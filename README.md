@@ -42,20 +42,7 @@
 ### 📌 Öne Çıkan Projelerim
 
 <p align="center">
-  <a href="https://github.com/KeremKalyoncu/Gelismis_Kutuphane_Sistemi">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KeremKalyoncu&repo=Gelismis_Kutuphane_Sistemi&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/KeremKalyoncu/Titanic_Veri_Analizi">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KeremKalyoncu&repo=Titanic_Veri_Analizi&theme=tokyonight&hide_border=true" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/KeremKalyoncu/KriptoParaTakip">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KeremKalyoncu&repo=KriptoParaTakip&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/KeremKalyoncu/Dinamik-Css-Portfolyo">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KeremKalyoncu&repo=Dinamik-Css-Portfolyo&theme=tokyonight&hide_border=true" />
-  </a>
+  <img src="./metrics.repos.svg" alt="repos" />
 </p>
 
 ---
