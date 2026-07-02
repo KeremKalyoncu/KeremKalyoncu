@@ -63,16 +63,7 @@
 ### 📊 GitHub İstatistiklerim
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=KeremKalyoncu&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KeremKalyoncu&layout=compact&theme=tokyonight&hide_border=true"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=KeremKalyoncu&theme=tokyonight&hide_border=true"/>
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=KeremKalyoncu&theme=tokyonight&no-frame=true&row=1&column=7"/>
+  <img src="./metrics.svg" alt="metrics" />
 </p>
 
 ---
