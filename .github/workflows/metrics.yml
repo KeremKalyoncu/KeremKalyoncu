@@ -40,12 +40,18 @@ jobs:
           plugin_habits_facts: yes
           plugin_habits_charts: yes
 
-      # ---- 2. ÖNE ÇIKAN PROJELER (repo kartları) ----
+      # ---- 2. ÖNE ÇIKAN PROJELER (gerçek repo kartları) ----
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: metrics.repos.svg
 
           template: classic
-          base: header, repositories
-          config_display: large
+          base: ""              # genel özeti kapat, sadece repo kartlarını göster
+
+          plugin_repositories: yes
+          plugin_repositories_featured: >-
+            KeremKalyoncu/Gelismis_Kutuphane_Sistemi,
+            KeremKalyoncu/Titanic_Veri_Analizi,
+            KeremKalyoncu/KriptoParaTakip,
+            KeremKalyoncu/Dinamik-Css-Portfolyo
