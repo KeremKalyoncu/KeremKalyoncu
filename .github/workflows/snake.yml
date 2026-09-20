@@ -1,9 +1,18 @@
 name: Generate contribution snake
 
 on:
+  push:
+    paths:
+      - "README.md"
+      - "assets/**"
+      - ".github/workflows/snake.yml"
   schedule:
     - cron: "30 18 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: profile-visuals
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -30,7 +39,22 @@ jobs:
           git add output/github-contribution-grid-snake.svg
           if git diff --cached --quiet; then
             echo "No snake animation changes."
-          else
-            git commit -m "chore: update contribution snake"
-            git push
+            exit 0
           fi
+
+          git commit -m "chore: update contribution snake"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push conflicted; retrying in ${attempt}0 seconds..."
+            sleep $((attempt * 10))
+          done
+
+          echo "Could not push the generated contribution snake."
+          exit 1

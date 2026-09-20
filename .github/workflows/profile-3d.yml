@@ -1,9 +1,18 @@
 name: Generate 3D contribution profile
 
 on:
+  push:
+    paths:
+      - "README.md"
+      - "assets/**"
+      - ".github/workflows/profile-3d.yml"
   schedule:
     - cron: "0 18 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: profile-visuals
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -27,7 +36,22 @@ jobs:
           git add profile-3d-contrib
           if git diff --cached --quiet; then
             echo "No 3D contribution changes."
-          else
-            git commit -m "chore: update 3D contribution profile"
-            git push
+            exit 0
           fi
+
+          git commit -m "chore: update 3D contribution profile"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push conflicted; retrying in ${attempt}0 seconds..."
+            sleep $((attempt * 10))
+          done
+
+          echo "Could not push the generated 3D contribution profile."
+          exit 1
