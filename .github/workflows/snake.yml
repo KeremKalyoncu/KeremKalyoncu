@@ -1,0 +1,36 @@
+name: Generate contribution snake
+
+on:
+  schedule:
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-contribution-snake
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?palette=github-dark
+
+      - name: Move and commit generated animation
+        run: |
+          mkdir -p output
+          cp dist/github-contribution-grid-snake.svg output/github-contribution-grid-snake.svg
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add output/github-contribution-grid-snake.svg
+          if git diff --cached --quiet; then
+            echo "No snake animation changes."
+          else
+            git commit -m "chore: update contribution snake"
+            git push
+          fi
