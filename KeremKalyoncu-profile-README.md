@@ -28,11 +28,19 @@
 
 <div align="center">
 
-`[ about ]` · `[ focus ]` · `[ projects ]` · `[ stack ]` · `[ stats ]` · `[ contact ]`
+<a href="#about">[ about ]</a> ·
+<a href="#focus">[ focus ]</a> ·
+<a href="#maritime-watch">[ flagship project ]</a> ·
+<a href="#projects">[ projects ]</a> ·
+<a href="#stack">[ stack ]</a> ·
+<a href="#telemetry">[ stats ]</a> ·
+<a href="#contact">[ contact ]</a>
 
 </div>
 
 <br />
+
+<a id="about"></a>
 
 ## `01` / About the builder
 
@@ -56,11 +64,26 @@ measurable outcome
 
 <div align="center">
 
-| `CURRENT MODE` | `INTERESTED IN` | `BASED IN` |
-| :---: | :---: | :---: |
-| `BUILDING` | `DATA × MAPS × AUTOMATION` | `ISTANBUL, TR` |
+| `CURRENT MODE` | `COMMUNITY` | `INTERESTED IN` | `BASED IN` |
+| :---: | :---: | :---: | :---: |
+| `BUILDING` | `GDG ON CAMPUS DOĞUŞ` | `DATA × MAPS × AUTOMATION` | `ISTANBUL, TR` |
 
 </div>
+
+<br />
+
+<div align="center">
+
+<a href="https://github.com/KeremKalyoncu?tab=repositories">
+  <img src="https://img.shields.io/badge/PUBLIC%20PROJECTS-0F172A?style=flat-square&logo=github&logoColor=67E8F9" alt="Public projects" />
+</a>
+<a href="https://github.com/KeremKalyoncu">
+  <img src="https://img.shields.io/badge/OPEN%20TO-COLLABORATION%20%26%20OPPORTUNITIES-0F172A?style=flat-square&logo=github&logoColor=34D399" alt="Open to collaboration and opportunities" />
+</a>
+
+</div>
+
+<a id="focus"></a>
 
 ## `02` / What I am building toward
 
@@ -99,7 +122,9 @@ Removing repetitive work with clean application logic, data and integrations.
 </tr>
 </table>
 
-## `03` / Featured build — Maritime Watch
+<a id="maritime-watch"></a>
+
+## `03` / Flagship build — Maritime Watch Türkiye
 
 <div align="center">
 
@@ -113,6 +138,12 @@ Removing repetitive work with clean application logic, data and integrations.
 
 <div align="center">
 
+<a href="https://keremkalyoncu.github.io/maritime-watch/stats.html">
+  <img src="https://img.shields.io/badge/LIVE%20STATISTICS-REPORT-0F172A?style=for-the-badge&logo=google-analytics&logoColor=67E8F9" alt="Maritime Watch statistics report" />
+</a>
+<a href="https://keremkalyoncu.github.io/maritime-watch/data/feed.xml">
+  <img src="https://img.shields.io/badge/RSS-LIVE%20FEED-0F172A?style=for-the-badge&logo=rss&logoColor=F59E0B" alt="Maritime Watch RSS feed" />
+</a>
 <a href="https://keremkalyoncu.github.io/maritime-watch">
   <img src="https://img.shields.io/badge/OPEN%20LIVE%20DASHBOARD-22D3EE?style=for-the-badge&logo=googleearth&logoColor=020617" alt="Open live dashboard" />
 </a>
@@ -122,26 +153,91 @@ Removing repetitive work with clean application logic, data and integrations.
 
 </div>
 
-### The idea
+### The problem
 
-Maritime data is valuable only when it is understandable at the moment it is needed. Maritime Watch is an experiment in making live vessel movement, environmental conditions and potential risk visible in one place.
+Most weather services return raw numbers: *22 knots of wind, 1.5 metres of waves*. That is not yet an operational decision. A 22-knot gust may be manageable for a commercial vessel but dangerous for a small open fishing boat.
+
+Maritime Watch turns those numbers into a clearer question:
+
+> **Can I safely leave today, and what time should I return?**
+
+It translates hourly forecasts into vessel-aware **go / no-go departure and return windows** for small craft, yachts and coastal communities across Turkish waters.
+
+### Why this project is different
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🛟 Decision support
+
+- Vessel-class-aware safety windows
+- Wind gust and wave thresholds
+- 06:00 daily briefing logic
+- Clear go / caution / no-go states
+
+</td>
+<td width="50%" valign="top">
+
+#### 📡 Live maritime intelligence
+
+- AIS vessel monitoring
+- Closest Point of Approach (CPA) risk
+- Speed-drop anomaly detection
+- Turkish Straits traffic telemetry
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🆘 Safety layer
+
+- Telegram emergency assistant
+- `/neredeyim` refuge-port lookup
+- `/mayday` VHF Channel 16 templates
+- Offline PWA with nautical map cache
+
+</td>
+<td width="50%" valign="top">
+
+#### 🌱 Unusual infrastructure
+
+- Deterministic rule-based safety engine
+- GitHub Actions + GitHub Pages pipeline
+- 24/7 Telegram sentinel on a recycled phone
+- Samsung Galaxy Note 4 edge node at ~1.2W
+
+</td>
+</tr>
+</table>
+
+### System signal flow
 
 ```mermaid
 flowchart LR
-    A[AIS vessel signals] --> D[Data processing]
-    B[Weather conditions] --> D
-    C[Geospatial context] --> D
-    D --> E[Map + live dashboard]
-    D --> F[Safety alerts]
-    E --> G[Human decision]
-    F --> G
+    A[AIS stream] --> D[Ingest]
+    B[Weather + waves] --> D
+    C[Official bulletins] --> D
+    D --> E[Rule engine]
+    E --> F[CPA + anomaly detection]
+    E --> G[Vessel safety window]
+    F --> H[Live map + RSS]
+    G --> H
+    F --> I[Telegram alerts]
+    G --> I
+    H --> J[Human decision]
+    I --> J
     style A fill:#082F49,stroke:#22D3EE,color:#E0F2FE
     style B fill:#082F49,stroke:#22D3EE,color:#E0F2FE
     style C fill:#082F49,stroke:#22D3EE,color:#E0F2FE
     style D fill:#164E63,stroke:#67E8F9,color:#F8FAFC
-    style E fill:#0F172A,stroke:#A78BFA,color:#F8FAFC
+    style E fill:#164E63,stroke:#67E8F9,color:#F8FAFC
     style F fill:#0F172A,stroke:#A78BFA,color:#F8FAFC
-    style G fill:#064E3B,stroke:#34D399,color:#ECFDF5
+    style G fill:#0F172A,stroke:#A78BFA,color:#F8FAFC
+    style H fill:#0F172A,stroke:#22D3EE,color:#F8FAFC
+    style I fill:#0F172A,stroke:#22D3EE,color:#F8FAFC
+    style J fill:#064E3B,stroke:#34D399,color:#ECFDF5
 ```
 
 <details>
@@ -149,16 +245,19 @@ flowchart LR
 
 <br />
 
-- Live AIS and vessel-tracking concepts
-- Geospatial map visualization
-- Marine-safety and collision-awareness direction
-- Weather data and warning workflows
-- Telegram-based alerting direction
-- A public live deployment
+- [Live web map](https://keremkalyoncu.github.io/maritime-watch)
+- [Live statistics report](https://keremkalyoncu.github.io/maritime-watch/stats.html)
+- [Machine-readable RSS feed](https://keremkalyoncu.github.io/maritime-watch/data/feed.xml)
+- Open-source MIT-licensed codebase
+- Offline PWA and emergency VHF reference cards
+- 200+ offline scenario tests and an evaluation dataset
+- A deterministic runtime with no LLM in the live safety decision path
 
 </details>
 
 <br />
+
+<a id="projects"></a>
 
 ## `04` / Selected work
 
@@ -213,6 +312,8 @@ A C# application shaped around real operational workflows in a fuel-station doma
 
 </div>
 
+<a id="stack"></a>
+
 ## `05` / Technology constellation
 
 <div align="center">
@@ -247,11 +348,13 @@ A C# application shaped around real operational workflows in a fuel-station doma
 
 I’m continuously improving how I design systems, communicate technical decisions and turn experiments into software that someone else can actually use.
 
+<a id="telemetry"></a>
+
 ## `07` / GitHub telemetry
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=KeremKalyoncu&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=tokyonight&bg_color=0B1220&title_color=67E8F9&icon_color=22D3EE&text_color=CBD5E1&rank_icon=github" alt="GitHub statistics" />
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=KeremKalyoncu&show_icons=true&include_all_commits=true&hide_border=true&theme=tokyonight&bg_color=0B1220&title_color=67E8F9&icon_color=22D3EE&text_color=CBD5E1&rank_icon=github" alt="GitHub statistics" />
 <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KeremKalyoncu&layout=compact&langs_count=8&hide_border=true&theme=tokyonight&bg_color=0B1220&title_color=67E8F9&text_color=CBD5E1" alt="Most used languages" />
 
 <br />
@@ -265,21 +368,20 @@ I’m continuously improving how I design systems, communicate technical decisio
 </div>
 
 <details>
-<summary><b>📈 Optional: add the animated contribution layers</b></summary>
+<summary><b>📈 Contribution ocean — generated automatically by GitHub Actions</b></summary>
 
 <br />
 
-These two visuals require GitHub Actions in the `KeremKalyoncu/KeremKalyoncu` profile repository:
+After the first successful workflow run, these two visuals will be available in the profile repository. Run both workflows manually once from the **Actions** tab to generate them immediately.
 
-```md
-<!-- Contribution snake generated by Platane/snk -->
-<img src="./output/github-contribution-grid-snake.svg" alt="Animated contribution snake" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./output/github-contribution-grid-snake.svg" />
+  <img src="./output/github-contribution-grid-snake.svg" alt="Animated contribution snake" />
+</picture>
 
-<!-- 3D contribution calendar generated by yoshi389111/github-profile-3d-contrib -->
 <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution calendar" />
-```
 
-They should be added only after the workflows generate the files. This keeps the profile fast and avoids broken image placeholders.
+If the images have not been generated yet, this section can stay collapsed without affecting the rest of the profile.
 
 </details>
 
@@ -293,11 +395,15 @@ I am active around developer communities and keep learning by building. I am esp
 
 </div>
 
+<a id="contact"></a>
+
 ## `09` / Open channel
 
 Are you building something with **data, maps, automation, live systems or developer tooling**?
 
-The best way to reach me is through GitHub:
+I am open to **software opportunities, meaningful collaborations and projects involving data, maps, automation or live systems**.
+
+The best way to start a conversation is through GitHub:
 
 <div align="center">
 
