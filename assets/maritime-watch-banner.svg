@@ -1,0 +1,151 @@
+<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mw-bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.45" stop-color="#081E36"/>
+      <stop offset="1" stop-color="#06283D"/>
+    </linearGradient>
+
+    <linearGradient id="mw-cyan-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <linearGradient id="mw-accent-card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0F172A" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0B1329" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <radialGradient id="mw-radar-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 170) scale(240)">
+      <stop stop-color="#0284C7" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+
+    <clipPath id="mw-clip">
+      <rect width="1200" height="340" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#mw-clip)">
+    <!-- Base Canvas -->
+    <rect width="1200" height="340" rx="20" fill="url(#mw-bg)"/>
+    <rect width="1200" height="340" fill="url(#mw-radar-glow)"/>
+
+    <!-- Lat/Long Maritime Grid -->
+    <g opacity="0.08" stroke="#38BDF8" stroke-width="1">
+      <path d="M0 50H1200M0 110H1200M0 170H1200M0 230H1200M0 290H1200"/>
+      <path d="M80 0V340M180 0V340M280 0V340M380 0V340M480 0V340M580 0V340M680 0V340M780 0V340M880 0V340M980 0V340M1080 0V340"/>
+    </g>
+
+    <!-- Bathymetry / Coastal Depth Lines -->
+    <path d="M720 340C770 260 840 240 920 280C990 315 1060 210 1120 180C1160 160 1180 170 1200 150" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 4" opacity="0.25"/>
+    <path d="M680 340C740 230 810 210 900 240C980 270 1040 180 1110 140C1150 120 1180 130 1200 110" stroke="#38BDF8" stroke-width="1.5" opacity="0.18"/>
+
+    <!-- Left Content Column -->
+    <g transform="translate(56, 42)">
+      <!-- System Tag -->
+      <g>
+        <rect width="248" height="26" rx="6" fill="#0369A1" fill-opacity="0.22" stroke="#0284C7" stroke-width="1"/>
+        <circle cx="14" cy="13" r="4" fill="#38BDF8">
+          <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="26" y="17" fill="#BAE6FD" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="1.5">FLAGSHIP PLATFORM • v2.4</text>
+      </g>
+
+      <!-- Main Title -->
+      <text x="0" y="72" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.5">Maritime Watch Türkiye</text>
+      <text x="0" y="104" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500">Real-Time AIS Telemetry, Geospatial Safety Engine &amp; Coastal Alert Mesh</text>
+
+      <!-- Problem Solved Statement -->
+      <g transform="translate(0, 126)">
+        <rect width="660" height="74" rx="10" fill="url(#mw-accent-card)" stroke="#1E3A8A" stroke-width="1"/>
+        <text x="18" y="28" fill="#38BDF8" font-family="ui-monospace, monospace" font-size="12" font-weight="700">CORE DECISION SUPPORT ENGINE</text>
+        <text x="18" y="52" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">
+          Converts raw 22kt wind/gusts &amp; waves into deterministic 
+          <tspan fill="#34D399" font-weight="700"> Go / Caution / No-Go </tspan> 
+          departure windows for vessels.
+        </text>
+      </g>
+
+      <!-- Key Architectural Badges -->
+      <g transform="translate(0, 222)">
+        <!-- Pill 1 -->
+        <g>
+          <rect width="146" height="28" rx="14" fill="#0C4A6E" fill-opacity="0.4" stroke="#0284C7" stroke-width="1"/>
+          <text x="14" y="18" fill="#7DD3FC" font-family="ui-monospace, monospace" font-size="11" font-weight="600">⚡ ~1.2W EDGE NODE</text>
+        </g>
+        <!-- Pill 2 -->
+        <g transform="translate(156, 0)">
+          <rect width="170" height="28" rx="14" fill="#064E3B" fill-opacity="0.4" stroke="#059669" stroke-width="1"/>
+          <text x="14" y="18" fill="#6EE7B7" font-family="ui-monospace, monospace" font-size="11" font-weight="600">🛡️ 0 LLM IN LIVE SAFETY</text>
+        </g>
+        <!-- Pill 3 -->
+        <g transform="translate(336, 0)">
+          <rect width="160" height="28" rx="14" fill="#1E1B4B" fill-opacity="0.5" stroke="#6366F1" stroke-width="1"/>
+          <text x="14" y="18" fill="#C7D2FE" font-family="ui-monospace, monospace" font-size="11" font-weight="600">📡 AIS CPA RADAR</text>
+        </g>
+        <!-- Pill 4 -->
+        <g transform="translate(506, 0)">
+          <rect width="154" height="28" rx="14" fill="#312E81" fill-opacity="0.4" stroke="#818CF8" stroke-width="1"/>
+          <text x="14" y="18" fill="#E0E7FF" font-family="ui-monospace, monospace" font-size="11" font-weight="600">🌊 200+ SCENARIOS</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Right Side: Interactive Maritime Radar Display -->
+    <g transform="translate(980, 170)">
+      <!-- Outer Distance Rings -->
+      <circle r="120" stroke="#0284C7" stroke-width="1.5" stroke-opacity="0.25" fill="none"/>
+      <circle r="85" stroke="#0284C7" stroke-width="1.5" stroke-opacity="0.4" fill="none"/>
+      <circle r="50" stroke="#0284C7" stroke-width="1" stroke-opacity="0.6" fill="none"/>
+      <circle r="18" stroke="#38BDF8" stroke-width="1.5" fill="#0C4A6E" fill-opacity="0.6"/>
+
+      <!-- Crosshairs -->
+      <line x1="-130" y1="0" x2="130" y2="0" stroke="#0284C7" stroke-width="1" stroke-opacity="0.3"/>
+      <line x1="0" y1="-130" x2="0" y2="130" stroke="#0284C7" stroke-width="1" stroke-opacity="0.3"/>
+
+      <!-- Rotating Radar Beam -->
+      <path d="M0 0 L104 -60 A120 120 0 0 0 60 -104 Z" fill="url(#mw-cyan-glow)" fill-opacity="0.15">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <line x1="0" y1="0" x2="104" y2="-60" stroke="#38BDF8" stroke-width="2">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+      </line>
+
+      <!-- Tracked Vessels / AIS Blips -->
+      <!-- Vessel 1 (Approaching) -->
+      <g transform="translate(48, -42)">
+        <circle r="4" fill="#38BDF8">
+          <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <line x1="0" y1="0" x2="14" y2="-12" stroke="#38BDF8" stroke-width="1.5"/>
+        <text x="18" y="-12" fill="#BAE6FD" font-family="ui-monospace, monospace" font-size="9" font-weight="700">MMSI 271044</text>
+      </g>
+
+      <!-- Vessel 2 (Safe Cargo) -->
+      <g transform="translate(-62, 38)">
+        <circle r="3.5" fill="#34D399"/>
+        <line x1="0" y1="0" x2="-10" y2="10" stroke="#34D399" stroke-width="1"/>
+        <text x="-58" y="24" fill="#A7F3D0" font-family="ui-monospace, monospace" font-size="9">CPA 1.8 NM</text>
+      </g>
+
+      <!-- Vessel 3 (Caution) -->
+      <g transform="translate(18, 72)">
+        <circle r="3.5" fill="#F59E0B">
+          <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="24" y="76" fill="#FDE68A" font-family="ui-monospace, monospace" font-size="9">WIND 24KT</text>
+      </g>
+
+      <!-- Coordinates Telemetry Badge -->
+      <g transform="translate(-85, 134)">
+        <rect width="170" height="22" rx="4" fill="#020617" fill-opacity="0.8" stroke="#0284C7" stroke-width="1"/>
+        <text x="10" y="15" fill="#7DD3FC" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">41°00'N 28°58'E TR</text>
+      </g>
+    </g>
+
+    <!-- Subtle border highlight -->
+    <rect x="1" y="1" width="1198" height="338" rx="19" stroke="#1E40AF" stroke-opacity="0.4"/>
+  </g>
+</svg>

@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     name: generate-contribution-snake
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
 
       - uses: Platane/snk/svg-only@v3
         with:

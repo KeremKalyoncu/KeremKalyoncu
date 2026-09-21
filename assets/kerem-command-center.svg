@@ -2,92 +2,146 @@
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
       <stop stop-color="#020617"/>
-      <stop offset="0.48" stop-color="#0F172A"/>
-      <stop offset="1" stop-color="#083344"/>
+      <stop offset="0.45" stop-color="#0B132B"/>
+      <stop offset="1" stop-color="#082F49"/>
     </linearGradient>
+
     <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#67E8F9"/>
+      <stop stop-color="#38BDF8"/>
       <stop offset="1" stop-color="#06B6D4"/>
     </linearGradient>
+
+    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+
     <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#A78BFA"/>
-      <stop offset="1" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#38BDF8"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(920 112) rotate(127) scale(360 410)">
-      <stop stop-color="#164E63" stop-opacity="0.7"/>
+
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(940 120) rotate(127) scale(380 430)">
+      <stop stop-color="#0284C7" stop-opacity="0.5"/>
       <stop offset="1" stop-color="#020617" stop-opacity="0"/>
     </radialGradient>
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="12"/>
-    </filter>
+
+    <radialGradient id="left-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 180) scale(300)">
+      <stop stop-color="#0E7490" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+
     <clipPath id="clip">
       <rect width="1200" height="360" rx="22"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#clip)">
+    <!-- Deep Canvas Background -->
     <rect width="1200" height="360" rx="22" fill="url(#bg)"/>
     <rect width="1200" height="360" fill="url(#glow)"/>
+    <rect width="1200" height="360" fill="url(#left-glow)"/>
 
-    <g opacity="0.12" stroke="#67E8F9">
-      <path d="M0 48H1200M0 96H1200M0 144H1200M0 192H1200M0 240H1200M0 288H1200M0 336H1200"/>
-      <path d="M48 0V360M96 0V360M144 0V360M192 0V360M240 0V360M288 0V360M336 0V360M384 0V360M432 0V360M480 0V360M528 0V360M576 0V360M624 0V360M672 0V360M720 0V360M768 0V360M816 0V360M864 0V360M912 0V360M960 0V360M1008 0V360M1056 0V360M1104 0V360M1152 0V360"/>
+    <!-- Subtle Cyber Grid -->
+    <g opacity="0.1" stroke="#38BDF8" stroke-width="1">
+      <path d="M0 45H1200M0 90H1200M0 135H1200M0 180H1200M0 225H1200M0 270H1200M0 315H1200"/>
+      <path d="M45 0V360M90 0V360M135 0V360M180 0V360M225 0V360M270 0V360M315 0V360M360 0V360M405 0V360M450 0V360M495 0V360M540 0V360M585 0V360M630 0V360M675 0V360M720 0V360M765 0V360M810 0V360M855 0V360M900 0V360M945 0V360M990 0V360M1035 0V360M1080 0V360M1125 0V360M1170 0V360"/>
     </g>
 
-    <g opacity="0.24" fill="#67E8F9">
-      <circle cx="82" cy="52" r="1.5"/><circle cx="174" cy="294" r="1.5"/><circle cx="310" cy="74" r="1.5"/>
-      <circle cx="468" cy="42" r="1.5"/><circle cx="580" cy="308" r="1.5"/><circle cx="740" cy="68" r="1.5"/>
-      <circle cx="1108" cy="278" r="1.5"/><circle cx="1150" cy="74" r="1.5"/>
+    <!-- Star / Coordinate Blips -->
+    <g opacity="0.3" fill="#38BDF8">
+      <circle cx="95" cy="48" r="1.5"/><circle cx="160" cy="310" r="1.5"/><circle cx="340" cy="62" r="1.5"/>
+      <circle cx="510" cy="38" r="1.5"/><circle cx="610" cy="318" r="1.5"/><circle cx="730" cy="72" r="1.5"/>
+      <circle cx="1110" cy="290" r="1.5"/><circle cx="1160" cy="68" r="1.5"/>
     </g>
 
-    <g transform="translate(86 64)">
-      <rect x="0" y="0" width="516" height="230" rx="16" fill="#020617" fill-opacity="0.62" stroke="#155E75"/>
-      <circle cx="28" cy="28" r="5" fill="#22D3EE"/>
-      <circle cx="47" cy="28" r="5" fill="#A78BFA"/>
-      <circle cx="66" cy="28" r="5" fill="#34D399"/>
-      <text x="92" y="33" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="1.4">KEREM / COMMAND CENTER</text>
-      <line x1="24" y1="52" x2="492" y2="52" stroke="#164E63"/>
+    <!-- LEFT SIDE: Command Center Terminal Window -->
+    <g transform="translate(68, 52)">
+      <!-- Window Frame -->
+      <rect x="0" y="0" width="560" height="256" rx="16" fill="#020617" fill-opacity="0.75" stroke="#164E63" stroke-width="1.2"/>
+      
+      <!-- Window Title Bar -->
+      <circle cx="26" cy="26" r="5" fill="#EF4444"/>
+      <circle cx="44" cy="26" r="5" fill="#F59E0B"/>
+      <circle cx="62" cy="26" r="5" fill="#10B981"/>
+      <text x="86" y="30" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600" letter-spacing="1.5">KEREM // COMMAND_CENTER_TERMINAL</text>
+      <line x1="20" y1="48" x2="540" y2="48" stroke="#1E293B" stroke-width="1"/>
 
-      <text x="28" y="91" fill="#67E8F9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">$ whoami</text>
-      <text x="28" y="119" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700">Kerem Kalyoncu</text>
-      <text x="28" y="148" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">software engineer / builder</text>
-      <text x="28" y="181" fill="#67E8F9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">$ status --now</text>
-      <text x="28" y="207" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">● building useful systems with data + maps</text>
-      <rect x="458" y="181" width="11" height="20" rx="2" fill="#22D3EE">
-        <animate attributeName="opacity" values="1;0.15;1" dur="1.1s" repeatCount="indefinite"/>
-      </rect>
+      <!-- Terminal Content -->
+      <text x="24" y="82" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">$ whoami</text>
+      <text x="24" y="114" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.5">Kerem Kalyoncu</text>
+      
+      <!-- Subtitle & Role Badges -->
+      <text x="24" y="142" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">Software Engineer &amp; Systems Builder</text>
+      <text x="24" y="162" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">Focus: Real-Time Telemetry × Geospatial × Practical Automation</text>
+
+      <!-- Status prompt -->
+      <g transform="translate(0, 182)">
+        <rect x="20" y="0" width="520" height="56" rx="8" fill="#0B1329" fill-opacity="0.8" stroke="#1E3A8A" stroke-width="1"/>
+        <text x="36" y="24" fill="#38BDF8" font-family="ui-monospace, monospace" font-size="12" font-weight="600">$ sys.status --operational</text>
+        <circle cx="40" cy="42" r="4" fill="#34D399">
+          <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="52" y="46" fill="#34D399" font-family="ui-monospace, monospace" font-size="12" font-weight="600">ONLINE</text>
+        <text x="110" y="46" fill="#CBD5E1" font-family="ui-monospace, monospace" font-size="12">| Ready for high-impact software &amp; live systems</text>
+      </g>
     </g>
 
-    <g transform="translate(716 62)">
-      <circle cx="150" cy="118" r="108" stroke="#155E75" stroke-width="2"/>
-      <circle cx="150" cy="118" r="78" stroke="#155E75" stroke-width="1"/>
-      <circle cx="150" cy="118" r="46" stroke="#155E75" stroke-width="1"/>
-      <path d="M150 10V226M42 118H258" stroke="#155E75" stroke-width="1"/>
-      <path d="M150 118L244 48" stroke="url(#cyan)" stroke-width="2" stroke-linecap="round">
-        <animateTransform attributeName="transform" type="rotate" from="0 150 118" to="360 150 118" dur="4.8s" repeatCount="indefinite"/>
-      </path>
-      <path d="M150 118L244 48L150 118Z" fill="url(#cyan)" fill-opacity="0.14">
-        <animateTransform attributeName="transform" type="rotate" from="0 150 118" to="360 150 118" dur="4.8s" repeatCount="indefinite"/>
-      </path>
-      <circle cx="208" cy="71" r="4" fill="#67E8F9">
-        <animate attributeName="r" values="3;7;3" dur="1.8s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="94" cy="169" r="4" fill="#A78BFA">
-        <animate attributeName="r" values="3;7;3" dur="2.3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="1;0.2;1" dur="2.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="150" cy="118" r="5" fill="#F8FAFC"/>
-      <text x="150" y="263" text-anchor="middle" fill="#67E8F9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2">SIGNAL: ONLINE</text>
+    <!-- RIGHT SIDE: Telemetry & Radar Array -->
+    <g transform="translate(850, 60)">
+      <!-- System Specs Pill (Top) -->
+      <g transform="translate(0, 0)">
+        <rect width="280" height="30" rx="15" fill="#0F172A" fill-opacity="0.8" stroke="#0E7490" stroke-width="1"/>
+        <circle cx="18" cy="15" r="4.5" fill="#34D399">
+          <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <text x="32" y="20" fill="#E0F2FE" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="1">GEO-LOCATION: ISTANBUL, TR</text>
+      </g>
+
+      <!-- Radar Scope -->
+      <g transform="translate(140, 150)">
+        <!-- Concentric Distance Rings -->
+        <circle r="95" stroke="#0E7490" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+        <circle r="68" stroke="#0E7490" stroke-width="1.2" stroke-opacity="0.55" fill="none"/>
+        <circle r="40" stroke="#0E7490" stroke-width="1" stroke-opacity="0.7" fill="none"/>
+        <circle r="14" stroke="#38BDF8" stroke-width="1.5" fill="#0C4A6E" fill-opacity="0.5"/>
+
+        <!-- Axes -->
+        <path d="M-105 0H105M0 -105V105" stroke="#0E7490" stroke-width="1" stroke-opacity="0.45"/>
+
+        <!-- Rotating Radar Sweep Beam -->
+        <path d="M0 0 L82 -48 A95 95 0 0 0 48 -82 Z" fill="url(#cyan)" fill-opacity="0.2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4.2s" repeatCount="indefinite"/>
+        </path>
+        <line x1="0" y1="0" x2="82" y2="-48" stroke="#38BDF8" stroke-width="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4.2s" repeatCount="indefinite"/>
+        </line>
+
+        <!-- Dynamic Signal Targets -->
+        <circle cx="48" cy="-32" r="3.5" fill="#38BDF8">
+          <animate attributeName="r" values="3;6;3" dur="2.1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="-38" cy="46" r="3.5" fill="#A78BFA">
+          <animate attributeName="r" values="3;6;3" dur="2.7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.2;1" dur="2.7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="30" cy="52" r="3" fill="#34D399"/>
+
+        <!-- Radar Core -->
+        <circle r="3" fill="#F8FAFC"/>
+      </g>
+
+      <!-- Bottom Signal Status Pill -->
+      <g transform="translate(30, 260)">
+        <rect width="220" height="26" rx="6" fill="#020617" fill-opacity="0.85" stroke="#164E63" stroke-width="1"/>
+        <text x="110" y="17" text-anchor="middle" fill="#7DD3FC" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="2">SIGNAL // ALL_SYSTEMS_GO</text>
+      </g>
     </g>
 
-    <g transform="translate(1005 42)" opacity="0.8">
-      <rect x="0" y="0" width="142" height="28" rx="14" fill="#164E63" fill-opacity="0.55" stroke="#0E7490"/>
-      <circle cx="18" cy="14" r="4" fill="#34D399"/>
-      <text x="31" y="19" fill="#BAE6FD" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" letter-spacing="1">OPEN TO BUILD</text>
-    </g>
-
-    <path d="M0 336C220 318 330 354 536 336C750 317 934 350 1200 324" stroke="url(#violet)" stroke-width="2" opacity="0.7"/>
-    <rect x="1" y="1" width="1198" height="358" rx="21" stroke="#164E63"/>
+    <!-- Bottom Accent Horizon Curve -->
+    <path d="M0 338C260 322 380 354 590 336C800 318 970 352 1200 326" stroke="url(#violet)" stroke-width="2.5" opacity="0.8"/>
+    <!-- Outer Bezel Border -->
+    <rect x="1" y="1" width="1198" height="358" rx="21" stroke="#0E7490" stroke-opacity="0.6"/>
   </g>
 </svg>
