@@ -23,7 +23,7 @@
 <br />
 
 <!--
-  Navigation Bar
+  Navigation Console
 -->
 
 <div align="center">
@@ -31,10 +31,11 @@
 <a href="#about">[ 01_about ]</a> ·
 <a href="#flagship">[ 02_flagship ]</a> ·
 <a href="#telemetry">[ 03_telemetry ]</a> ·
-<a href="#projects">[ 04_projects ]</a> ·
-<a href="#contributions">[ 05_contributions ]</a> ·
-<a href="#stack">[ 06_stack ]</a> ·
-<a href="#contact">[ 07_contact ]</a>
+<a href="#console">[ 04_interactive_console ]</a> ·
+<a href="#projects">[ 05_projects ]</a> ·
+<a href="#contributions">[ 06_contributions ]</a> ·
+<a href="#stack">[ 07_stack ]</a> ·
+<a href="#contact">[ 08_contact ]</a>
 
 </div>
 
@@ -169,7 +170,9 @@ Standard marine weather reports output raw numbers: *24 knots of wind, 1.8 metre
 
 <a id="telemetry"></a>
 
-## `03` / Real-time developer telemetry & system metrics
+## `03` / Real-time living developer telemetry & Bosphorus sensor HUD
+
+The HUD card below is updated autonomously via GitHub Actions with live marine conditions from the Turkish Straits and a 5-axis engineering capability radar:
 
 <div align="center">
 
@@ -179,9 +182,43 @@ Standard marine weather reports output raw numbers: *24 knots of wind, 1.8 metre
 
 <br />
 
+<a id="console"></a>
+
+## `04` / Interactive visitor command console (GitHub Issue-Ops)
+
+You can interact directly with the Command Center! Click any command below to dispatch an autonomous operation. A GitHub Action will execute the request in ~15 seconds, log your telemetry response to the live teletype terminal below, and close the session automatically:
+
+<div align="center">
+
+<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20PING_NODE4&body=Ping%20request%20to%20Samsung%20Galaxy%20Note%204%20Edge%20Sentinel%20(~1.2W).">
+  <img src="https://img.shields.io/badge/EXECUTE-PING%20NOTE%204%20NODE-22D3EE?style=for-the-badge&logo=satellite&logoColor=020617" alt="Ping Note 4 Edge Node" />
+</a>
+<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20RUN_SAFETY_EVAL&body=Executing%20deterministic%20coastal%20safety%20evaluation%20for%20Turkish%20waters.">
+  <img src="https://img.shields.io/badge/EXECUTE-RUN%20SAFETY%20EVAL-10B981?style=for-the-badge&logo=shield&logoColor=white" alt="Run Safety Evaluation" />
+</a>
+<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20CALLSIGN%20STATION-GUEST&body=Transmitting%20operator%20callsign%20to%20command%20center.">
+  <img src="https://img.shields.io/badge/TRANSMIT-CALLSIGN%20SIGNAL-6366F1?style=for-the-badge&logo=radio&logoColor=white" alt="Transmit Callsign" />
+</a>
+
+<br /><br />
+
+### 📟 Real-Time Operator Teletype Log
+
+<!-- VISITOR_LOG_START -->
+| `UTC TIME` | `OPERATOR` | `COMMAND` | `TELEMETRY TELETYPE OUTPUT` |
+| :--- | :--- | :--- | :--- |
+| `2026-09-21 22:30` | **@KeremKalyoncu** | `PING_NODE4` | `PONG (28ms) · Note 4 Edge Node [Termux] Online · ~1.18W Nominal` |
+| `2026-09-21 22:15` | **@octocat** | `RUN_SAFETY_EVAL` | `EVAL_OK · Turkish Straits Sector: Wind < 16kt · Wave 0.6m · Status: GO (SAFE)` |
+| `2026-09-21 21:50` | **@visitor-ops** | `CALLSIGN [STATION-ALPHA]` | `ACKNOWLEDGED · Frequency 156.800 MHz (VHF CH 16) · Welcome to Command Station` |
+<!-- VISITOR_LOG_END -->
+
+</div>
+
+<br />
+
 <a id="projects"></a>
 
-## `04` / Selected work & production repositories
+## `05` / Selected work & production repositories
 
 <table>
 <tr>
@@ -252,7 +289,7 @@ Interactive frontend showcase focusing on responsive layouts, CSS animations, an
 
 <a id="contributions"></a>
 
-## `05` / Live contribution theater
+## `06` / Live contribution theater
 
 ### 🐍 Autonomous Contribution Stream
 
@@ -287,7 +324,7 @@ Visualizing commitment volume, frequency, and density over time:
 
 <a id="stack"></a>
 
-## `06` / Technology constellation
+## `07` / Technology constellation
 
 <div align="center">
 
@@ -306,7 +343,7 @@ Visualizing commitment volume, frequency, and density over time:
 
 <br />
 
-## `07` / Engineering principles
+## `08` / Engineering principles
 
 <div align="center">
 
@@ -326,7 +363,7 @@ Visualizing commitment volume, frequency, and density over time:
 
 <a id="contact"></a>
 
-## `08` / Connect & open channel
+## `09` / Connect & open channel
 
 Are you building systems with **real-time telemetry, maps, automation, or data-driven software**?
 

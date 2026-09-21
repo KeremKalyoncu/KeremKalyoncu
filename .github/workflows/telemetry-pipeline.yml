@@ -2,7 +2,7 @@ name: Generate Developer Telemetry HUD
 
 on:
   schedule:
-    - cron: "0 19 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     paths:
@@ -43,7 +43,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: update developer telemetry HUD"
+          git commit -m "chore: update live Bosphorus and developer telemetry HUD"
 
           for attempt in 1 2 3; do
             git fetch origin main

@@ -56,26 +56,39 @@
       0% { transform: translateY(-420px); }
       100% { transform: translateY(420px); }
     }
-    .scan-beam {
-      animation: scan-move 7s linear infinite;
-    }
+    .scan-beam { animation: scan-move 7s linear infinite; }
 
     @keyframes pulse-ring {
       0% { r: 3px; opacity: 1; }
       50% { r: 7.5px; opacity: 0.3; }
       100% { r: 3px; opacity: 1; }
     }
-    .blip-pulse {
-      animation: pulse-ring 2.2s ease-in-out infinite;
-    }
+    .blip-pulse { animation: pulse-ring 2.2s ease-in-out infinite; }
 
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.15; }
     }
-    .cursor-blink {
-      animation: blink 1.1s steps(2, start) infinite;
+    .cursor-blink { animation: blink 1.1s steps(2, start) infinite; }
+
+    @keyframes eq-scale {
+      0% { height: 4px; y: 18px; opacity: 0.4; }
+      50% { height: 22px; y: 0px; opacity: 1; }
+      100% { height: 6px; y: 16px; opacity: 0.5; }
     }
+    .eq-bar { animation: eq-scale 1.2s ease-in-out infinite alternate; }
+    .eq-1 { animation-delay: 0.05s; }
+    .eq-2 { animation-delay: 0.25s; }
+    .eq-3 { animation-delay: 0.15s; }
+    .eq-4 { animation-delay: 0.45s; }
+    .eq-5 { animation-delay: 0.30s; }
+    .eq-6 { animation-delay: 0.60s; }
+    .eq-7 { animation-delay: 0.20s; }
+    .eq-8 { animation-delay: 0.50s; }
+    .eq-9 { animation-delay: 0.35s; }
+    .eq-10 { animation-delay: 0.10s; }
+    .eq-11 { animation-delay: 0.40s; }
+    .eq-12 { animation-delay: 0.55s; }
   </style>
 
   <g clip-path="url(#frame-clip)">
@@ -95,50 +108,88 @@
     <rect class="scan-beam" x="0" y="0" width="1200" height="90" fill="url(#cyan-glow)" opacity="0.04"/>
 
     <!-- LEFT PANEL: Command Center Terminal Window -->
-    <g transform="translate(54, 42)">
+    <g transform="translate(54, 38)">
       <!-- Frame Box -->
-      <rect width="610" height="310" rx="14" fill="url(#card-panel)" stroke="#0E7490" stroke-width="1.2"/>
+      <rect width="610" height="324" rx="14" fill="url(#card-panel)" stroke="#0E7490" stroke-width="1.2"/>
       
       <!-- Window Top Header Bar -->
       <path d="M0 14C0 6.26801 6.26801 0 14 0H596C603.732 0 610 6.26801 610 14V38H0V14Z" fill="#071326"/>
       <circle cx="22" cy="19" r="5" fill="#EF4444"/>
       <circle cx="40" cy="19" r="5" fill="#F59E0B"/>
       <circle cx="58" cy="19" r="5" fill="#10B981"/>
-      <text x="82" y="24" fill="#94A3B8" class="font-mono" font-size="12" font-weight="700" letter-spacing="1.4">KEREM // COMMAND_STATION_TERMINAL_v3.0</text>
+      <text x="82" y="24" fill="#94A3B8" class="font-mono" font-size="12" font-weight="700" letter-spacing="1.4">KEREM // COMMAND_STATION_TERMINAL_v4.0</text>
       <line x1="0" y1="38" x2="610" y2="38" stroke="#1E293B" stroke-width="1"/>
 
       <!-- Terminal Body Content -->
-      <text x="24" y="68" fill="#38BDF8" class="font-mono" font-size="13" font-weight="600">$ whoami</text>
-      <text x="24" y="104" fill="#F8FAFC" class="font-sans" font-size="30" font-weight="900" letter-spacing="-0.5">Kerem Kalyoncu</text>
+      <text x="24" y="66" fill="#38BDF8" class="font-mono" font-size="13" font-weight="600">$ whoami</text>
+      <text x="24" y="100" fill="#F8FAFC" class="font-sans" font-size="30" font-weight="900" letter-spacing="-0.5">Kerem Kalyoncu</text>
       
       <!-- Subtitle -->
-      <text x="24" y="132" fill="#38BDF8" class="font-mono" font-size="13" font-weight="700">SOFTWARE ENGINEER &amp; SYSTEMS BUILDER</text>
-      <text x="24" y="152" fill="#94A3B8" class="font-mono" font-size="12">Real-Time Telemetry · Geospatial Computing · Practical Automation</text>
+      <text x="24" y="126" fill="#38BDF8" class="font-mono" font-size="12.5" font-weight="700">SOFTWARE ENGINEER &amp; SYSTEMS BUILDER</text>
+      <text x="24" y="146" fill="#94A3B8" class="font-mono" font-size="11.5">Real-Time Telemetry · Geospatial Computing · Practical Automation</text>
 
       <!-- System Diagnostic Panel -->
-      <g transform="translate(20, 172)">
-        <rect width="570" height="114" rx="8" fill="#030A17" stroke="#1E3A8A" stroke-width="1"/>
+      <g transform="translate(20, 162)">
+        <rect width="570" height="90" rx="8" fill="#030A17" stroke="#1E3A8A" stroke-width="1"/>
         
-        <text x="16" y="24" fill="#38BDF8" class="font-mono" font-size="12" font-weight="700">$ sys.diagnostics --all</text>
+        <text x="16" y="22" fill="#38BDF8" class="font-mono" font-size="11.5" font-weight="700">$ sys.diagnostics --all</text>
         
         <!-- Indicator 1 -->
-        <g transform="translate(16, 42)">
+        <g transform="translate(16, 38)">
           <circle cx="4" cy="4" r="4" fill="#34D399"/>
-          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="11">ENGINE: <tspan fill="#34D399" font-weight="700">ONLINE</tspan> | LAT/LON: <tspan fill="#E2E8F0">41.0082° N, 28.9784° E (TR)</tspan></text>
+          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="10.5">ENGINE: <tspan fill="#34D399" font-weight="700">ONLINE</tspan> | LAT/LON: <tspan fill="#E2E8F0">41.0082° N, 28.9784° E (TR)</tspan></text>
         </g>
         
         <!-- Indicator 2 -->
-        <g transform="translate(16, 64)">
+        <g transform="translate(16, 58)">
           <circle cx="4" cy="4" r="4" fill="#38BDF8"/>
-          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="11">FLAGSHIP: <tspan fill="#7DD3FC" font-weight="700">MARITIME WATCH</tspan> (~1.2W EDGE SENTINEL)</text>
+          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="10.5">FLAGSHIP: <tspan fill="#7DD3FC" font-weight="700">MARITIME WATCH</tspan> (~1.2W EDGE SENTINEL)</text>
         </g>
 
         <!-- Indicator 3 & Blinking Prompt -->
-        <g transform="translate(16, 86)">
+        <g transform="translate(16, 76)">
           <circle cx="4" cy="4" r="4" fill="#A78BFA"/>
-          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="11">STATUS: READY FOR PRODUCTION SOFTWARE &amp; LIVE SYSTEMS</text>
-          <rect class="cursor-blink" x="432" y="-3" width="9" height="14" rx="1.5" fill="#38BDF8"/>
+          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="10.5">STATUS: READY FOR PRODUCTION SOFTWARE &amp; LIVE SYSTEMS</text>
+          <rect class="cursor-blink" x="412" y="-3" width="8" height="13" rx="1.5" fill="#38BDF8"/>
         </g>
+      </g>
+
+      <!-- VHF CHANNEL 16 AUDIO & SIGNAL SPECTRUM ANALYZER -->
+      <g transform="translate(20, 264)">
+        <rect width="570" height="46" rx="6" fill="#020917" stroke="#0E7490" stroke-width="1"/>
+        <text x="14" y="27" fill="#38BDF8" class="font-mono" font-size="10" font-weight="700">156.800 MHz [VHF CH 16 SENTINEL]</text>
+        <circle cx="218" cy="23" r="3" fill="#34D399" class="pulse-dot"/>
+        <text x="226" y="27" fill="#34D399" class="font-mono" font-size="9" font-weight="700">ACTIVE</text>
+
+        <!-- 24 Staggered Equalizer Bars -->
+        <g transform="translate(286, 12)">
+          <rect class="eq-bar eq-1" x="0" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-2" x="7" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-3" x="14" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-4" x="21" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-5" x="28" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-6" x="35" width="4" rx="2" fill="#34D399"/>
+          <rect class="eq-bar eq-7" x="42" width="4" rx="2" fill="#34D399"/>
+          <rect class="eq-bar eq-8" x="49" width="4" rx="2" fill="#34D399"/>
+          <rect class="eq-bar eq-9" x="56" width="4" rx="2" fill="#34D399"/>
+          <rect class="eq-bar eq-10" x="63" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-11" x="70" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-12" x="77" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-3" x="84" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-5" x="91" width="4" rx="2" fill="#A78BFA"/>
+          <rect class="eq-bar eq-7" x="98" width="4" rx="2" fill="#A78BFA"/>
+          <rect class="eq-bar eq-1" x="105" width="4" rx="2" fill="#A78BFA"/>
+          <rect class="eq-bar eq-8" x="112" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-2" x="119" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-9" x="126" width="4" rx="2" fill="#34D399"/>
+          <rect class="eq-bar eq-4" x="133" width="4" rx="2" fill="#34D399"/>
+          <rect class="eq-bar eq-11" x="140" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-6" x="147" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-10" x="154" width="4" rx="2" fill="#38BDF8"/>
+          <rect class="eq-bar eq-12" x="161" width="4" rx="2" fill="#38BDF8"/>
+        </g>
+        
+        <text x="554" y="27" text-anchor="end" fill="#94A3B8" class="font-mono" font-size="9.5">AUDIO SPECTRUM // OK</text>
       </g>
     </g>
 

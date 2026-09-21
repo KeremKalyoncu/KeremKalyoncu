@@ -1,19 +1,19 @@
-<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="hud-bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+    <linearGradient id="hud-bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
       <stop stop-color="#020617"/>
-      <stop offset="0.5" stop-color="#09182E"/>
-      <stop offset="1" stop-color="#041224"/>
+      <stop offset="0.5" stop-color="#07192F"/>
+      <stop offset="1" stop-color="#031021"/>
     </linearGradient>
 
-    <linearGradient id="hud-card" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#050E1F" stop-opacity="0.95"/>
+    <linearGradient id="hud-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#061226" stop-opacity="0.95"/>
       <stop offset="1" stop-color="#020713" stop-opacity="0.98"/>
     </linearGradient>
 
-    <linearGradient id="bar-cyan" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#0284C7"/>
-      <stop offset="1" stop-color="#38BDF8"/>
+    <linearGradient id="spider-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38BDF8" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#0284C7" stop-opacity="0.15"/>
     </linearGradient>
 
     <pattern id="grid-dots" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -21,7 +21,7 @@
     </pattern>
 
     <clipPath id="hud-clip">
-      <rect width="1200" height="320" rx="18"/>
+      <rect width="1200" height="340" rx="18"/>
     </clipPath>
   </defs>
 
@@ -33,134 +33,151 @@
   </style>
 
   <g clip-path="url(#hud-clip)">
-    <!-- Canvas Base -->
-    <rect width="1200" height="320" fill="url(#hud-bg)"/>
-    <rect width="1200" height="320" fill="url(#grid-dots)"/>
+    <!-- Base Canvas -->
+    <rect width="1200" height="340" fill="url(#hud-bg)"/>
+    <rect width="1200" height="340" fill="url(#grid-dots)"/>
 
     <!-- Header Telemetry Strip -->
-    <g transform="translate(48, 26)">
-      <rect width="240" height="24" rx="4" fill="#0369A1" fill-opacity="0.25" stroke="#0284C7" stroke-width="1"/>
+    <g transform="translate(48, 24)">
+      <rect width="250" height="24" rx="4" fill="#0369A1" fill-opacity="0.25" stroke="#0284C7" stroke-width="1"/>
       <circle cx="12" cy="12" r="3.5" fill="#34D399" class="pulse-dot"/>
-      <text x="24" y="16" fill="#7DD3FC" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.5">TELEMETRY HUD // METRICS</text>
-      <text x="256" y="16" fill="#64748B" class="mono" font-size="11">● 100% RUNTIME UPTIME // ZERO EXTERNAL DEPENDENCY</text>
+      <text x="24" y="16" fill="#7DD3FC" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.5">LIVING TELEMETRY HUD</text>
+      
+      <!-- Live Marine Weather Badge -->
+      <g transform="translate(266, 0)">
+        <rect width="640" height="24" rx="4" fill="#041E38" stroke="#0E7490" stroke-width="1"/>
+        <text x="12" y="16" fill="#38BDF8" class="mono" font-size="10.5" font-weight="700">● LIVE BOSPORUS:</text>
+        <text x="136" y="16" fill="#E2E8F0" class="mono" font-size="10.5">WIND: 1.6 KT S (GUSTS 2.3 KT) · WAVE: 0.2M · 21.3°C · DEPARTURE: <tspan fill="#34D399" font-weight="800">GO (SAFE)</tspan></text>
+      </g>
+
+      <!-- Sync Time -->
+      <text x="1104" y="16" text-anchor="end" fill="#64748B" class="mono" font-size="10">SYNC: 2026-09-21 19:31 UTC</text>
     </g>
 
     <!-- 3-PANEL SYSTEM GRID -->
-    <g transform="translate(48, 64)">
+    <g transform="translate(48, 62)">
       
-      <!-- PANEL 1: GitHub Repos & Signal Metrics -->
+      <!-- PANEL 1: Multi-Axis Capability Radar (Spider Chart) -->
       <g transform="translate(0, 0)">
-        <rect width="345" height="226" rx="10" fill="url(#hud-card)" stroke="#0E7490" stroke-width="1.2"/>
-        <path d="M0 8C0 3.58172 3.58172 0 8 0H337C341.418 0 345 3.58172 345 8V28H0V8Z" fill="#071933"/>
-        <text x="14" y="18" fill="#38BDF8" class="mono" font-size="11" font-weight="700">01 // REPOSITORY &amp; ACTIVITY</text>
+        <rect width="350" height="246" rx="10" fill="url(#hud-panel)" stroke="#0E7490" stroke-width="1.2"/>
+        <path d="M0 8C0 3.58172 3.58172 0 8 0H342C346.418 0 350 3.58172 350 8V28H0V8Z" fill="#071933"/>
+        <text x="14" y="18" fill="#38BDF8" class="mono" font-size="11" font-weight="700">01 // CAPABILITY RADAR (SPIDER HUD)</text>
 
-        <!-- Metric Cards -->
-        <g transform="translate(16, 44)">
-          <!-- Repos -->
-          <g transform="translate(0, 0)">
-            <rect width="150" height="74" rx="6" fill="#020817" stroke="#164E63" stroke-width="1"/>
-            <text x="14" y="24" fill="#94A3B8" class="mono" font-size="10.5" font-weight="600">PUBLIC REPOS</text>
-            <text x="14" y="58" fill="#F8FAFC" class="sans" font-size="28" font-weight="900">15</text>
-            <circle cx="130" cy="22" r="4" fill="#38BDF8"/>
-          </g>
+        <!-- Spider Grid -->
+        <g transform="translate(8, 20)">
+          <!-- Concentric Pentagons -->
+          
+            <polygon points="166,98 181.2,109.1 175.4,126.9 156.6,126.9 150.8,109.1" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.35" fill="none"/>
+          
+            <polygon points="166,82 196.4,104.1 184.8,139.9 147.2,139.9 135.6,104.1" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.35" fill="none"/>
+          
+            <polygon points="166,66 211.7,99.2 194.2,152.8 137.8,152.8 120.3,99.2" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.35" fill="none"/>
+          
+            <polygon points="166,50 226.9,94.2 203.6,165.8 128.4,165.8 105.1,94.2" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.35" fill="none"/>
+          
 
-          <!-- Followers / Community -->
-          <g transform="translate(162, 0)">
-            <rect width="150" height="74" rx="6" fill="#020817" stroke="#164E63" stroke-width="1"/>
-            <text x="14" y="24" fill="#94A3B8" class="mono" font-size="10.5" font-weight="600">COMMUNITY</text>
-            <text x="14" y="54" fill="#34D399" class="mono" font-size="14" font-weight="800">GDG DOĞUŞ</text>
-            <text x="14" y="68" fill="#64748B" class="mono" font-size="9.5">CAMPUS CORE</text>
-          </g>
-        </g>
+          <!-- Spoke Axes -->
+          <line x1="166" y1="114" x2="166" y2="50" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.4"/><line x1="166" y1="114" x2="226.9" y2="94.2" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.4"/><line x1="166" y1="114" x2="203.6" y2="165.8" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.4"/><line x1="166" y1="114" x2="128.4" y2="165.8" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.4"/><line x1="166" y1="114" x2="105.1" y2="94.2" stroke="#0E7490" stroke-width="0.8" stroke-opacity="0.4"/>
 
-        <!-- Operational Status -->
-        <g transform="translate(16, 134)">
-          <rect width="312" height="74" rx="6" fill="#020B1A" stroke="#1E3A8A" stroke-width="1"/>
-          <text x="14" y="22" fill="#38BDF8" class="mono" font-size="10.5" font-weight="700">SYSTEM HEALTH &amp; CI PIPELINE</text>
-          <text x="14" y="44" fill="#E2E8F0" class="mono" font-size="11">● ACTIONS: <tspan fill="#34D399" font-weight="700">PASSING</tspan> (SNAKE + 3D)</text>
-          <text x="14" y="62" fill="#94A3B8" class="mono" font-size="10">FAIL-SAFE: LOCAL CACHE ENABLED</text>
+          <!-- Filled Capability Polygon -->
+          <polygon points="166,53.2 222,95.8 199.1,159.6 134,158 111.2,96.2" fill="url(#spider-fill)" stroke="#38BDF8" stroke-width="1.8"/>
+
+          <!-- Glowing Vertex Dots -->
+          <circle cx="166" cy="53.2" r="3" fill="#38BDF8"/><circle cx="222" cy="95.8" r="3" fill="#38BDF8"/><circle cx="199.1" cy="159.6" r="3" fill="#38BDF8"/><circle cx="134" cy="158" r="3" fill="#38BDF8"/><circle cx="111.2" cy="96.2" r="3" fill="#38BDF8"/>
+
+          <!-- Axis Labels -->
+          <text x="166" y="44" text-anchor="middle" fill="#7DD3FC" class="mono" font-size="8.5" font-weight="700">TELEMETRY 95%</text>
+          <text x="240" y="98" text-anchor="start" fill="#7DD3FC" class="mono" font-size="8.5" font-weight="700">GIS 92%</text>
+          <text x="204" y="192" text-anchor="start" fill="#7DD3FC" class="mono" font-size="8.5" font-weight="700">DATA 88%</text>
+          <text x="128" y="192" text-anchor="end" fill="#7DD3FC" class="mono" font-size="8.5" font-weight="700">EDGE 85%</text>
+          <text x="92" y="98" text-anchor="end" fill="#7DD3FC" class="mono" font-size="8.5" font-weight="700">AUTO 90%</text>
         </g>
       </g>
 
-      <!-- PANEL 2: Language Matrix -->
+      <!-- PANEL 2: Verified Codebase Languages -->
       <g transform="translate(378, 0)">
-        <rect width="345" height="226" rx="10" fill="url(#hud-card)" stroke="#1D4ED8" stroke-width="1.2"/>
-        <path d="M0 8C0 3.58172 3.58172 0 8 0H337C341.418 0 345 3.58172 345 8V28H0V8Z" fill="#0C234D"/>
+        <rect width="350" height="246" rx="10" fill="url(#hud-panel)" stroke="#1D4ED8" stroke-width="1.2"/>
+        <path d="M0 8C0 3.58172 3.58172 0 8 0H342C346.418 0 350 3.58172 350 8V28H0V8Z" fill="#0C234D"/>
         <text x="14" y="18" fill="#60A5FA" class="mono" font-size="11" font-weight="700">02 // CODEBASE LANGUAGE MATRIX</text>
 
         <!-- Dynamic Language Rows -->
-        <g transform="translate(16, 40)">
+        <g transform="translate(18, 44)">
           
           <g transform="translate(0, 0)">
             <text x="0" y="14" fill="#E2E8F0" class="mono" font-size="11.5" font-weight="600">Python</text>
-            <text x="312" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">36%</text>
-            <rect x="0" y="20" width="312" height="6" rx="3" fill="#0A162B"/>
-            <rect x="0" y="20" width="112" height="6" rx="3" fill="#38BDF8"/>
+            <text x="314" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">36%</text>
+            <rect x="0" y="20" width="314" height="6" rx="3" fill="#09162C"/>
+            <rect x="0" y="20" width="113" height="6" rx="3" fill="#38BDF8"/>
           </g>
-          <g transform="translate(0, 34)">
+          <g transform="translate(0, 38)">
             <text x="0" y="14" fill="#E2E8F0" class="mono" font-size="11.5" font-weight="600">JavaScript</text>
-            <text x="312" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">21%</text>
-            <rect x="0" y="20" width="312" height="6" rx="3" fill="#0A162B"/>
+            <text x="314" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">21%</text>
+            <rect x="0" y="20" width="314" height="6" rx="3" fill="#09162C"/>
             <rect x="0" y="20" width="66" height="6" rx="3" fill="#FCD34D"/>
           </g>
-          <g transform="translate(0, 68)">
+          <g transform="translate(0, 76)">
             <text x="0" y="14" fill="#E2E8F0" class="mono" font-size="11.5" font-weight="600">Java</text>
-            <text x="312" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">14%</text>
-            <rect x="0" y="20" width="312" height="6" rx="3" fill="#0A162B"/>
+            <text x="314" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">14%</text>
+            <rect x="0" y="20" width="314" height="6" rx="3" fill="#09162C"/>
             <rect x="0" y="20" width="44" height="6" rx="3" fill="#FB923C"/>
           </g>
-          <g transform="translate(0, 102)">
+          <g transform="translate(0, 114)">
             <text x="0" y="14" fill="#E2E8F0" class="mono" font-size="11.5" font-weight="600">C#</text>
-            <text x="312" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">7%</text>
-            <rect x="0" y="20" width="312" height="6" rx="3" fill="#0A162B"/>
+            <text x="314" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">7%</text>
+            <rect x="0" y="20" width="314" height="6" rx="3" fill="#09162C"/>
             <rect x="0" y="20" width="22" height="6" rx="3" fill="#A78BFA"/>
           </g>
-          <g transform="translate(0, 136)">
+          <g transform="translate(0, 152)">
             <text x="0" y="14" fill="#E2E8F0" class="mono" font-size="11.5" font-weight="600">HTML</text>
-            <text x="312" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">7%</text>
-            <rect x="0" y="20" width="312" height="6" rx="3" fill="#0A162B"/>
+            <text x="314" y="14" text-anchor="end" fill="#94A3B8" class="mono" font-size="11">7%</text>
+            <rect x="0" y="20" width="314" height="6" rx="3" fill="#09162C"/>
             <rect x="0" y="20" width="22" height="6" rx="3" fill="#F43F5E"/>
           </g>
         </g>
       </g>
 
-      <!-- PANEL 3: Engineering Capabilities & Architecture -->
+      <!-- PANEL 3: Node & Operational Health -->
       <g transform="translate(756, 0)">
-        <rect width="348" height="226" rx="10" fill="url(#hud-card)" stroke="#059669" stroke-width="1.2"/>
+        <rect width="348" height="246" rx="10" fill="url(#hud-panel)" stroke="#059669" stroke-width="1.2"/>
         <path d="M0 8C0 3.58172 3.58172 0 8 0H340C344.418 0 348 3.58172 348 8V28H0V8Z" fill="#052E23"/>
-        <text x="14" y="18" fill="#34D399" class="mono" font-size="11" font-weight="700">03 // ARCHITECTURAL CAPABILITY</text>
+        <text x="14" y="18" fill="#34D399" class="mono" font-size="11" font-weight="700">03 // OPERATIONAL EDGE TELEMETRY</text>
 
-        <!-- Feature Stack List -->
         <g transform="translate(16, 44)">
+          <!-- Node 1 -->
           <g transform="translate(0, 0)">
-            <rect width="316" height="34" rx="5" fill="#02140E" stroke="#047857" stroke-width="1"/>
-            <circle cx="16" cy="17" r="4" fill="#34D399"/>
-            <text x="30" y="21" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Real-Time Telemetry &amp; AIS CPA</text>
+            <rect width="316" height="42" rx="6" fill="#02140E" stroke="#047857" stroke-width="1"/>
+            <circle cx="16" cy="21" r="4" fill="#34D399"/>
+            <text x="28" y="18" fill="#E2E8F0" class="mono" font-size="10.5" font-weight="700">SAMSUNG NOTE 4 EDGE NODE</text>
+            <text x="28" y="32" fill="#6EE7B7" class="mono" font-size="9.5">POWER: ~1.2W · 24/7 TERMINAL SENTINEL</text>
           </g>
 
-          <g transform="translate(0, 42)">
-            <rect width="316" height="34" rx="5" fill="#02140E" stroke="#047857" stroke-width="1"/>
-            <circle cx="16" cy="17" r="4" fill="#38BDF8"/>
-            <text x="30" y="21" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Geospatial Mapping &amp; Leaflet</text>
+          <!-- Node 2 -->
+          <g transform="translate(0, 50)">
+            <rect width="316" height="42" rx="6" fill="#02140E" stroke="#047857" stroke-width="1"/>
+            <circle cx="16" cy="21" r="4" fill="#38BDF8"/>
+            <text x="28" y="18" fill="#E2E8F0" class="mono" font-size="10.5" font-weight="700">PUBLIC REPOSITORIES: 15</text>
+            <text x="28" y="32" fill="#7DD3FC" class="mono" font-size="9.5">COMMUNITY: GDG ON CAMPUS DOĞUŞ</text>
           </g>
 
-          <g transform="translate(0, 84)">
-            <rect width="316" height="34" rx="5" fill="#02140E" stroke="#047857" stroke-width="1"/>
-            <circle cx="16" cy="17" r="4" fill="#F59E0B"/>
-            <text x="30" y="21" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Low-Power Edge Nodes (~1.2W)</text>
+          <!-- Node 3 -->
+          <g transform="translate(0, 100)">
+            <rect width="316" height="42" rx="6" fill="#02140E" stroke="#047857" stroke-width="1"/>
+            <circle cx="16" cy="21" r="4" fill="#F59E0B"/>
+            <text x="28" y="18" fill="#E2E8F0" class="mono" font-size="10.5" font-weight="700">DETERMINISTIC EVAL MOTOR</text>
+            <text x="28" y="32" fill="#FCD34D" class="mono" font-size="9.5">200+ SCENARIOS · 0 LLM IN CRITICAL LOOP</text>
           </g>
 
-          <g transform="translate(0, 126)">
-            <rect width="316" height="34" rx="5" fill="#02140E" stroke="#047857" stroke-width="1"/>
-            <circle cx="16" cy="17" r="4" fill="#A78BFA"/>
-            <text x="30" y="21" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Deterministic Rule Engine (0 LLM)</text>
+          <!-- Node 4 -->
+          <g transform="translate(0, 150)">
+            <rect width="316" height="34" rx="6" fill="#030F1A" stroke="#0284C7" stroke-width="1"/>
+            <text x="158" y="21" text-anchor="middle" fill="#7DD3FC" class="mono" font-size="10" font-weight="700" letter-spacing="1.5">FAIL-SAFE // 100% LOCAL RUNTIME</text>
           </g>
         </g>
       </g>
 
     </g>
 
-    <!-- Outer Highlight Border -->
-    <rect x="1" y="1" width="1198" height="318" rx="17" stroke="#0284C7" stroke-opacity="0.4"/>
+    <!-- Outer Border -->
+    <rect x="1" y="1" width="1198" height="338" rx="17" stroke="#0284C7" stroke-opacity="0.4"/>
   </g>
 </svg>

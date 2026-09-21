@@ -6,24 +6,28 @@
       <stop offset="1" stop-color="#041224"/>
     </linearGradient>
 
-    <linearGradient id="cyan-accent" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="1" stop-color="#0284C7"/>
-    </linearGradient>
-
-    <linearGradient id="emerald-accent" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#34D399"/>
-      <stop offset="1" stop-color="#059669"/>
-    </linearGradient>
-
     <linearGradient id="card-inner" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#050E1F" stop-opacity="0.95"/>
       <stop offset="1" stop-color="#030814" stop-opacity="0.98"/>
     </linearGradient>
 
+    <filter id="glow-fx" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
     <pattern id="blueprint-grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0H0V40" stroke="#0284C7" stroke-width="0.75" stroke-opacity="0.12"/>
     </pattern>
+
+    <!-- Motion Paths for Live Packet Streams -->
+    <path id="stream-1" d="M330 97 L388 97" fill="none"/>
+    <path id="stream-2" d="M718 97 L776 97" fill="none"/>
+    <path id="stream-sub1" d="M14 64 L290 64" fill="none"/>
+    <path id="stream-sub2" d="M14 116 L290 116" fill="none"/>
 
     <clipPath id="bp-clip">
       <rect width="1200" height="360" rx="18"/>
@@ -33,6 +37,8 @@
   <style>
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .pulse-dot { animation: pulse 1.8s infinite; }
   </style>
 
   <g clip-path="url(#bp-clip)">
@@ -42,21 +48,19 @@
 
     <!-- Header Telemetry Strip -->
     <g transform="translate(48, 28)">
-      <rect width="280" height="24" rx="4" fill="#0369A1" fill-opacity="0.25" stroke="#0284C7" stroke-width="1"/>
-      <circle cx="12" cy="12" r="3.5" fill="#38BDF8">
-        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text x="24" y="16" fill="#7DD3FC" class="mono" font-size="10" font-weight="700" letter-spacing="1.5">TACTICAL MARITIME BLUEPRINT // AIS v2.4</text>
+      <rect width="320" height="24" rx="4" fill="#0369A1" fill-opacity="0.25" stroke="#0284C7" stroke-width="1"/>
+      <circle cx="12" cy="12" r="3.5" fill="#38BDF8" class="pulse-dot"/>
+      <text x="24" y="16" fill="#7DD3FC" class="mono" font-size="10" font-weight="700" letter-spacing="1.5">TACTICAL MARITIME BLUEPRINT // LIVE MESH</text>
       
       <text x="0" y="62" fill="#F8FAFC" class="sans" font-size="24" font-weight="800">Maritime Watch: End-to-End Signal Engine</text>
       <text x="0" y="84" fill="#94A3B8" class="sans" font-size="13">Deterministic Safety Calculus, Multi-Node Telemetry &amp; Real-Time Coastal Decision Loop</text>
     </g>
 
     <!-- Top Right Location Indicator -->
-    <g transform="translate(940, 32)">
-      <rect width="212" height="44" rx="6" fill="#020817" stroke="#1E3A8A" stroke-width="1"/>
+    <g transform="translate(920, 32)">
+      <rect width="232" height="44" rx="6" fill="#020817" stroke="#1E3A8A" stroke-width="1"/>
       <text x="14" y="20" fill="#38BDF8" class="mono" font-size="10" font-weight="700">TURKISH STRAITS &amp; MARMARA</text>
-      <text x="14" y="36" fill="#64748B" class="mono" font-size="10">SECTOR: 41°00'N · 28°58'E</text>
+      <text x="14" y="36" fill="#34D399" class="mono" font-size="10">LIVE TELEMETRY FLOW: ACTIVE</text>
     </g>
 
     <!-- 3-COLUMNS SYSTEM PIPELINE (Left: Ingest, Center: Edge Engine, Right: Action Layer) -->
@@ -91,10 +95,19 @@
         </g>
       </g>
 
-      <!-- Arrow Connector 1 -> 2 -->
-      <g transform="translate(342, 92)">
-        <line x1="0" y1="0" x2="32" y2="0" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 3"/>
-        <polygon points="32,-4 40,0 32,4" fill="#38BDF8"/>
+      <!-- Connection Wire 1 -> 2 with Animated Motion Packets -->
+      <g transform="translate(330, 97)">
+        <line x1="0" y1="0" x2="58" y2="0" stroke="#0E7490" stroke-width="2"/>
+        <line x1="0" y1="0" x2="58" y2="0" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3 3"/>
+        
+        <!-- Live Neon Packet 1A (Moving Forward) -->
+        <circle r="4.5" fill="#38BDF8" filter="url(#glow-fx)">
+          <animateMotion path="M0 0 L58 0" dur="1.6s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Live Neon Packet 1B (Staggered) -->
+        <circle r="3.5" fill="#A78BFA" filter="url(#glow-fx)">
+          <animateMotion path="M0 0 L58 0" dur="1.6s" begin="0.8s" repeatCount="indefinite"/>
+        </circle>
       </g>
 
       <!-- COLUMN 2: Edge Node & Deterministic Engine -->
@@ -120,10 +133,19 @@
         </g>
       </g>
 
-      <!-- Arrow Connector 2 -> 3 -->
-      <g transform="translate(730, 92)">
-        <line x1="0" y1="0" x2="32" y2="0" stroke="#34D399" stroke-width="2" stroke-dasharray="4 3"/>
-        <polygon points="32,-4 40,0 32,4" fill="#34D399"/>
+      <!-- Connection Wire 2 -> 3 with Animated Motion Packets -->
+      <g transform="translate(718, 97)">
+        <line x1="0" y1="0" x2="58" y2="0" stroke="#047857" stroke-width="2"/>
+        <line x1="0" y1="0" x2="58" y2="0" stroke="#34D399" stroke-width="1" stroke-dasharray="3 3"/>
+        
+        <!-- Live Neon Packet 2A (Emerald Moving Forward) -->
+        <circle r="4.5" fill="#34D399" filter="url(#glow-fx)">
+          <animateMotion path="M0 0 L58 0" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Live Neon Packet 2B (Staggered Cyan) -->
+        <circle r="3.5" fill="#38BDF8" filter="url(#glow-fx)">
+          <animateMotion path="M0 0 L58 0" dur="1.5s" begin="0.75s" repeatCount="indefinite"/>
+        </circle>
       </g>
 
       <!-- COLUMN 3: Operator Action & Safety Output -->
