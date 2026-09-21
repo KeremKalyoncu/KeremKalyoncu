@@ -1,147 +1,222 @@
-<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+    <!-- Background Gradients -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
       <stop stop-color="#020617"/>
-      <stop offset="0.45" stop-color="#0B132B"/>
-      <stop offset="1" stop-color="#082F49"/>
+      <stop offset="0.35" stop-color="#07152B"/>
+      <stop offset="0.75" stop-color="#0A223F"/>
+      <stop offset="1" stop-color="#061F38"/>
     </linearGradient>
 
-    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="card-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#050C1A" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0.96"/>
+    </linearGradient>
+
+    <linearGradient id="cyan-glow" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#38BDF8"/>
-      <stop offset="1" stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#0284C7"/>
     </linearGradient>
 
-    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#34D399"/>
-      <stop offset="1" stop-color="#059669"/>
-    </linearGradient>
-
-    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="violet-glow" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#A78BFA"/>
       <stop offset="1" stop-color="#38BDF8"/>
     </linearGradient>
 
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(940 120) rotate(127) scale(380 430)">
-      <stop stop-color="#0284C7" stop-opacity="0.5"/>
+    <linearGradient id="radar-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38BDF8" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#0284C7" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="ambience" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 180) scale(400 350)">
+      <stop stop-color="#0284C7" stop-opacity="0.45"/>
       <stop offset="1" stop-color="#020617" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="left-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 180) scale(300)">
-      <stop stop-color="#0E7490" stop-opacity="0.25"/>
+    <radialGradient id="left-ambience" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 210) scale(380 320)">
+      <stop stop-color="#0D9488" stop-opacity="0.2"/>
       <stop offset="1" stop-color="#020617" stop-opacity="0"/>
     </radialGradient>
 
-    <clipPath id="clip">
-      <rect width="1200" height="360" rx="22"/>
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#38BDF8" stroke-width="0.7" stroke-opacity="0.04"/>
+    </pattern>
+
+    <clipPath id="frame-clip">
+      <rect width="1200" height="420" rx="22"/>
     </clipPath>
   </defs>
 
-  <g clip-path="url(#clip)">
-    <!-- Deep Canvas Background -->
-    <rect width="1200" height="360" rx="22" fill="url(#bg)"/>
-    <rect width="1200" height="360" fill="url(#glow)"/>
-    <rect width="1200" height="360" fill="url(#left-glow)"/>
+  <style>
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+    
+    @keyframes scan-move {
+      0% { transform: translateY(-420px); }
+      100% { transform: translateY(420px); }
+    }
+    .scan-beam {
+      animation: scan-move 7s linear infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% { r: 3px; opacity: 1; }
+      50% { r: 7.5px; opacity: 0.3; }
+      100% { r: 3px; opacity: 1; }
+    }
+    .blip-pulse {
+      animation: pulse-ring 2.2s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.15; }
+    }
+    .cursor-blink {
+      animation: blink 1.1s steps(2, start) infinite;
+    }
+  </style>
+
+  <g clip-path="url(#frame-clip)">
+    <!-- Base Canvas -->
+    <rect width="1200" height="420" fill="url(#bg)"/>
+    <rect width="1200" height="420" fill="url(#ambience)"/>
+    <rect width="1200" height="420" fill="url(#left-ambience)"/>
+    <rect width="1200" height="420" fill="url(#scanlines)"/>
 
     <!-- Subtle Cyber Grid -->
-    <g opacity="0.1" stroke="#38BDF8" stroke-width="1">
-      <path d="M0 45H1200M0 90H1200M0 135H1200M0 180H1200M0 225H1200M0 270H1200M0 315H1200"/>
-      <path d="M45 0V360M90 0V360M135 0V360M180 0V360M225 0V360M270 0V360M315 0V360M360 0V360M405 0V360M450 0V360M495 0V360M540 0V360M585 0V360M630 0V360M675 0V360M720 0V360M765 0V360M810 0V360M855 0V360M900 0V360M945 0V360M990 0V360M1035 0V360M1080 0V360M1125 0V360M1170 0V360"/>
+    <g opacity="0.08" stroke="#38BDF8" stroke-width="1">
+      <path d="M0 42H1200M0 84H1200M0 126H1200M0 168H1200M0 210H1200M0 252H1200M0 294H1200M0 336H1200M0 378H1200"/>
+      <path d="M42 0V420M84 0V420M126 0V420M168 0V420M210 0V420M252 0V420M294 0V420M336 0V420M378 0V420M420 0V420M462 0V420M504 0V420M546 0V420M588 0V420M630 0V420M672 0V420M714 0V420M756 0V420M798 0V420M840 0V420M882 0V420M924 0V420M966 0V420M1008 0V420M1050 0V420M1092 0V420M1134 0V420M1176 0V420"/>
     </g>
 
-    <!-- Star / Coordinate Blips -->
-    <g opacity="0.3" fill="#38BDF8">
-      <circle cx="95" cy="48" r="1.5"/><circle cx="160" cy="310" r="1.5"/><circle cx="340" cy="62" r="1.5"/>
-      <circle cx="510" cy="38" r="1.5"/><circle cx="610" cy="318" r="1.5"/><circle cx="730" cy="72" r="1.5"/>
-      <circle cx="1110" cy="290" r="1.5"/><circle cx="1160" cy="68" r="1.5"/>
-    </g>
+    <!-- Animated Scanline Sweep -->
+    <rect class="scan-beam" x="0" y="0" width="1200" height="90" fill="url(#cyan-glow)" opacity="0.04"/>
 
-    <!-- LEFT SIDE: Command Center Terminal Window -->
-    <g transform="translate(68, 52)">
-      <!-- Window Frame -->
-      <rect x="0" y="0" width="560" height="256" rx="16" fill="#020617" fill-opacity="0.75" stroke="#164E63" stroke-width="1.2"/>
+    <!-- LEFT PANEL: Command Center Terminal Window -->
+    <g transform="translate(54, 42)">
+      <!-- Frame Box -->
+      <rect width="610" height="310" rx="14" fill="url(#card-panel)" stroke="#0E7490" stroke-width="1.2"/>
       
-      <!-- Window Title Bar -->
-      <circle cx="26" cy="26" r="5" fill="#EF4444"/>
-      <circle cx="44" cy="26" r="5" fill="#F59E0B"/>
-      <circle cx="62" cy="26" r="5" fill="#10B981"/>
-      <text x="86" y="30" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600" letter-spacing="1.5">KEREM // COMMAND_CENTER_TERMINAL</text>
-      <line x1="20" y1="48" x2="540" y2="48" stroke="#1E293B" stroke-width="1"/>
+      <!-- Window Top Header Bar -->
+      <path d="M0 14C0 6.26801 6.26801 0 14 0H596C603.732 0 610 6.26801 610 14V38H0V14Z" fill="#071326"/>
+      <circle cx="22" cy="19" r="5" fill="#EF4444"/>
+      <circle cx="40" cy="19" r="5" fill="#F59E0B"/>
+      <circle cx="58" cy="19" r="5" fill="#10B981"/>
+      <text x="82" y="24" fill="#94A3B8" class="font-mono" font-size="12" font-weight="700" letter-spacing="1.4">KEREM // COMMAND_STATION_TERMINAL_v3.0</text>
+      <line x1="0" y1="38" x2="610" y2="38" stroke="#1E293B" stroke-width="1"/>
 
-      <!-- Terminal Content -->
-      <text x="24" y="82" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">$ whoami</text>
-      <text x="24" y="114" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.5">Kerem Kalyoncu</text>
+      <!-- Terminal Body Content -->
+      <text x="24" y="68" fill="#38BDF8" class="font-mono" font-size="13" font-weight="600">$ whoami</text>
+      <text x="24" y="104" fill="#F8FAFC" class="font-sans" font-size="30" font-weight="900" letter-spacing="-0.5">Kerem Kalyoncu</text>
       
-      <!-- Subtitle & Role Badges -->
-      <text x="24" y="142" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">Software Engineer &amp; Systems Builder</text>
-      <text x="24" y="162" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">Focus: Real-Time Telemetry × Geospatial × Practical Automation</text>
+      <!-- Subtitle -->
+      <text x="24" y="132" fill="#38BDF8" class="font-mono" font-size="13" font-weight="700">SOFTWARE ENGINEER &amp; SYSTEMS BUILDER</text>
+      <text x="24" y="152" fill="#94A3B8" class="font-mono" font-size="12">Real-Time Telemetry · Geospatial Computing · Practical Automation</text>
 
-      <!-- Status prompt -->
-      <g transform="translate(0, 182)">
-        <rect x="20" y="0" width="520" height="56" rx="8" fill="#0B1329" fill-opacity="0.8" stroke="#1E3A8A" stroke-width="1"/>
-        <text x="36" y="24" fill="#38BDF8" font-family="ui-monospace, monospace" font-size="12" font-weight="600">$ sys.status --operational</text>
-        <circle cx="40" cy="42" r="4" fill="#34D399">
-          <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
-        </circle>
-        <text x="52" y="46" fill="#34D399" font-family="ui-monospace, monospace" font-size="12" font-weight="600">ONLINE</text>
-        <text x="110" y="46" fill="#CBD5E1" font-family="ui-monospace, monospace" font-size="12">| Ready for high-impact software &amp; live systems</text>
+      <!-- System Diagnostic Panel -->
+      <g transform="translate(20, 172)">
+        <rect width="570" height="114" rx="8" fill="#030A17" stroke="#1E3A8A" stroke-width="1"/>
+        
+        <text x="16" y="24" fill="#38BDF8" class="font-mono" font-size="12" font-weight="700">$ sys.diagnostics --all</text>
+        
+        <!-- Indicator 1 -->
+        <g transform="translate(16, 42)">
+          <circle cx="4" cy="4" r="4" fill="#34D399"/>
+          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="11">ENGINE: <tspan fill="#34D399" font-weight="700">ONLINE</tspan> | LAT/LON: <tspan fill="#E2E8F0">41.0082° N, 28.9784° E (TR)</tspan></text>
+        </g>
+        
+        <!-- Indicator 2 -->
+        <g transform="translate(16, 64)">
+          <circle cx="4" cy="4" r="4" fill="#38BDF8"/>
+          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="11">FLAGSHIP: <tspan fill="#7DD3FC" font-weight="700">MARITIME WATCH</tspan> (~1.2W EDGE SENTINEL)</text>
+        </g>
+
+        <!-- Indicator 3 & Blinking Prompt -->
+        <g transform="translate(16, 86)">
+          <circle cx="4" cy="4" r="4" fill="#A78BFA"/>
+          <text x="16" y="8" fill="#CBD5E1" class="font-mono" font-size="11">STATUS: READY FOR PRODUCTION SOFTWARE &amp; LIVE SYSTEMS</text>
+          <rect class="cursor-blink" x="432" y="-3" width="9" height="14" rx="1.5" fill="#38BDF8"/>
+        </g>
       </g>
     </g>
 
-    <!-- RIGHT SIDE: Telemetry & Radar Array -->
-    <g transform="translate(850, 60)">
-      <!-- System Specs Pill (Top) -->
-      <g transform="translate(0, 0)">
-        <rect width="280" height="30" rx="15" fill="#0F172A" fill-opacity="0.8" stroke="#0E7490" stroke-width="1"/>
-        <circle cx="18" cy="15" r="4.5" fill="#34D399">
-          <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
+    <!-- RIGHT PANEL: Holographic Multi-Axis Radar Array -->
+    <g transform="translate(930, 195)">
+      <!-- System Geo-Coordinates Header Pill -->
+      <g transform="translate(-140, -155)">
+        <rect width="280" height="28" rx="14" fill="#07152B" stroke="#0E7490" stroke-width="1"/>
+        <circle cx="16" cy="14" r="4" fill="#34D399">
+          <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
         </circle>
-        <text x="32" y="20" fill="#E0F2FE" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="1">GEO-LOCATION: ISTANBUL, TR</text>
+        <text x="28" y="18" fill="#BAE6FD" class="font-mono" font-size="10.5" font-weight="700" letter-spacing="1">LOCATION: ISTANBUL // TR-34</text>
       </g>
 
-      <!-- Radar Scope -->
-      <g transform="translate(140, 150)">
-        <!-- Concentric Distance Rings -->
-        <circle r="95" stroke="#0E7490" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
-        <circle r="68" stroke="#0E7490" stroke-width="1.2" stroke-opacity="0.55" fill="none"/>
-        <circle r="40" stroke="#0E7490" stroke-width="1" stroke-opacity="0.7" fill="none"/>
-        <circle r="14" stroke="#38BDF8" stroke-width="1.5" fill="#0C4A6E" fill-opacity="0.5"/>
+      <!-- Outer Degree Scale & Radar Rings -->
+      <circle r="128" stroke="#0E7490" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="4 6" fill="none"/>
+      <circle r="96" stroke="#0E7490" stroke-width="1.2" stroke-opacity="0.5" fill="none"/>
+      <circle r="64" stroke="#0E7490" stroke-width="1" stroke-opacity="0.65" fill="none"/>
+      <circle r="32" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.8" fill="#0C4A6E" fill-opacity="0.4"/>
 
-        <!-- Axes -->
-        <path d="M-105 0H105M0 -105V105" stroke="#0E7490" stroke-width="1" stroke-opacity="0.45"/>
+      <!-- Degree Markings -->
+      <text x="0" y="-136" text-anchor="middle" fill="#7DD3FC" class="font-mono" font-size="9" font-weight="700">000°</text>
+      <text x="144" y="3" text-anchor="start" fill="#7DD3FC" class="font-mono" font-size="9" font-weight="700">090°</text>
+      <text x="0" y="145" text-anchor="middle" fill="#7DD3FC" class="font-mono" font-size="9" font-weight="700">180°</text>
+      <text x="-144" y="3" text-anchor="end" fill="#7DD3FC" class="font-mono" font-size="9" font-weight="700">270°</text>
 
-        <!-- Rotating Radar Sweep Beam -->
-        <path d="M0 0 L82 -48 A95 95 0 0 0 48 -82 Z" fill="url(#cyan)" fill-opacity="0.2">
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4.2s" repeatCount="indefinite"/>
-        </path>
-        <line x1="0" y1="0" x2="82" y2="-48" stroke="#38BDF8" stroke-width="2">
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4.2s" repeatCount="indefinite"/>
-        </line>
+      <!-- Axes -->
+      <line x1="-128" y1="0" x2="128" y2="0" stroke="#0E7490" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="0" y1="-128" x2="0" y2="128" stroke="#0E7490" stroke-width="1" stroke-opacity="0.4"/>
 
-        <!-- Dynamic Signal Targets -->
-        <circle cx="48" cy="-32" r="3.5" fill="#38BDF8">
-          <animate attributeName="r" values="3;6;3" dur="2.1s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="-38" cy="46" r="3.5" fill="#A78BFA">
-          <animate attributeName="r" values="3;6;3" dur="2.7s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="1;0.2;1" dur="2.7s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="30" cy="52" r="3" fill="#34D399"/>
-
-        <!-- Radar Core -->
-        <circle r="3" fill="#F8FAFC"/>
+      <!-- Rotating Sweep Beam -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4.2s" repeatCount="indefinite"/>
+        <path d="M0 0 L110 -64 A128 128 0 0 0 64 -110 Z" fill="url(#radar-sweep)"/>
+        <line x1="0" y1="0" x2="110" y2="-64" stroke="#38BDF8" stroke-width="2"/>
       </g>
 
-      <!-- Bottom Signal Status Pill -->
-      <g transform="translate(30, 260)">
-        <rect width="220" height="26" rx="6" fill="#020617" fill-opacity="0.85" stroke="#164E63" stroke-width="1"/>
-        <text x="110" y="17" text-anchor="middle" fill="#7DD3FC" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="2">SIGNAL // ALL_SYSTEMS_GO</text>
+      <!-- Reverse Orbiting Ring (Counter-Clockwise) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"/>
+        <circle cx="96" cy="0" r="3" fill="#A78BFA"/>
+        <circle cx="-96" cy="0" r="3" fill="#38BDF8"/>
+      </g>
+
+      <!-- Dynamic AIS Target Blips -->
+      <g transform="translate(56, -42)">
+        <circle class="blip-pulse" r="4" fill="#38BDF8"/>
+        <line x1="0" y1="0" x2="16" y2="-12" stroke="#38BDF8" stroke-width="1"/>
+        <text x="20" y="-12" fill="#BAE6FD" class="font-mono" font-size="9.5" font-weight="700">MMSI 271044</text>
+      </g>
+
+      <g transform="translate(-48, 54)">
+        <circle r="3.5" fill="#34D399"/>
+        <line x1="0" y1="0" x2="-14" y2="12" stroke="#34D399" stroke-width="1"/>
+        <text x="-70" y="24" fill="#A7F3D0" class="font-mono" font-size="9.5">CPA: 1.8 NM</text>
+      </g>
+
+      <g transform="translate(32, 68)">
+        <circle r="3.5" fill="#F59E0B">
+          <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="40" y="72" fill="#FDE68A" class="font-mono" font-size="9">WIND 24KT</text>
+      </g>
+
+      <!-- Core Center -->
+      <circle r="4" fill="#FFFFFF"/>
+
+      <!-- Radar Bottom Label -->
+      <g transform="translate(-105, 155)">
+        <rect width="210" height="24" rx="6" fill="#030B1A" stroke="#164E63" stroke-width="1"/>
+        <text x="105" y="16" text-anchor="middle" fill="#7DD3FC" class="font-mono" font-size="10" font-weight="700" letter-spacing="1.5">TELEMETRY: BROADCASTING</text>
       </g>
     </g>
 
-    <!-- Bottom Accent Horizon Curve -->
-    <path d="M0 338C260 322 380 354 590 336C800 318 970 352 1200 326" stroke="url(#violet)" stroke-width="2.5" opacity="0.8"/>
-    <!-- Outer Bezel Border -->
-    <rect x="1" y="1" width="1198" height="358" rx="21" stroke="#0E7490" stroke-opacity="0.6"/>
+    <!-- Bottom Aesthetic Curve Line -->
+    <path d="M0 398C280 380 420 412 640 394C860 376 1020 410 1200 388" stroke="url(#violet-glow)" stroke-width="2.5" opacity="0.8"/>
+    
+    <!-- Outer Frame Border -->
+    <rect x="1" y="1" width="1198" height="418" rx="21" stroke="#0E7490" stroke-opacity="0.5"/>
   </g>
 </svg>

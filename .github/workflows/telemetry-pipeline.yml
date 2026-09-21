@@ -1,0 +1,61 @@
+name: Generate Developer Telemetry HUD
+
+on:
+  schedule:
+    - cron: "0 19 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/telemetry-pipeline.yml"
+
+concurrency:
+  group: profile-visuals
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  telemetry:
+    runs-on: ubuntu-latest
+    name: generate-telemetry-hud
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate Telemetry SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/generate-telemetry.mjs
+
+      - name: Commit and push generated telemetry
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add assets/developer-telemetry.svg
+          if git diff --cached --quiet; then
+            echo "No telemetry changes."
+            exit 0
+          fi
+
+          git commit -m "chore: update developer telemetry HUD"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push conflicted; retrying in ${attempt}0 seconds..."
+            sleep $((attempt * 10))
+          done
+
+          echo "Could not push telemetry HUD."
+          exit 1

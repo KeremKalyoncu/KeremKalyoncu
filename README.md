@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/kerem-command-center.svg" alt="Kerem Kalyoncu command center profile banner" width="100%" />
+<img src="./assets/kerem-command-center.svg" alt="Kerem Kalyoncu Command Station HUD" width="100%" />
 
 <br />
 
@@ -23,17 +23,18 @@
 <br />
 
 <!--
-  Navigation
+  Navigation Bar
 -->
 
 <div align="center">
 
-<a href="#about">[ about ]</a> ·
-<a href="#flagship">[ flagship build ]</a> ·
-<a href="#projects">[ projects ]</a> ·
-<a href="#telemetry">[ telemetry &amp; stats ]</a> ·
-<a href="#stack">[ stack ]</a> ·
-<a href="#contact">[ contact ]</a>
+<a href="#about">[ 01_about ]</a> ·
+<a href="#flagship">[ 02_flagship ]</a> ·
+<a href="#telemetry">[ 03_telemetry ]</a> ·
+<a href="#projects">[ 04_projects ]</a> ·
+<a href="#contributions">[ 05_contributions ]</a> ·
+<a href="#stack">[ 06_stack ]</a> ·
+<a href="#contact">[ 07_contact ]</a>
 
 </div>
 
@@ -45,25 +46,25 @@
 
 I’m **Kerem Kalyoncu**, a Software Engineer based in **İstanbul, Türkiye**.
 
-I engineer software where **digital systems intersect with the physical world**: real-time operational streams, geospatial mapping, automated workflows, and high-clarity interfaces that turn complex telemetry into reliable decisions.
+I engineer software where **digital systems intersect with the physical world**: live telemetry streams, geospatial mapping, automated workflows, and high-clarity interfaces that convert complex operational signals into reliable human decisions.
 
-I care about deterministic reliability over fragile hype. Every system should solve a tangible problem across its entire lifecycle:
+I prioritize deterministic reliability over fragile tech trends. Every system must solve a tangible problem across its full operational loop:
 
 ```text
 operational problem
         ↓
-accurate telemetry & signal
+accurate telemetry & raw sensor data
         ↓
-deterministic logic & engine
+deterministic logic & safety engine
         ↓
-clear, intuitive interface
+clear, resilient interface
         ↓
 measurable, real-world outcome
 ```
 
 <div align="center">
 
-| `CURRENT STATUS` | `COMMUNITY` | `ENGINEERING FOCUS` | `LOCATION` |
+| `SYSTEM STATUS` | `COMMUNITY LEADERSHIP` | `ENGINEERING FOCUS` | `PRIMARY SECTOR` |
 | :---: | :---: | :---: | :---: |
 | `BUILDING & SHIPPING` | `GDG ON CAMPUS DOĞUŞ` | `REAL-TIME × GIS × AUTOMATION` | `ISTANBUL, TR` |
 
@@ -91,7 +92,7 @@ measurable, real-world outcome
 <div align="center">
 
 <a href="https://github.com/KeremKalyoncu/maritime-watch">
-  <img src="./assets/maritime-watch-banner.svg" alt="Maritime Watch Türkiye - Real-Time Marine Safety Platform" width="100%" />
+  <img src="./assets/maritime-watch-blueprint.svg" alt="Maritime Watch Türkiye - Tactical System Blueprint" width="100%" />
 </a>
 
 <br /><br />
@@ -113,11 +114,11 @@ measurable, real-world outcome
 
 ### The Problem It Solves
 
-Standard marine weather reports state raw numbers: *24 knots of wind, 1.8 metres wave height*. To a maritime operator or small craft captain, raw numbers do not answer the real question:
+Standard marine weather reports output raw numbers: *24 knots of wind, 1.8 metres of wave height*. To a maritime operator or small craft captain, raw numbers do not answer the operational question:
 
 > **"Can my vessel safely depart right now, and by what exact time must I return?"**
 
-**Maritime Watch Türkiye** translates multi-source weather forecasts, live AIS feeds, and navigational warnings into vessel-specific **Go / Caution / No-Go departure and safe return windows** across Turkish waters and the Turkish Straits.
+**Maritime Watch Türkiye** translates multi-source weather forecasts, live AIS telemetry, and official navigational warnings into vessel-specific **Go / Caution / No-Go departure and safe return windows** across Turkish waters and the Turkish Straits.
 
 ### Architectural Highlights
 
@@ -126,7 +127,7 @@ Standard marine weather reports state raw numbers: *24 knots of wind, 1.8 metres
 <td width="50%" valign="top">
 
 #### 🛟 Decision Support Engine
-- Vessel-class safety windows (open boat, small yacht, commercial craft)
+- Vessel-class safety windows (open fishing boat, yacht, commercial craft)
 - Dynamic wind gust & wave threshold calculations
 - 06:00 daily operational maritime briefings
 - Deterministic go / caution / no-go states
@@ -164,39 +165,23 @@ Standard marine weather reports state raw numbers: *24 knots of wind, 1.8 metres
 </tr>
 </table>
 
-### Signal & Data Ingestion Pipeline
+<br />
 
-```mermaid
-flowchart LR
-    A[AIS Ingestion] --> D[Core Pipeline]
-    B[Marine Weather & Wave APIs] --> D
-    C[Navigational Bulletins] --> D
-    D --> E[Deterministic Rule Engine]
-    E --> F[CPA Risk & Anomaly Detector]
-    E --> G[Go / No-Go Departure Window]
-    F --> H[Live Leaflet Map & RSS Feed]
-    G --> H
-    F --> I[24/7 Telegram Sentinel]
-    G --> I
-    H --> J[Safe Maritime Decision]
-    I --> J
-    style A fill:#082F49,stroke:#22D3EE,color:#E0F2FE
-    style B fill:#082F49,stroke:#22D3EE,color:#E0F2FE
-    style C fill:#082F49,stroke:#22D3EE,color:#E0F2FE
-    style D fill:#164E63,stroke:#67E8F9,color:#F8FAFC
-    style E fill:#164E63,stroke:#67E8F9,color:#F8FAFC
-    style F fill:#0F172A,stroke:#A78BFA,color:#F8FAFC
-    style G fill:#0F172A,stroke:#A78BFA,color:#F8FAFC
-    style H fill:#0F172A,stroke:#22D3EE,color:#F8FAFC
-    style I fill:#0F172A,stroke:#22D3EE,color:#F8FAFC
-    style J fill:#064E3B,stroke:#34D399,color:#ECFDF5
-```
+<a id="telemetry"></a>
+
+## `03` / Real-time developer telemetry & system metrics
+
+<div align="center">
+
+<img src="./assets/developer-telemetry.svg" alt="Developer Telemetry and Metrics HUD" width="100%" />
+
+</div>
 
 <br />
 
 <a id="projects"></a>
 
-## `03` / Selected work & repositories
+## `04` / Selected work & production repositories
 
 <table>
 <tr>
@@ -265,13 +250,13 @@ Interactive frontend showcase focusing on responsive layouts, CSS animations, an
 
 <br />
 
-<a id="telemetry"></a>
+<a id="contributions"></a>
 
-## `04` / Contribution art & GitHub telemetry
+## `05` / Live contribution theater
 
-### 🐍 Contribution Stream
+### 🐍 Autonomous Contribution Stream
 
-The contribution snake navigates and harvests commits automatically via GitHub Actions:
+Harvests repository activity automatically via GitHub Actions:
 
 <div align="center">
 
@@ -286,7 +271,7 @@ The contribution snake navigates and harvests commits automatically via GitHub A
 
 ### 🌌 3D Isometric Contribution Landscape
 
-Generated daily using GitHub Actions to visualize commitment volume, frequency, and density:
+Visualizing commitment volume, frequency, and density over time:
 
 <div align="center">
 
@@ -302,7 +287,7 @@ Generated daily using GitHub Actions to visualize commitment volume, frequency, 
 
 <a id="stack"></a>
 
-## `05` / Technology constellation
+## `06` / Technology constellation
 
 <div align="center">
 
@@ -321,7 +306,7 @@ Generated daily using GitHub Actions to visualize commitment volume, frequency, 
 
 <br />
 
-## `06` / Engineering principles
+## `07` / Engineering principles
 
 <div align="center">
 
@@ -341,7 +326,7 @@ Generated daily using GitHub Actions to visualize commitment volume, frequency, 
 
 <a id="contact"></a>
 
-## `07` / Connect & open channel
+## `08` / Connect & open channel
 
 Are you building systems with **real-time telemetry, maps, automation, or data-driven software**?
 

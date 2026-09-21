@@ -1,0 +1,161 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bp-bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020713"/>
+      <stop offset="0.5" stop-color="#07192F"/>
+      <stop offset="1" stop-color="#041224"/>
+    </linearGradient>
+
+    <linearGradient id="cyan-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <linearGradient id="emerald-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+
+    <linearGradient id="card-inner" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#050E1F" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#030814" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <pattern id="blueprint-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#0284C7" stroke-width="0.75" stroke-opacity="0.12"/>
+    </pattern>
+
+    <clipPath id="bp-clip">
+      <rect width="1200" height="360" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <g clip-path="url(#bp-clip)">
+    <!-- Deep Sea Background -->
+    <rect width="1200" height="360" fill="url(#bp-bg)"/>
+    <rect width="1200" height="360" fill="url(#blueprint-grid)"/>
+
+    <!-- Header Telemetry Strip -->
+    <g transform="translate(48, 28)">
+      <rect width="280" height="24" rx="4" fill="#0369A1" fill-opacity="0.25" stroke="#0284C7" stroke-width="1"/>
+      <circle cx="12" cy="12" r="3.5" fill="#38BDF8">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="24" y="16" fill="#7DD3FC" class="mono" font-size="10" font-weight="700" letter-spacing="1.5">TACTICAL MARITIME BLUEPRINT // AIS v2.4</text>
+      
+      <text x="0" y="62" fill="#F8FAFC" class="sans" font-size="24" font-weight="800">Maritime Watch: End-to-End Signal Engine</text>
+      <text x="0" y="84" fill="#94A3B8" class="sans" font-size="13">Deterministic Safety Calculus, Multi-Node Telemetry &amp; Real-Time Coastal Decision Loop</text>
+    </g>
+
+    <!-- Top Right Location Indicator -->
+    <g transform="translate(940, 32)">
+      <rect width="212" height="44" rx="6" fill="#020817" stroke="#1E3A8A" stroke-width="1"/>
+      <text x="14" y="20" fill="#38BDF8" class="mono" font-size="10" font-weight="700">TURKISH STRAITS &amp; MARMARA</text>
+      <text x="14" y="36" fill="#64748B" class="mono" font-size="10">SECTOR: 41°00'N · 28°58'E</text>
+    </g>
+
+    <!-- 3-COLUMNS SYSTEM PIPELINE (Left: Ingest, Center: Edge Engine, Right: Action Layer) -->
+    <g transform="translate(48, 126)">
+      
+      <!-- COLUMN 1: Ingestion & Sensing -->
+      <g transform="translate(0, 0)">
+        <rect width="330" height="194" rx="10" fill="url(#card-inner)" stroke="#0E7490" stroke-width="1"/>
+        <path d="M0 8C0 3.58172 3.58172 0 8 0H322C326.418 0 330 3.58172 330 8V28H0V8Z" fill="#071933"/>
+        <text x="14" y="18" fill="#38BDF8" class="mono" font-size="11" font-weight="700">01 // INGESTION &amp; TELEMETRY</text>
+
+        <!-- Pipeline Items -->
+        <g transform="translate(14, 46)">
+          <rect width="302" height="36" rx="6" fill="#030C1C" stroke="#164E63" stroke-width="1"/>
+          <circle cx="16" cy="18" r="4" fill="#38BDF8"/>
+          <text x="30" y="17" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Raw AIS Vessel Stream</text>
+          <text x="30" y="29" fill="#64748B" class="mono" font-size="9">Class A/B Transponders · Speed · Heading</text>
+        </g>
+
+        <g transform="translate(14, 90)">
+          <rect width="302" height="36" rx="6" fill="#030C1C" stroke="#164E63" stroke-width="1"/>
+          <circle cx="16" cy="18" r="4" fill="#38BDF8"/>
+          <text x="30" y="17" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Weather &amp; Wave Conditions</text>
+          <text x="30" y="29" fill="#64748B" class="mono" font-size="9">Hourly Gusts · Significant Wave Height</text>
+        </g>
+
+        <g transform="translate(14, 134)">
+          <rect width="302" height="36" rx="6" fill="#030C1C" stroke="#164E63" stroke-width="1"/>
+          <circle cx="16" cy="18" r="4" fill="#A78BFA"/>
+          <text x="30" y="17" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Navigational Bulletins</text>
+          <text x="30" y="29" fill="#64748B" class="mono" font-size="9">NAVTEX Alerts · Firing Exercises · Warnings</text>
+        </g>
+      </g>
+
+      <!-- Arrow Connector 1 -> 2 -->
+      <g transform="translate(342, 92)">
+        <line x1="0" y1="0" x2="32" y2="0" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="32,-4 40,0 32,4" fill="#38BDF8"/>
+      </g>
+
+      <!-- COLUMN 2: Edge Node & Deterministic Engine -->
+      <g transform="translate(388, 0)">
+        <rect width="330" height="194" rx="10" fill="url(#card-inner)" stroke="#1D4ED8" stroke-width="1.2"/>
+        <path d="M0 8C0 3.58172 3.58172 0 8 0H322C326.418 0 330 3.58172 330 8V28H0V8Z" fill="#0C234D"/>
+        <text x="14" y="18" fill="#60A5FA" class="mono" font-size="11" font-weight="700">02 // DETERMINISTIC RULE CORE</text>
+
+        <!-- Hardware specs -->
+        <g transform="translate(14, 46)">
+          <rect width="302" height="42" rx="6" fill="#030E26" stroke="#2563EB" stroke-width="1"/>
+          <text x="14" y="18" fill="#93C5FD" class="mono" font-size="11" font-weight="700">⚡ ~1.2W RECYCLED EDGE NODE</text>
+          <text x="14" y="32" fill="#60A5FA" class="mono" font-size="9">Samsung Note 4 · 24/7 Zero-Cloud Core</text>
+        </g>
+
+        <!-- Calculations -->
+        <g transform="translate(14, 96)">
+          <rect width="302" height="84" rx="6" fill="#020817" stroke="#1E3A8A" stroke-width="1"/>
+          <text x="14" y="20" fill="#34D399" class="mono" font-size="10.5" font-weight="700">● 0 LLM IN LIVE SAFETY LOOP</text>
+          <text x="14" y="38" fill="#CBD5E1" class="mono" font-size="9.5">Calculates Closest Point of Approach (CPA)</text>
+          <text x="14" y="54" fill="#CBD5E1" class="mono" font-size="9.5">Speed-drop anomaly &amp; traffic congestion</text>
+          <text x="14" y="70" fill="#FBBF24" class="mono" font-size="9.5">Outputs: GO / CAUTION / NO-GO Window</text>
+        </g>
+      </g>
+
+      <!-- Arrow Connector 2 -> 3 -->
+      <g transform="translate(730, 92)">
+        <line x1="0" y1="0" x2="32" y2="0" stroke="#34D399" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="32,-4 40,0 32,4" fill="#34D399"/>
+      </g>
+
+      <!-- COLUMN 3: Operator Action & Safety Output -->
+      <g transform="translate(776, 0)">
+        <rect width="330" height="194" rx="10" fill="url(#card-inner)" stroke="#059669" stroke-width="1"/>
+        <path d="M0 8C0 3.58172 3.58172 0 8 0H322C326.418 0 330 3.58172 330 8V28H0V8Z" fill="#052E23"/>
+        <text x="14" y="18" fill="#34D399" class="mono" font-size="11" font-weight="700">03 // OPERATOR ACTION MESH</text>
+
+        <g transform="translate(14, 46)">
+          <rect width="302" height="36" rx="6" fill="#02140E" stroke="#047857" stroke-width="1"/>
+          <circle cx="16" cy="18" r="4" fill="#34D399"/>
+          <text x="30" y="17" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Live Interactive Map</text>
+          <text x="30" y="29" fill="#6EE7B7" class="mono" font-size="9">Leaflet.js · Vessel Track History · Nautical Cache</text>
+        </g>
+
+        <g transform="translate(14, 90)">
+          <rect width="302" height="36" rx="6" fill="#02140E" stroke="#047857" stroke-width="1"/>
+          <circle cx="16" cy="18" r="4" fill="#38BDF8"/>
+          <text x="30" y="17" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Telegram Emergency Sentinel</text>
+          <text x="30" y="29" fill="#6EE7B7" class="mono" font-size="9">/neredeyim Refuge Port · /mayday VHF Ch.16</text>
+        </g>
+
+        <g transform="translate(14, 134)">
+          <rect width="302" height="36" rx="6" fill="#02140E" stroke="#047857" stroke-width="1"/>
+          <circle cx="16" cy="18" r="4" fill="#F59E0B"/>
+          <text x="30" y="17" fill="#E2E8F0" class="mono" font-size="11" font-weight="600">Daily 06:00 Briefing &amp; RSS</text>
+          <text x="30" y="29" fill="#6EE7B7" class="mono" font-size="9">Deterministic Vessel Class Forecasts</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Outer Border -->
+    <rect x="1" y="1" width="1198" height="358" rx="17" stroke="#0284C7" stroke-opacity="0.35"/>
+  </g>
+</svg>
