@@ -40,18 +40,18 @@
     <!-- Header Telemetry Strip -->
     <g transform="translate(48, 24)">
       <rect width="250" height="24" rx="4" fill="#0369A1" fill-opacity="0.25" stroke="#0284C7" stroke-width="1"/>
-      <circle cx="12" cy="12" r="3.5" fill="#34D399" class="pulse-dot"/>
+      <circle cx="12" cy="12" r="3.5" fill="#FBBF24" class="pulse-dot"/>
       <text x="24" y="16" fill="#7DD3FC" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.5">LIVING TELEMETRY HUD</text>
       
       <!-- Live Marine Weather Badge -->
       <g transform="translate(266, 0)">
         <rect width="640" height="24" rx="4" fill="#041E38" stroke="#0E7490" stroke-width="1"/>
         <text x="12" y="16" fill="#38BDF8" class="mono" font-size="10.5" font-weight="700">● LIVE BOSPORUS:</text>
-        <text x="136" y="16" fill="#E2E8F0" class="mono" font-size="10.5">WIND: 7.9 KT N (GUSTS 13.2 KT) · WAVE: 0.2M · 20.2°C · DEPARTURE: <tspan fill="#34D399" font-weight="800">GO (SAFE)</tspan></text>
+        <text x="136" y="16" fill="#E2E8F0" class="mono" font-size="10.5">WIND: 11.7 KT N (GUSTS 20.6 KT) · WAVE: 0.2M · 19.3°C · DEPARTURE: <tspan fill="#FBBF24" font-weight="800">CAUTION</tspan></text>
       </g>
 
       <!-- Sync Time -->
-      <text x="1104" y="16" text-anchor="end" fill="#64748B" class="mono" font-size="10">SYNC: 2026-09-22 03:03 UTC</text>
+      <text x="1104" y="16" text-anchor="end" fill="#64748B" class="mono" font-size="10">SYNC: 2026-09-22 10:52 UTC</text>
     </g>
 
     <!-- 3-PANEL SYSTEM GRID -->
