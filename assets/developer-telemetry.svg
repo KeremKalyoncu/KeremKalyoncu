@@ -47,11 +47,11 @@
       <g transform="translate(266, 0)">
         <rect width="640" height="24" rx="4" fill="#041E38" stroke="#0E7490" stroke-width="1"/>
         <text x="12" y="16" fill="#38BDF8" class="mono" font-size="10.5" font-weight="700">● LIVE BOSPORUS:</text>
-        <text x="136" y="16" fill="#E2E8F0" class="mono" font-size="10.5">WIND: 11.7 KT N (GUSTS 20.6 KT) · WAVE: 0.2M · 19.3°C · DEPARTURE: <tspan fill="#FBBF24" font-weight="800">CAUTION</tspan></text>
+        <text x="136" y="16" fill="#E2E8F0" class="mono" font-size="10.5">WIND: 9.3 KT N (GUSTS 16.1 KT) · WAVE: 0.3M · 18.7°C · DEPARTURE: <tspan fill="#FBBF24" font-weight="800">CAUTION</tspan></text>
       </g>
 
       <!-- Sync Time -->
-      <text x="1104" y="16" text-anchor="end" fill="#64748B" class="mono" font-size="10">SYNC: 2026-09-22 10:52 UTC</text>
+      <text x="1104" y="16" text-anchor="end" fill="#64748B" class="mono" font-size="10">SYNC: 2026-09-22 16:10 UTC</text>
     </g>
 
     <!-- 3-PANEL SYSTEM GRID -->
