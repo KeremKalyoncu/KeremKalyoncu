@@ -16,7 +16,7 @@
 
 <br /><br />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=67E8F9&center=true&vCenter=true&width=900&lines=Software+Engineer+%26+Systems+Builder.;Live+Telemetry.+Geospatial+Interfaces.+Practical+Automation.;From+raw+operational+signals+to+reliable%2C+useful+software." alt="Animated profile introduction" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=67E8F9&center=true&vCenter=true&width=900&lines=Software+Engineer+%26+Systems+Builder.;Live+Telemetry.+Geospatial+Interfaces.+Practical+Automation.;Financial+forensics+on+public+market+data.;From+raw+operational+signals+to+reliable%2C+useful+software." alt="Animated profile introduction" />
 
 </div>
 
@@ -275,6 +275,42 @@ Interactive frontend showcase focusing on responsive layouts, CSS animations, an
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🤖 [Müşteri Churn Tahmini](https://github.com/KeremKalyoncu/ml-ara-odev)
+End-to-end classification pipeline for customer churn: synthetic data generation, feature engineering, LR / KNN / DT benchmarking, and class-imbalance handling.
+
+`Python` `scikit-learn` `Classification` `EDA`
+
+</td>
+<td width="50%" valign="top">
+
+### 🏠 [Ev Fiyat Tahmini](https://github.com/KeremKalyoncu/ml-final-odev)
+Full regression workflow on California Housing: feature engineering, cross-validation, hyperparameter tuning, and model comparison.
+
+`Python` `scikit-learn` `Regression` `GridSearch`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📦 [Envanter Stok Takibi](https://github.com/KeremKalyoncu/Envanter-Stok-Takibi)
+Inventory and stock tracking application for small-business workflows, built in Python.
+
+`Python` `Inventory` `Automation`
+
+</td>
+<td width="50%" valign="top">
+
+### 🔒 FonDedektifi *(private build)*
+Financial intelligence platform for TEFAS funds & BIST equities: liquidity risk (DTL), concentration (HHI), toxic fund scoring, and collusion detection.
+
+`Python` `FastAPI` `DuckDB` `Financial Forensics`
+
+</td>
+</tr>
 </table>
 
 <div align="center">
@@ -328,14 +364,15 @@ Visualizing commitment volume, frequency, and density over time:
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,javascript,java,cs,sqlite,html,css,git,github,leaflet&perline=10" alt="Core Technologies" />
+<img src="https://skillicons.dev/icons?i=python,javascript,java,cs,html,css,sqlite,fastapi,sklearn,git,github,leaflet&perline=12" alt="Core Technologies" />
 
 <br /><br />
 
 | Category | Technologies &amp; Tools |
 | :--- | :--- |
 | **Core Languages** | `Python` · `JavaScript` · `Java` · `C#` · `SQL` · `HTML5` · `CSS3` |
-| **Data &amp; Analysis** | `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `SQLite` |
+| **Data &amp; Analysis** | `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `scikit-learn` · `SQLite` · `DuckDB` |
+| **Backend &amp; Finance** | `FastAPI` · `Pydantic v2` · `Financial Data Pipelines` · `ReportLab` |
 | **Geospatial &amp; Systems** | `Leaflet.js` · `AIS Decoding` · `REST APIs` · `IoT Edge Computing` · `PWA` |
 | **Automation &amp; CI/CD** | `GitHub Actions` · `Cron Telemetry` · `Telegram Bot API` · `Linux / Bash` |
 
