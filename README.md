@@ -1,426 +1,233 @@
 <div align="center">
 
-<img src="./assets/kerem-command-center.svg" alt="Kerem Kalyoncu Command Station HUD" width="100%" />
+<img src="./assets/aero-v4-hero.jpg" alt="Kerem Kalyoncu personal Aero desktop: luminous blue sky, water, frosted-glass windows and software engineering introduction" width="100%" />
 
-<br />
+### Building the backend *and* the experience.
 
-<a href="https://github.com/KeremKalyoncu?tab=repositories">
-  <img src="https://img.shields.io/badge/EXPLORE%20PROJECTS-22D3EE?style=for-the-badge&logo=github&logoColor=020617" alt="Explore projects" />
-</a>
-<a href="https://keremkalyoncu.github.io/maritime-watch">
-  <img src="https://img.shields.io/badge/LIVE%20DEMO-MARITIME%20WATCH-0E7490?style=for-the-badge&logo=googleearth&logoColor=white" alt="Maritime Watch live demo" />
-</a>
-<a href="https://github.com/KeremKalyoncu">
-  <img src="https://img.shields.io/github/followers/KeremKalyoncu?label=FOLLOW&style=for-the-badge&color=164E63&logo=github&logoColor=white" alt="Follow Kerem" />
-</a>
+I enjoy turning messy problems into useful software — with reliable foundations and a little more sunlight in the interface.
 
-<br /><br />
+**[Explore my work](#selected-work)** &nbsp; · &nbsp; **[Engineering experience](#experience)** &nbsp; · &nbsp; **[How I build](#how-i-build)** &nbsp; · &nbsp; **[Say hello](#connect)**
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=67E8F9&center=true&vCenter=true&width=900&lines=Software+Engineer+%26+Systems+Builder.;Live+Telemetry.+Geospatial+Interfaces.+Practical+Automation.;Financial+forensics+on+public+market+data.;From+raw+operational+signals+to+reliable%2C+useful+software." alt="Animated profile introduction" />
+<sub>01 / ABOUT &nbsp; · &nbsp; 02 / FEATURED &nbsp; · &nbsp; 03 / OPEN WINDOWS &nbsp; · &nbsp; 04 / EXPERIENCE &nbsp; · &nbsp; 05 / PROCESS &nbsp; · &nbsp; 06 / TOOLBOX &nbsp; · &nbsp; 07 / ACTIVITY</sub>
 
 </div>
 
-<br />
-
-<!--
-  Navigation Console
--->
-
-<div align="center">
-
-<a href="#about">[ 01_about ]</a> ·
-<a href="#flagship">[ 02_flagship ]</a> ·
-<a href="#telemetry">[ 03_telemetry ]</a> ·
-<a href="#console">[ 04_interactive_console ]</a> ·
-<a href="#projects">[ 05_projects ]</a> ·
-<a href="#contributions">[ 06_contributions ]</a> ·
-<a href="#stack">[ 07_stack ]</a> ·
-<a href="#contact">[ 08_contact ]</a>
-
-</div>
-
-<br />
+---
 
 <a id="about"></a>
+## 01 / The person behind the glass
 
-## `01` / About the builder
+Hey! I'm **Kerem Kalyoncu** — a software engineer in **İstanbul, Türkiye**, currently in my final year of Software Engineering.
 
-I’m **Kerem Kalyoncu**, a Software Engineer based in **İstanbul, Türkiye**.
+My favorite place to work is where **backend architecture, data, and human-centered interfaces** meet. I build APIs, connect services, work with data, test the behavior, and pay attention to what using the final product actually feels like.
 
-I engineer software where **digital systems intersect with the physical world**: live telemetry streams, geospatial mapping, automated workflows, and high-clarity interfaces that convert complex operational signals into reliable human decisions.
+I have a soft spot for **Frutiger Aero**: optimistic technology, translucent glass, wide-open skies, and playful interfaces. But the visual style is only the surface. Underneath it, I care about **clear code, sound system boundaries, explicit failure states, and practical results**.
 
-I prioritize deterministic reliability over fragile tech trends. Every system must solve a tangible problem across its full operational loop:
+| **What I build** | **What I care about** | **What I'm exploring** |
+| :--- | :--- | :--- |
+| Backend systems, data products, developer tools, interactive web experiences | Architecture, testability, clarity, maintainability, usable interfaces | Python, Go, AI-assisted engineering, reliable automation |
 
-```text
-operational problem
-        ↓
-accurate telemetry & raw sensor data
-        ↓
-deterministic logic & safety engine
-        ↓
-clear, resilient interface
-        ↓
-measurable, real-world outcome
-```
-
-<div align="center">
-
-| `SYSTEM STATUS` | `COMMUNITY LEADERSHIP` | `ENGINEERING FOCUS` | `PRIMARY SECTOR` |
-| :---: | :---: | :---: | :---: |
-| `BUILDING & SHIPPING` | `GDG ON CAMPUS DOĞUŞ` | `REAL-TIME × GIS × AUTOMATION` | `ISTANBUL, TR` |
-
-</div>
-
-<br />
-
-<div align="center">
-
-<a href="https://github.com/KeremKalyoncu?tab=repositories">
-  <img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-15-0F172A?style=flat-square&logo=github&logoColor=67E8F9" alt="Public repositories" />
-</a>
-<a href="https://github.com/KeremKalyoncu">
-  <img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20OPPORTUNITIES%20%26%20COLLABORATION-0F172A?style=flat-square&logo=github&logoColor=34D399" alt="Open to opportunities" />
-</a>
-
-</div>
-
-<br />
-
-<a id="flagship"></a>
-
-## `02` / Flagship build — Maritime Watch Türkiye
-
-<div align="center">
+<a id="selected-work"></a>
+## 02 / Featured application
 
 <a href="https://github.com/KeremKalyoncu/maritime-watch">
-  <img src="./assets/maritime-watch-blueprint.svg" alt="Maritime Watch Türkiye - Tactical System Blueprint" width="100%" />
+  <img src="./assets/aero-v4-maritime.jpg" alt="Maritime Watch Türkiye Aero glass application window with conceptual Turkish Straits map and rule-based decision-support motif" width="100%" />
 </a>
 
-<br /><br />
+### [Maritime Watch Türkiye](https://github.com/KeremKalyoncu/maritime-watch) &nbsp; · &nbsp; [Live map](https://keremkalyoncu.github.io/maritime-watch)
 
-<a href="https://keremkalyoncu.github.io/maritime-watch">
-  <img src="https://img.shields.io/badge/OPEN%20LIVE%20DASHBOARD-22D3EE?style=for-the-badge&logo=googleearth&logoColor=020617" alt="Open live dashboard" />
-</a>
-<a href="https://keremkalyoncu.github.io/maritime-watch/stats.html">
-  <img src="https://img.shields.io/badge/LIVE%20STATISTICS-REPORT-0F172A?style=for-the-badge&logo=google-analytics&logoColor=67E8F9" alt="Maritime Watch statistics report" />
-</a>
-<a href="https://keremkalyoncu.github.io/maritime-watch/data/feed.xml">
-  <img src="https://img.shields.io/badge/RSS-LIVE%20FEED-0F172A?style=for-the-badge&logo=rss&logoColor=F59E0B" alt="Maritime Watch RSS feed" />
-</a>
-<a href="https://github.com/KeremKalyoncu/maritime-watch">
-  <img src="https://img.shields.io/badge/EXPLORE%20SOURCE%20CODE-164E63?style=for-the-badge&logo=github&logoColor=white" alt="Read source code" />
-</a>
+**From weather data to a decision someone can use.** Raw forecasts may tell a small-craft operator the wind and wave height, but not how the conditions could affect a particular journey. Maritime Watch combines public marine forecasts, maritime signals, and map-based context into understandable, vessel-oriented **decision-support information** for Turkish waters.
 
-</div>
+- **The engineering:** Python-based data pipelines, geospatial presentation, deterministic safety thresholds, operational bulletins, and clear handling of unavailable data.
+- **The design challenge:** reducing several noisy data sources to a readable interface without pretending that the system knows more than its inputs.
+- **The interesting constraint:** a critical decision path should be inspectable and rule-based, rather than dependent on a generative model's guesses.
 
-### The Problem It Solves
+**[Open the application](https://keremkalyoncu.github.io/maritime-watch)** · **[Read the source](https://github.com/KeremKalyoncu/maritime-watch)** · **[Project documentation](https://github.com/KeremKalyoncu/maritime-watch#readme)**
 
-Standard marine weather reports output raw numbers: *24 knots of wind, 1.8 metres of wave height*. To a maritime operator or small craft captain, raw numbers do not answer the operational question:
+<sub>Maritime Watch provides informational decision support. It is not an official navigational, safety, or rescue authority. The map in the banner is an illustration, not live telemetry.</sub>
 
-> **"Can my vessel safely depart right now, and by what exact time must I return?"**
+<a id="open-windows"></a>
+## 03 / Open windows — selected public work
 
-**Maritime Watch Türkiye** translates multi-source weather forecasts, live AIS telemetry, and official navigational warnings into vessel-specific **Go / Caution / No-Go departure and safe return windows** across Turkish waters and the Turkish Straits.
-
-### Architectural Highlights
+Different projects, different problems. These are public repositories you can actually explore, including a collaborative team project.
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### 🛟 Decision Support Engine
-- Vessel-class safety windows (open fishing boat, yacht, commercial craft)
-- Dynamic wind gust & wave threshold calculations
-- 06:00 daily operational maritime briefings
-- Deterministic go / caution / no-go states
+<a href="https://github.com/software-lecture-labs/Restofy"><img src="./assets/aero-v4-restofy.png" alt="Restofy Aero window with orange restaurant plate and QR elements" width="100%" /></a>
+
+### [Restofy](https://github.com/software-lecture-labs/Restofy)
+**Collaborative / public organization repository**
+
+A QR-based restaurant management platform being developed around a **Spring Boot microservice architecture**, with digital menu, ordering, and operational workflows.
+
+**My contribution:** authentication and email-related backend development, with attention to APIs and service boundaries.
+
+`Java` · `Spring Boot` · `PostgreSQL` · `Next.js`
+
+[View team repository](https://github.com/software-lecture-labs/Restofy)
 
 </td>
 <td width="50%" valign="top">
 
-#### 📡 Live Maritime Intelligence
-- Real-time AIS vessel tracking & speed telemetry
-- Closest Point of Approach (**CPA**) collision risk
-- Sudden speed-drop anomaly detection in heavy traffic
-- Turkish Straits passage monitoring
+<a href="https://github.com/KeremKalyoncu/KriptoParaTakip"><img src="./assets/aero-v4-crypto.png" alt="Crypto Tracker Aero window with illustrative candlestick market chart" width="100%" /></a>
+
+### [KriptoParaTakip](https://github.com/KeremKalyoncu/KriptoParaTakip)
+**Personal / public repository**
+
+A Java desktop application that reads market data through the **Binance API**, monitors selected cryptocurrencies, and provides audible price-change alerts.
+
+**Engineering focus:** external API integration, continuous updates, desktop UI, and user-configured watchlists.
+
+`Java` · `Desktop GUI` · `API integration`
+
+[View source](https://github.com/KeremKalyoncu/KriptoParaTakip)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-#### 🆘 Safety & Offline Resilience
-- Telegram emergency assistant bot
-- `/neredeyim` nearest refuge-port spatial lookup
-- `/mayday` VHF Channel 16 distress communication templates
-- Offline PWA with cached nautical map layers
+<a href="https://github.com/KeremKalyoncu/ml-final-odev"><img src="./assets/aero-v4-ml.png" alt="Machine Learning Aero window with an illustrative scatter chart and regression line" width="100%" /></a>
+
+### [Machine Learning Lab](https://github.com/KeremKalyoncu/ml-final-odev)
+**Personal / public experiments**
+
+Two practical studies: **California housing-price regression** and **customer churn classification** using generated sample data. They cover preprocessing, feature engineering, model evaluation, and interpreting the tradeoffs behind a metric.
+
+**Engineering focus:** experiments, validation, reproducible comparisons, and explaining model limitations.
+
+`Python` · `Pandas` · `scikit-learn`
+
+[Housing-price regression](https://github.com/KeremKalyoncu/ml-final-odev) · [Churn classification](https://github.com/KeremKalyoncu/ml-ara-odev)
 
 </td>
 <td width="50%" valign="top">
 
-#### 🌱 Ultra-Low Power Infrastructure
-- Deterministic rule engine (**0 LLM in live safety loop**)
-- Automated GitHub Actions data processing pipeline
-- 24/7 Telegram sentinel operating on a recycled device
-- Dedicated Samsung Galaxy Note 4 edge node (~1.2W)
+<a href="https://github.com/KeremKalyoncu/Gelismis_Kutuphane_Sistemi"><img src="./assets/aero-v4-library.png" alt="Library System Aero window with a glassy stack of colored book spines" width="100%" /></a>
+
+### [Library Management System](https://github.com/KeremKalyoncu/Gelismis_Kutuphane_Sistemi)
+**Personal / public repository**
+
+A Python command-line application for managing a small library: book records, borrowing and returns, **SQLite** persistence, and logs that make actions traceable.
+
+**Engineering focus:** data modeling, durable storage, transactional workflows, and maintainable CLI logic.
+
+`Python` · `SQLite` · `Logging`
+
+[View source](https://github.com/KeremKalyoncu/Gelismis_Kutuphane_Sistemi)
 
 </td>
 </tr>
 </table>
 
-<br />
+<details>
+<summary><b>More public projects in the archive</b></summary>
 
-<a id="telemetry"></a>
+- **[Fuel Station Automation](https://github.com/KeremKalyoncu/Benzin_Istasyonu_Otamasyon)** — a C# Windows Forms app for daily operations, stock and sales.
+- **[QRKodder](https://github.com/KeremKalyoncu/QRKodder)** — Java QR-code generation and reading with ZXing.
+- **[Titanic Data Analysis](https://github.com/KeremKalyoncu/Titanic_Veri_Analizi)** — exploratory data analysis and visualizations.
+- **[Inventory Stock Tracking](https://github.com/KeremKalyoncu/Envanter-Stok-Takibi)** — a lightweight Python inventory tool.
 
-## `03` / Real-time living developer telemetry & Bosphorus sensor HUD
+**[Browse every public repository](https://github.com/KeremKalyoncu?tab=repositories)**
 
-The HUD card below is updated autonomously via GitHub Actions with live marine conditions from the Turkish Straits and a 5-axis engineering capability radar:
+</details>
 
-<div align="center">
+<a id="experience"></a>
+## 04 / Professional experience
 
-<img src="./assets/developer-telemetry.svg" alt="Developer Telemetry and Metrics HUD" width="100%" />
+<a href="https://vollsign.com"><img src="./assets/aero-v4-vollsign.jpg" alt="VollSign professional experience Aero banner with conceptual digital document workflow" width="100%" /></a>
 
-</div>
+### Software Engineer · [VollSign](https://vollsign.com)
 
-<br />
+VollSign develops software for digital document and legal-workflow management. I work across **software development and functional quality assurance**, reviewing user flows, interface behavior, API interactions, and integration outcomes.
 
-<a id="console"></a>
+I value this side of engineering: checking not just whether a feature is implemented, but whether it behaves consistently for the people using it.
 
-## `04` / Interactive visitor command console (GitHub Issue-Ops)
+**[VollSign official website](https://vollsign.com)**
 
-You can interact directly with the Command Center! Click any command below to dispatch an autonomous operation. A GitHub Action will execute the request in ~15 seconds, log your telemetry response to the live teletype terminal below, and close the session automatically:
+<sub>Professional work is shown as experience, not presented as publicly available personal source code. Illustrations are conceptual and do not depict a private product interface.</sub>
 
-<div align="center">
+### Beyond the code
 
-<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20PING_NODE4&body=Ping%20request%20to%20Samsung%20Galaxy%20Note%204%20Edge%20Sentinel%20(~1.2W).">
-  <img src="https://img.shields.io/badge/EXECUTE-PING%20NOTE%204%20NODE-22D3EE?style=for-the-badge&logo=satellite&logoColor=020617" alt="Ping Note 4 Edge Node" />
-</a>
-<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20RUN_SAFETY_EVAL&body=Executing%20deterministic%20coastal%20safety%20evaluation%20for%20Turkish%20waters.">
-  <img src="https://img.shields.io/badge/EXECUTE-RUN%20SAFETY%20EVAL-10B981?style=for-the-badge&logo=shield&logoColor=white" alt="Run Safety Evaluation" />
-</a>
-<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20CALLSIGN%20STATION-GUEST&body=Transmitting%20operator%20callsign%20to%20command%20center.">
-  <img src="https://img.shields.io/badge/TRANSMIT-CALLSIGN%20SIGNAL-6366F1?style=for-the-badge&logo=radio&logoColor=white" alt="Transmit Callsign" />
-</a>
+I also contribute to student developer communities through **GDG on Campus Doğuş**, where technical learning meets communication, events, and collaborative work.
 
-<br /><br />
+<a id="how-i-build"></a>
+## 05 / Under the glass — my engineering loop
 
-### 📟 Real-Time Operator Teletype Log
+<img src="./assets/aero-v4-process.png" alt="Engineering loop: identify the problem, design system boundaries, implement, verify, and iterate" width="100%" />
 
-<!-- VISITOR_LOG_START -->
-| `UTC TIME` | `OPERATOR` | `COMMAND` | `TELEMETRY TELETYPE OUTPUT` |
-| :--- | :--- | :--- | :--- |
-| `2026-09-21 22:30` | **@KeremKalyoncu** | `PING_NODE4` | `PONG (28ms) · Note 4 Edge Node [Termux] Online · ~1.18W Nominal` |
-| `2026-09-21 22:15` | **@octocat** | `RUN_SAFETY_EVAL` | `EVAL_OK · Turkish Straits Sector: Wind < 16kt · Wave 0.6m · Status: GO (SAFE)` |
-| `2026-09-21 21:50` | **@visitor-ops** | `CALLSIGN [STATION-ALPHA]` | `ACKNOWLEDGED · Frequency 156.800 MHz (VHF CH 16) · Welcome to Command Station` |
-<!-- VISITOR_LOG_END -->
+**A nice interface earns attention. A dependable system earns trust.** My process tries to support both:
 
-</div>
+1. **Understand the actual problem.** A feature list is not a product goal.
+2. **Define boundaries deliberately.** APIs, service ownership, contracts, and dependencies need to make sense.
+3. **Build readable software.** Prefer understandable implementations over clever-looking complexity.
+4. **Verify real behavior.** Test important flows, failures, integrations, and edge cases.
+5. **Improve with evidence.** Logs, reproducible bugs, and observed outcomes should inform changes.
 
-<br />
+<a id="toolbox"></a>
+## 06 / The toolbench
 
-<a id="projects"></a>
-
-## `05` / Selected work & production repositories
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### ⚓ [Maritime Watch](https://github.com/KeremKalyoncu/maritime-watch)
-Flagship real-time marine safety & AIS intelligence platform for Turkish waters. Includes deterministic departure windows, low-power edge node, and spatial alerts.
-
-`Python` `Leaflet` `AIS` `Geospatial` `PWA`
-
-</td>
-<td width="50%" valign="top">
-
-### 📚 [Gelişmiş Kütüphane Sistemi](https://github.com/KeremKalyoncu/Gelismis_Kutuphane_Sistemi)
-A robust library management system featuring relational SQLite storage, transactional borrowing workflows, and detailed audit logging.
-
-`Python` `SQLite` `Data Architecture` `Logging`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 💹 [KriptoParaTakip](https://github.com/KeremKalyoncu/KriptoParaTakip)
-Desktop cryptocurrency intelligence application built in Java, streaming live price telemetry and market movements in real time.
-
-`Java` `Real-Time Data` `Desktop GUI` `API Integration`
-
-</td>
-<td width="50%" valign="top">
-
-### 📊 [Titanic Veri Analizi](https://github.com/KeremKalyoncu/Titanic_Veri_Analizi)
-In-depth exploratory data analysis and feature engineering on survival patterns, passenger demographics, and correlation matrices.
-
-`Jupyter` `Pandas` `NumPy` `Matplotlib` `Seaborn`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### ⛽ [Benzin İstasyonu Otomasyonu](https://github.com/KeremKalyoncu/Benzin_Istasyonu_Otamasyon)
-An enterprise domain automation tool modeling pump inventory, daily transactions, and fuel-station operational logic.
-
-`C#` `.NET` `Enterprise Automation` `Workflows`
-
-</td>
-<td width="50%" valign="top">
-
-### 🎨 [Dinamik CSS Portfolyo](https://github.com/KeremKalyoncu/Dinamik-Css-Portfolyo)
-Interactive frontend showcase focusing on responsive layouts, CSS animations, and vanilla JavaScript state handling.
-
-`JavaScript` `CSS3` `UI/UX` `Interactive Design`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🤖 [Müşteri Churn Tahmini](https://github.com/KeremKalyoncu/ml-ara-odev)
-End-to-end classification pipeline for customer churn: synthetic data generation, feature engineering, LR / KNN / DT benchmarking, and class-imbalance handling.
-
-`Python` `scikit-learn` `Classification` `EDA`
-
-</td>
-<td width="50%" valign="top">
-
-### 🏠 [Ev Fiyat Tahmini](https://github.com/KeremKalyoncu/ml-final-odev)
-Full regression workflow on California Housing: feature engineering, cross-validation, hyperparameter tuning, and model comparison.
-
-`Python` `scikit-learn` `Regression` `GridSearch`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 📦 [Envanter Stok Takibi](https://github.com/KeremKalyoncu/Envanter-Stok-Takibi)
-Inventory and stock tracking application for small-business workflows, built in Python.
-
-`Python` `Inventory` `Automation`
-
-</td>
-<td width="50%" valign="top">
-
-### 🔒 FonDedektifi *(private build)*
-Financial intelligence platform for TEFAS funds & BIST equities: liquidity risk (DTL), concentration (HHI), toxic fund scoring, and collusion detection.
-
-`Python` `FastAPI` `DuckDB` `Financial Forensics`
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-<a href="https://github.com/KeremKalyoncu?tab=repositories">
-  <img src="https://img.shields.io/badge/EXPLORE%20ALL-REPOSITORIES-0F172A?style=for-the-badge&logo=github&logoColor=67E8F9" alt="View all repositories" />
-</a>
-
-</div>
-
-<br />
-
-<a id="contributions"></a>
-
-## `06` / Live contribution theater
-
-### 🐍 Autonomous Contribution Stream
-
-Harvests repository activity automatically via GitHub Actions:
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./output/github-contribution-grid-snake.svg" />
-  <img src="./output/github-contribution-grid-snake.svg" alt="Animated contribution snake" width="100%" />
-</picture>
-
-</div>
-
-<br />
-
-### 🌌 3D Isometric Contribution Landscape
-
-Visualizing commitment volume, frequency, and density over time:
-
-<div align="center">
-
-<img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution calendar" width="100%" />
-
-<br /><br />
-
-<img src="https://streak-stats.demolab.com?user=KeremKalyoncu&theme=tokyonight&hide_border=true&background=0B1220&ring=22D3EE&fire=67E8F9&currStreakLabel=67E8F9&sideLabels=CBD5E1&dates=94A3B8" alt="GitHub contribution streak" />
-
-</div>
-
-<br />
-
-<a id="stack"></a>
-
-## `07` / Technology constellation
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,javascript,java,cs,html,css,sqlite,fastapi,sklearn,git,github,leaflet&perline=12" alt="Core Technologies" />
-
-<br /><br />
-
-| Category | Technologies &amp; Tools |
+| **Layer** | **Technologies** |
 | :--- | :--- |
-| **Core Languages** | `Python` · `JavaScript` · `Java` · `C#` · `SQL` · `HTML5` · `CSS3` |
-| **Data &amp; Analysis** | `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `scikit-learn` · `SQLite` · `DuckDB` |
-| **Backend &amp; Finance** | `FastAPI` · `Pydantic v2` · `Financial Data Pipelines` · `ReportLab` |
-| **Geospatial &amp; Systems** | `Leaflet.js` · `AIS Decoding` · `REST APIs` · `IoT Edge Computing` · `PWA` |
-| **Automation &amp; CI/CD** | `GitHub Actions` · `Cron Telemetry` · `Telegram Bot API` · `Linux / Bash` |
+| **Backend and API engineering** | `Java` · `Spring Boot` · `C#` · `ASP.NET Core` · `REST` |
+| **Data and machine learning** | `Python` · `SQL` · `Pandas` · `NumPy` · `scikit-learn` |
+| **Web and interaction** | `TypeScript` · `JavaScript` · `React` · `Next.js` · `HTML` · `CSS` |
+| **Databases and delivery** | `PostgreSQL` · `SQLite` · `Docker` · `Git` · `GitHub Actions` |
+| **Currently exploring** | `Go` · reliable AI-assisted development · developer tooling |
 
+<sub>The languages and frameworks above reflect my broader engineering experience; not every one appears in a public personal repository.</sub>
+
+<a id="activity"></a>
+## 07 / Contribution landscape
+
+I prefer meaningful engineering work to invented skill percentages. If you enjoy visual GitHub activity, here are two generated views maintained by my existing profile workflows:
+
+<details>
+<summary><strong>Open the contribution stream</strong></summary>
+
+<div align="center">
+<img src="./output/github-contribution-grid-snake.svg" alt="GitHub contribution snake visualization, generated from public contribution activity" width="100%" />
 </div>
 
-<br />
+</details>
 
-## `08` / Engineering principles
+<details>
+<summary><strong>Open the 3D contribution landscape</strong></summary>
+
+<div align="center">
+<img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="Generated 3D GitHub contribution calendar" width="100%" />
+</div>
+
+</details>
+
+<a id="guestbook"></a>
+## 08 / Aero guestbook
+
+You can leave a quick greeting without sending me a message elsewhere. The link opens a **GitHub Issue**; once the included GitHub Actions workflow is installed and permitted to write, it records the greeting here and closes the issue. GitHub login is required.
+
+**[Leave a greeting in the Aero guestbook](https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BAERO-HELLO%5D%20Hello%20from%20GitHub&body=Hi%20Kerem%21%20I%20found%20your%20Aero%20desktop%20profile.)**
+
+<!-- AERO_GUESTBOOK_START -->
+| UTC | Visitor | Message |
+| :--- | :--- | :--- |
+| — | — | Waiting for the first greeting |
+<!-- AERO_GUESTBOOK_END -->
+
+<sub>The guestbook shows verified GitHub issue events, not simulated commands, fabricated response times, or fake hardware health checks.</sub>
+
+<a id="connect"></a>
+## 09 / Connect
+
+I enjoy talking about **backend architecture, data, useful automation, developer experience, and expressive interfaces**. If you're working on something interesting, I'd love to hear about it.
+
+**[GitHub](https://github.com/KeremKalyoncu)** &nbsp; · &nbsp; **[LinkedIn](https://www.linkedin.com/in/kerem-kalyoncu-0753k)** &nbsp; · &nbsp; **[Explore public code](https://github.com/KeremKalyoncu?tab=repositories)**
 
 <div align="center">
 
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│  01. BUILD FOR THE PHYSICAL PROBLEM, NOT FOR TRANSIENT TECH HYPE       │
-│  02. RAW NUMBERS ARE NOT ENOUGH; ALWAYS DELIVER ACTIONABLE DECISIONS   │
-│  03. ZERO LLM IN THE CRITICAL REAL-TIME SAFETY PATH                    │
-│  04. RECYCLE HARDWARE & MAXIMIZE EFFICIENCY (1.2W OVER EXPENSIVE CLOUD)│
-│  05. SHIP WORKING PROTOTYPES FAST; HARDEN THROUGH EMPIRICAL TESTING    │
-└────────────────────────────────────────────────────────────────────────┘
-```
+<img src="./assets/aero-v4-footer.jpg" alt="Make it useful. Make it human. Curious by design and deliberate by engineering." width="100%" />
 
-</div>
-
-<br />
-
-<a id="contact"></a>
-
-## `09` / Connect & open channel
-
-Are you building systems with **real-time telemetry, maps, automation, or data-driven software**?
-
-I am open to **software engineering opportunities, high-impact collaborations, and ambitious technical projects**.
-
-<div align="center">
-
-<a href="https://github.com/KeremKalyoncu">
-  <img src="https://img.shields.io/badge/GITHUB%20PROFILE-22D3EE?style=for-the-badge&logo=github&logoColor=020617" alt="Open GitHub profile" />
-</a>
-<a href="https://github.com/KeremKalyoncu?tab=issues">
-  <img src="https://img.shields.io/badge/START%20A%20CONVERSATION-164E63?style=for-the-badge&logo=github&logoColor=white" alt="Start a conversation" />
-</a>
-
-<br /><br />
-
-<img src="https://komarev.com/ghpvc/?username=KeremKalyoncu&style=for-the-badge&color=0891B2&label=PROFILE+SIGNALS" alt="Profile views" />
-
-<br /><br />
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,50:0E7490,100:020617&height=120&section=footer&animation=fadeIn" alt="Animated footer wave" width="100%" />
+<sub>A little nostalgia in the pixels. Careful engineering under the glass.</sub>
 
 </div>

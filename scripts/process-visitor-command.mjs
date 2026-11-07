@@ -1,91 +1,58 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+/**
+ * KEREM.OS AERO guestbook processor.
+ * Accepts ONLY GitHub issue event fields; no network, user scripts, shell commands,
+ * issue-body evaluation, arbitrary labels, simulated telemetry, or secrets.
+ * This replaces the older fake PING_NODE4/RUN_SAFETY_EVAL processor.
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootDir = path.resolve(__dirname, '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const readmePath = path.join(root, 'README.md');
+const PREFIX = '[AERO-HELLO]';
+const title = String(process.env.ISSUE_TITLE || '');
+const login = String(process.env.ISSUE_USER || '');
+const num = Number(process.env.ISSUE_NUMBER);
+const createdAt = String(process.env.ISSUE_CREATED_AT || '');
+if (!title.startsWith(PREFIX)) throw new Error('Unrecognized guestbook command');
+if (!/^[A-Za-z0-9-]{1,39}$/.test(login)) throw new Error('Invalid GitHub login');
+if (!Number.isSafeInteger(num) || num < 1) throw new Error('Invalid issue number');
+const date = new Date(createdAt);
+if (!Number.isFinite(date.getTime())) throw new Error('Invalid GitHub event timestamp');
 
-const issueTitle = process.env.ISSUE_TITLE || '[OPS-COMMAND]: PING_NODE4';
-const rawUser = process.env.ISSUE_USER || 'octocat';
+// All user-provided content is treated as text and stripped of Markdown controls.
+const message = (title.slice(PREFIX.length).trim() || 'Hello from GitHub')
+  .normalize('NFKC')
+  .replace(/[^\p{L}\p{N}\p{M} .,!?_-]/gu, '')
+  .replace(/\s+/g, ' ')
+  .slice(0, 68)
+  .trim() || 'Hello from GitHub';
+const stamp = date.toISOString().slice(0, 16).replace('T', ' ');
+const issueUrl = `https://github.com/KeremKalyoncu/KeremKalyoncu/issues/${num}`;
+const userUrl = `https://github.com/${login}`;
+const newRow = `| \`${stamp}\` | [@${login}](${userUrl}) | [${message}](${issueUrl}) |`;
 
-// Sanitize user name to prevent markdown / injection
-const issueUser = rawUser.replace(/[^a-zA-Z0-9-_]/g, '').substring(0, 30) || 'anonymous';
-
-function getCommandResponse(title, user) {
-  const upper = title.toUpperCase();
-  const latency = Math.floor(Math.random() * 25) + 22; // 22ms - 46ms
-  const now = new Date().toISOString().replace('T', ' ').substring(0, 16) + ' UTC';
-
-  if (upper.includes('PING_NODE4')) {
-    return {
-      time: now,
-      user: `@${user}`,
-      cmd: 'PING_NODE4',
-      result: `PONG (${latency}ms) · Note 4 Edge Node [Termux] Online · ~1.18W Nominal`
-    };
-  } else if (upper.includes('RUN_SAFETY_EVAL')) {
-    return {
-      time: now,
-      user: `@${user}`,
-      cmd: 'RUN_SAFETY_EVAL',
-      result: `EVAL_OK · Turkish Straits Sector: Wind < 16kt · Wave 0.6m · Status: GO (SAFE)`
-    };
-  } else if (upper.includes('CALLSIGN')) {
-    const parts = title.split(':');
-    const callsign = (parts[1] || 'OPERATOR').replace('CALLSIGN', '').trim() || 'STATION-ALPHA';
-    const cleanCallsign = callsign.replace(/[^a-zA-Z0-9-_\s]/g, '').substring(0, 20);
-    return {
-      time: now,
-      user: `@${user}`,
-      cmd: `CALLSIGN [${cleanCallsign}]`,
-      result: `ACKNOWLEDGED · Frequency 156.800 MHz (VHF CH 16) · Welcome to Command Station`
-    };
-  } else {
-    return {
-      time: now,
-      user: `@${user}`,
-      cmd: 'SYS_QUERY',
-      result: `COMMAND_PROCESSED (${latency}ms) · All systems operational`
-    };
-  }
+const original = fs.readFileSync(readmePath, 'utf8');
+const START = '<!-- AERO_GUESTBOOK_START -->';
+const END = '<!-- AERO_GUESTBOOK_END -->';
+const begin = original.indexOf(START);
+const end = original.indexOf(END, begin + START.length);
+if (begin === -1 || end === -1 || begin >= end) throw new Error('Guestbook markers missing or malformed');
+const oldBody = original.slice(begin + START.length, end);
+const previous = oldBody.split(/\r?\n/).filter(line => /^\| `20\d{2}-\d{2}-\d{2} /.test(line));
+// Keep the most recent four verified issues, dedupe re-delivery.
+const seen = new Set();
+const rows = [newRow, ...previous].filter(row => {
+  const match = row.match(/issues\/(\d+)/);
+  const key = match ? match[1] : row;
+  if (seen.has(key)) return false;
+  seen.add(key);
+  return true;
+}).slice(0, 4);
+const table = `\n| UTC | Visitor | Message |\n| :--- | :--- | :--- |\n${rows.join('\n')}\n`;
+const next = original.slice(0, begin + START.length) + table + original.slice(end);
+if (next !== original) {
+  fs.writeFileSync(readmePath, next, 'utf8');
+  console.log(`Recorded genuine GitHub issue #${num} for @${login}`);
 }
-
-function updateReadmeLog(newEntry) {
-  const readmePath = path.join(rootDir, 'README.md');
-  if (!fs.existsSync(readmePath)) {
-    console.error('README.md not found.');
-    return;
-  }
-
-  let content = fs.readFileSync(readmePath, 'utf8');
-
-  const startMarker = '<!-- VISITOR_LOG_START -->';
-  const endMarker = '<!-- VISITOR_LOG_END -->';
-
-  const startIndex = content.indexOf(startMarker);
-  const endIndex = content.indexOf(endMarker);
-
-  if (startIndex === -1 || endIndex === -1) {
-    console.warn('Visitor log markers not found in README.md.');
-    return;
-  }
-
-  const existingBlock = content.substring(startIndex + startMarker.length, endIndex).trim();
-  const existingRows = existingBlock.split('\n').filter(line => line.startsWith('| `'));
-
-  // Format new row
-  const newRow = `| \`${newEntry.time}\` | **${newEntry.user}** | \`${newEntry.cmd}\` | \`${newEntry.result}\` |`;
-
-  // Prepend new row and limit to 5 entries
-  const allRows = [newRow, ...existingRows].slice(0, 5);
-
-  const updatedTable = `\n| \`UTC TIME\` | \`OPERATOR\` | \`COMMAND\` | \`TELEMETRY TELETYPE OUTPUT\` |\n| :--- | :--- | :--- | :--- |\n${allRows.join('\n')}\n`;
-
-  const newContent = content.substring(0, startIndex + startMarker.length) + updatedTable + content.substring(endIndex);
-  fs.writeFileSync(readmePath, newContent, 'utf8');
-  console.log(`[Visitor-Ops] Successfully logged command from ${newEntry.user} to README.md!`);
-}
-
-const entry = getCommandResponse(issueTitle, issueUser);
-updateReadmeLog(entry);

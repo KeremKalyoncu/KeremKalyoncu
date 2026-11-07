@@ -1,11 +1,11 @@
-name: Visitor Issue-Ops Command Console
+name: Aero Guestbook / Verified Issue Events
 
 on:
   issues:
     types: [opened]
 
 concurrency:
-  group: profile-visuals
+  group: aero-guestbook-commit
   cancel-in-progress: false
 
 permissions:
@@ -13,56 +13,49 @@ permissions:
   issues: write
 
 jobs:
-  process-command:
-    if: startsWith(github.event.issue.title, '[OPS-COMMAND]')
+  write-guestbook:
+    if: startsWith(github.event.issue.title, '[AERO-HELLO]')
     runs-on: ubuntu-latest
-    name: execute-visitor-command
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
         with:
-          node-version: 20
+          fetch-depth: 0
+          persist-credentials: true
 
-      - name: Run command processor
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Record real issue event
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_USER: ${{ github.event.issue.user.login }}
-        run: |
-          node scripts/process-visitor-command.mjs
-
-      - name: Comment and close issue
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-          USER: ${{ github.event.issue.user.login }}
-        run: |
-          gh issue comment $ISSUE_NUMBER --body "🛰️ **Command Received & Executed** | Telemetry response logged to profile console for @$USER. Closing session."
-          gh issue close $ISSUE_NUMBER
+          ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+        run: node scripts/process-visitor-command.mjs
 
-      - name: Commit and push updated log
+      - name: Commit verified guestbook entry
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add README.md
-          if git diff --cached --quiet; then
-            echo "No README changes."
-            exit 0
-          fi
-
-          git commit -m "chore(ops): log terminal command from @${{ github.event.issue.user.login }}"
-
-          for attempt in 1 2 3; do
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "docs(guestbook): record GitHub issue #${{ github.event.issue.number }}"
+          for retry in 1 2 3; do
             git fetch origin main
-            git rebase origin/main
-
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-
-            echo "Push conflicted; retrying in ${attempt}0 seconds..."
-            sleep $((attempt * 10))
+            git rebase origin/main || { git rebase --abort || true; exit 1; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((retry * 3))
           done
-
-          echo "Could not push command log."
           exit 1
+
+      - name: Confirm and close issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Thanks for visiting the Aero guestbook! Your greeting is recorded in the profile README."
+          gh issue close "$ISSUE_NUMBER" --reason completed
