@@ -1,5 +1,5 @@
 <div align="center">
 <a href="https://github.com/KeremKalyoncu?tab=repositories">
-<img src="assets/kerem-living-world.svg" width="100%" alt="Kerem Kalyoncu — living Frutiger Aero portfolio. Animated clouds, sea, floating project capsules, marine radar, bubbles, and career highlights. Click to explore public projects." />
+<img src="assets/kerem-living-world-v8.svg" width="100%" alt="Kerem Kalyoncu's living Frutiger Aero engineering universe. Animated sea, bubbles, reef, public software projects, team products, VollSign experience, engineering toolkit, GDG community, academic journey and contact information. Click for public repositories."/>
 </a>
 </div>
