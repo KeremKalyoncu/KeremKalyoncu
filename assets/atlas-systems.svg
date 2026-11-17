@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 624" width="880" height="624" role="img" aria-label="Obsidian Atlas Plate 02 — 6 Deployed Engineering Systems: Maritime Watch Türkiye, Inventra, Restofy, Shifha, KriptoParaTakip, ML &amp; Data Lab">
+  <title>Obsidian Atlas Plate 02 — 6 Deployed Engineering Systems: Maritime Watch Türkiye, Inventra, Restofy, Shifha, KriptoParaTakip, ML &amp; Data Lab</title>
+  <defs>
+    <style>.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+@keyframes busFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -48; } }
+.bus-pulse { stroke-dasharray: 10 38; stroke-dashoffset: 0; animation: busFlow 2.8s linear infinite; }</style>
+    <pattern id="micro-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.6" stroke-opacity="0.55" />
+    </pattern>
+    <filter id="slate-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="3" stitchTiles="stitch" result="noise" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.96  0 0 0 0 0.98  0 0 0 0.045 0" in="noise" />
+    </filter>
+    <filter id="amber-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="880" height="624" rx="12" fill="#080A0F" />
+  <rect width="880" height="624" rx="12" fill="url(#micro-grid)" />
+  <rect width="880" height="624" rx="12" filter="url(#slate-grain)" />
+  <rect x="0.5" y="0.5" width="879" height="623" rx="11.5" fill="none" stroke="#1E293B" stroke-width="1" />
+  <path d="M10,18 V10 H18 M862,10 H870 V18 M10,606 V614 H18 M862,614 H870 V606" fill="none" stroke="#334155" stroke-width="1.2" />
+  <text x="20" y="31" fill="#FF5A1F" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.2">02 // DEPLOYED SYSTEMS &amp; ARCHITECTURE MATRIX</text>
+  <text x="860" y="31" fill="#7C8EA6" class="mono" font-size="10" text-anchor="end" letter-spacing="0.5">NODES: 06  ·  BUS: ACTIVE  ·  TOPOLOGY: 2×3</text>
+  <line x1="20" y1="46" x2="860" y2="46" stroke="#1E293B" stroke-width="1" />
+  <g>
+    <path d="M440,104 V540" fill="none" stroke="#1E293B" stroke-width="1.6" />
+    <path d="M416,142 H464" fill="none" stroke="#1E293B" stroke-width="1.4" />
+    <path d="M416,324 H464" fill="none" stroke="#1E293B" stroke-width="1.4" />
+    <path d="M416,506 H464" fill="none" stroke="#1E293B" stroke-width="1.4" />
+    <path d="M416,104 H430 V324 H464" fill="none" stroke="#334155" stroke-width="1.2" />
+    <path d="M416,104 H430 V324 H464" fill="none" stroke="#FF5A1F" class="bus-pulse" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M464,180 H450 V506 H416" fill="none" stroke="#334155" stroke-width="1.2" />
+    <path d="M464,180 H450 V506 H416" fill="none" stroke="#818CF8" class="bus-pulse" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M440,142 V506" fill="none" stroke="#334155" stroke-width="1.2" />
+    <path d="M440,142 V506" fill="none" stroke="#FF5A1F" class="bus-pulse" stroke-width="1.8" stroke-linecap="round" />
+    <circle cx="416" cy="104" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="416" cy="142" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="416" cy="180" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="416" cy="324" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="416" cy="506" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="464" cy="104" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="464" cy="142" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="464" cy="180" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="464" cy="324" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+    <circle cx="464" cy="506" r="3" fill="#0F141D" stroke="#334155" stroke-width="1.2" />
+  </g>
+  <g>
+    <rect x="20" y="60" width="396" height="164" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+    <line x1="20" y1="92" x2="416" y2="92" stroke="#1E293B" stroke-width="1" />
+    <circle cx="34" cy="76" r="2.5" fill="#34D399" />
+    <text x="44" y="80" fill="#34D399" class="mono" font-size="9.5" font-weight="700" letter-spacing="0.6">SYS-01 // PRODUCTION SYSTEMS</text>
+    <text x="402" y="80" fill="#34D399" class="mono" font-size="9.5" font-weight="700" text-anchor="end" letter-spacing="0.6">LIVE</text>
+    <rect x="34" y="104" width="76" height="76" rx="4" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <g transform="translate(34,104)">
+      <path d="M38,8 V68 M8,38 H68" fill="none" stroke="#1E293B" stroke-width="1" />
+      <circle cx="38" cy="38" r="10" fill="none" stroke="#1E293B" stroke-width="1" />
+      <circle cx="38" cy="38" r="20" fill="none" stroke="#334155" stroke-width="1" />
+      <circle cx="38" cy="38" r="29" fill="none" stroke="#334155" stroke-width="1" />
+      <g>
+        <path d="M38,38 L38,9 A29,29 0 0,1 63,23 Z" fill="#FF5A1F" fill-opacity="0.24" />
+        <line x1="38" y1="38" x2="38" y2="9" stroke="#FF5A1F" stroke-width="1.6" />
+        <animateTransform attributeName="transform" type="rotate" from="0 38 38" to="360 38 38" dur="5.5s" repeatCount="indefinite" />
+      </g>
+      <circle cx="52" cy="24" r="2.5" fill="#34D399" />
+      <circle cx="24" cy="49" r="2.2" fill="#F59E0B" />
+      <circle cx="38" cy="38" r="2.8" fill="#FF5A1F" />
+    </g>
+    <text x="124" y="120" fill="#F1F5F9" class="sans" font-size="14" font-weight="700">Maritime Watch Türkiye</text>
+    <text x="124" y="140" fill="#94A3B8" class="sans" font-size="11.5">Multi-source weather, AIS &amp; NAVTEX</text>
+    <text x="124" y="156" fill="#94A3B8" class="sans" font-size="11.5">telemetry into Go/Caution/No-Go.</text>
+    <text x="124" y="176" fill="#F59E0B" class="mono" font-size="10" font-weight="600" letter-spacing="0.3">EDGE: ~1.2W NODE · OPEN-METEO · AIS</text>
+    <rect x="34" y="192" width="52" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="60.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Python</text>
+    <rect x="92" y="192" width="76" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="130.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Leaflet.js</text>
+    <rect x="174" y="192" width="34" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="191.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">PWA</text>
+    <rect x="214" y="192" width="64" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="246.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Edge IoT</text>
+  </g>
+  <g>
+    <rect x="464" y="60" width="396" height="164" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+    <line x1="464" y1="92" x2="860" y2="92" stroke="#1E293B" stroke-width="1" />
+    <circle cx="478" cy="76" r="2.5" fill="#FF5A1F" />
+    <text x="488" y="80" fill="#FF5A1F" class="mono" font-size="9.5" font-weight="700" letter-spacing="0.6">SYS-02 // PRODUCTION SYSTEMS</text>
+    <text x="846" y="80" fill="#FF5A1F" class="mono" font-size="9.5" font-weight="700" text-anchor="end" letter-spacing="0.6">PRODUCTION</text>
+    <rect x="478" y="104" width="76" height="76" rx="4" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <g transform="translate(478,104)">
+      <polygon points="38,11 62,25 62,51 38,65 14,51 14,25" fill="#0F141D" stroke="#334155" stroke-width="1.4" />
+      <path d="M14,25 L38,38 L62,25 M38,38 V65" fill="none" stroke="#F59E0B" stroke-width="1.4" />
+      <polygon points="38,24 49,30 49,44 38,50 27,44 27,30" fill="none" stroke="#FF5A1F" stroke-width="1.2" />
+      <circle cx="38" cy="11" r="2" fill="#F1F5F9" />
+      <circle cx="62" cy="25" r="2" fill="#F1F5F9" />
+      <circle cx="62" cy="51" r="2" fill="#F1F5F9" />
+      <circle cx="38" cy="65" r="2" fill="#F1F5F9" />
+      <circle cx="14" cy="51" r="2" fill="#F1F5F9" />
+      <circle cx="14" cy="25" r="2" fill="#F1F5F9" />
+    </g>
+    <text x="568" y="120" fill="#F1F5F9" class="sans" font-size="14" font-weight="700">Inventra</text>
+    <text x="568" y="140" fill="#94A3B8" class="sans" font-size="11.5">Cloud workforce &amp; inventory platform</text>
+    <text x="568" y="156" fill="#94A3B8" class="sans" font-size="11.5">with multi-warehouse SKU tracking.</text>
+    <text x="568" y="176" fill="#F59E0B" class="mono" font-size="10" font-weight="600" letter-spacing="0.3">LIVE: X-ETC.ONLINE · POSTGRESQL</text>
+    <rect x="478" y="192" width="88" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="522.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">ASP.NET Core</text>
+    <rect x="572" y="192" width="46" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="595.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">React</text>
+    <rect x="624" y="192" width="34" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="641.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">MUI</text>
+    <rect x="664" y="192" width="76" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="702.0" y="205.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">PostgreSQL</text>
+  </g>
+  <g>
+    <rect x="20" y="242" width="396" height="164" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+    <line x1="20" y1="274" x2="416" y2="274" stroke="#1E293B" stroke-width="1" />
+    <circle cx="34" cy="258" r="2.5" fill="#F59E0B" />
+    <text x="44" y="262" fill="#F59E0B" class="mono" font-size="9.5" font-weight="700" letter-spacing="0.6">SYS-03 // BACKEND &amp; MICROSERVICES</text>
+    <text x="402" y="262" fill="#F59E0B" class="mono" font-size="9.5" font-weight="700" text-anchor="end" letter-spacing="0.6">ACTIVE</text>
+    <rect x="34" y="286" width="76" height="76" rx="4" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <g transform="translate(34,286)">
+      <rect x="11" y="14" width="14" height="10" rx="2" fill="#0F141D" stroke="#334155" stroke-width="1.1" />
+      <rect x="31" y="14" width="14" height="10" rx="2" fill="#FF5A1F" stroke="#FF5A1F" stroke-width="1.1" />
+      <rect x="51" y="14" width="14" height="10" rx="2" fill="#0F141D" stroke="#334155" stroke-width="1.1" />
+      <rect x="11" y="30" width="14" height="10" rx="2" fill="#0F141D" stroke="#334155" stroke-width="1.1" />
+      <rect x="31" y="30" width="14" height="10" rx="2" fill="#0F141D" stroke="#334155" stroke-width="1.1" />
+      <rect x="51" y="30" width="14" height="10" rx="2" fill="#34D399" stroke="#34D399" stroke-width="1.1" />
+      <path d="M18,40 V46 H38 V51 M38,40 V51 M58,40 V46 H38" fill="none" stroke="#334155" stroke-width="1.2" />
+      <rect x="24" y="51" width="28" height="13" rx="2" fill="#151C28" stroke="#F59E0B" stroke-width="1.2" />
+      <circle cx="38" cy="57.5" r="2.2" fill="#34D399" />
+    </g>
+    <text x="124" y="302" fill="#F1F5F9" class="sans" font-size="14" font-weight="700">Restofy</text>
+    <text x="124" y="322" fill="#94A3B8" class="sans" font-size="11.5">Restaurant QR menu &amp; distributed</text>
+    <text x="124" y="338" fill="#94A3B8" class="sans" font-size="11.5">order-dispatch microservice fleet.</text>
+    <text x="124" y="358" fill="#F59E0B" class="mono" font-size="10" font-weight="600" letter-spacing="0.3">STACK: SPRING BOOT · DOCKER FLEET</text>
+    <rect x="34" y="374" width="40" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="54.0" y="387.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Java</text>
+    <rect x="80" y="374" width="82" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="121.0" y="387.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Spring Boot</text>
+    <rect x="168" y="374" width="52" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="194.0" y="387.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Docker</text>
+    <rect x="226" y="374" width="40" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="246.0" y="387.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">REST</text>
+  </g>
+  <g>
+    <rect x="464" y="242" width="396" height="164" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+    <line x1="464" y1="274" x2="860" y2="274" stroke="#1E293B" stroke-width="1" />
+    <circle cx="478" cy="258" r="2.5" fill="#818CF8" />
+    <text x="488" y="262" fill="#818CF8" class="mono" font-size="9.5" font-weight="700" letter-spacing="0.6">SYS-04 // AI &amp; DATA LAB</text>
+    <text x="846" y="262" fill="#818CF8" class="mono" font-size="9.5" font-weight="700" text-anchor="end" letter-spacing="0.6">CONCEPT</text>
+    <rect x="478" y="286" width="76" height="76" rx="4" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <g transform="translate(478,286)">
+      <path d="M8,24 H68 M8,38 H68 M8,52 H68 M20,10 V66 M38,10 V66 M56,10 V66" fill="none" stroke="#1E293B" stroke-width="0.7" />
+      <path d="M8,41 H19 L23,35 L27,41 L31,46 L36,15 L41,59 L45,41 L52,33 L57,41 H68" fill="none" stroke="#FF5A1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="36" cy="15" r="2.5" fill="#F1F5F9" />
+      <circle cx="52" cy="33" r="2.6" fill="#818CF8" opacity="1">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    <text x="568" y="302" fill="#F1F5F9" class="sans" font-size="14" font-weight="700">Shifha</text>
+    <text x="568" y="322" fill="#94A3B8" class="sans" font-size="11.5">Clinical AI protocol engine &amp;</text>
+    <text x="568" y="338" fill="#94A3B8" class="sans" font-size="11.5">structured clinician decision aid.</text>
+    <text x="568" y="358" fill="#F59E0B" class="mono" font-size="10" font-weight="600" letter-spacing="0.3">DOMAIN: MEDICAL NLP · MOBILE APP</text>
+    <rect x="478" y="374" width="88" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="522.0" y="387.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">React Native</text>
+    <rect x="572" y="374" width="52" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="598.0" y="387.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Python</text>
+    <rect x="630" y="374" width="82" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="671.0" y="387.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Medical NLP</text>
+  </g>
+  <g>
+    <rect x="20" y="424" width="396" height="164" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+    <line x1="20" y1="456" x2="416" y2="456" stroke="#1E293B" stroke-width="1" />
+    <circle cx="34" cy="440" r="2.5" fill="#34D399" />
+    <text x="44" y="444" fill="#34D399" class="mono" font-size="9.5" font-weight="700" letter-spacing="0.6">SYS-05 // BACKEND &amp; MICROSERVICES</text>
+    <text x="402" y="444" fill="#34D399" class="mono" font-size="9.5" font-weight="700" text-anchor="end" letter-spacing="0.6">RELEASED</text>
+    <rect x="34" y="468" width="76" height="76" rx="4" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <g transform="translate(34,468)">
+      <path d="M10,60 H66 M10,14 V60" fill="none" stroke="#334155" stroke-width="1" />
+      <line x1="18" y1="36" x2="18" y2="54" stroke="#34D399" stroke-width="1.2" />
+      <rect x="15.5" y="41" width="5" height="10" rx="1" fill="#34D399" />
+      <line x1="28" y1="34" x2="28" y2="52" stroke="#FF5A1F" stroke-width="1.2" />
+      <rect x="25.5" y="39" width="5" height="9" rx="1" fill="#FF5A1F" />
+      <line x1="38" y1="22" x2="38" y2="46" stroke="#34D399" stroke-width="1.2" />
+      <rect x="35.5" y="28" width="5" height="12" rx="1" fill="#34D399" />
+      <line x1="48" y1="26" x2="48" y2="48" stroke="#FF5A1F" stroke-width="1.2" />
+      <rect x="45.5" y="31" width="5" height="10" rx="1" fill="#FF5A1F" />
+      <line x1="58" y1="16" x2="58" y2="38" stroke="#34D399" stroke-width="1.2" />
+      <rect x="55.5" y="21" width="5" height="12" rx="1" fill="#34D399" />
+      <path d="M14,48 L28,44 L38,30 L48,36 L62,19" fill="none" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="62" cy="19" r="2.5" fill="#F59E0B" />
+    </g>
+    <text x="124" y="484" fill="#F1F5F9" class="sans" font-size="14" font-weight="700">KriptoParaTakip</text>
+    <text x="124" y="504" fill="#94A3B8" class="sans" font-size="11.5">Real-time crypto market tracker &amp;</text>
+    <text x="124" y="520" fill="#94A3B8" class="sans" font-size="11.5">automated volatility alert engine.</text>
+    <text x="124" y="540" fill="#F59E0B" class="mono" font-size="10" font-weight="600" letter-spacing="0.3">PIPELINE: REST APIS · JSON STREAM</text>
+    <rect x="34" y="556" width="40" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="54.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Java</text>
+    <rect x="80" y="556" width="70" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="115.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">REST APIs</text>
+    <rect x="156" y="556" width="82" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="197.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Desktop GUI</text>
+    <rect x="244" y="556" width="40" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="264.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">JSON</text>
+  </g>
+  <g>
+    <rect x="464" y="424" width="396" height="164" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+    <line x1="464" y1="456" x2="860" y2="456" stroke="#1E293B" stroke-width="1" />
+    <circle cx="478" cy="440" r="2.5" fill="#818CF8" />
+    <text x="488" y="444" fill="#818CF8" class="mono" font-size="9.5" font-weight="700" letter-spacing="0.6">SYS-06 // AI &amp; DATA LAB</text>
+    <text x="846" y="444" fill="#818CF8" class="mono" font-size="9.5" font-weight="700" text-anchor="end" letter-spacing="0.6">RESEARCH</text>
+    <rect x="478" y="468" width="76" height="76" rx="4" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <g transform="translate(478,468)">
+      <line x1="15" y1="20" x2="38" y2="14" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="20" x2="38" y2="30" stroke="#818CF8" stroke-width="1.2" stroke-opacity="0.95" />
+      <line x1="15" y1="20" x2="38" y2="46" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="20" x2="38" y2="62" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="38" x2="38" y2="14" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="38" x2="38" y2="30" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="38" x2="38" y2="46" stroke="#818CF8" stroke-width="1.2" stroke-opacity="0.95" />
+      <line x1="15" y1="38" x2="38" y2="62" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="56" x2="38" y2="14" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="56" x2="38" y2="30" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="56" x2="38" y2="46" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="15" y1="56" x2="38" y2="62" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="38" y1="14" x2="61" y2="28" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="38" y1="14" x2="61" y2="48" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="38" y1="30" x2="61" y2="28" stroke="#818CF8" stroke-width="1.2" stroke-opacity="0.95" />
+      <line x1="38" y1="30" x2="61" y2="48" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="38" y1="46" x2="61" y2="28" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="38" y1="46" x2="61" y2="48" stroke="#818CF8" stroke-width="1.2" stroke-opacity="0.95" />
+      <line x1="38" y1="62" x2="61" y2="28" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <line x1="38" y1="62" x2="61" y2="48" stroke="#334155" stroke-width="0.8" stroke-opacity="0.65" />
+      <circle cx="15" cy="20" r="3.2" fill="#0F141D" stroke="#818CF8" stroke-width="1.3" />
+      <circle cx="15" cy="38" r="3.2" fill="#0F141D" stroke="#818CF8" stroke-width="1.3" />
+      <circle cx="15" cy="56" r="3.2" fill="#0F141D" stroke="#818CF8" stroke-width="1.3" />
+      <circle cx="38" cy="14" r="3.2" fill="#0F141D" stroke="#818CF8" stroke-width="1.3" />
+      <circle cx="38" cy="30" r="3.2" fill="#0F141D" stroke="#818CF8" stroke-width="1.3" />
+      <circle cx="38" cy="46" r="3.2" fill="#0F141D" stroke="#818CF8" stroke-width="1.3" />
+      <circle cx="38" cy="62" r="3.2" fill="#0F141D" stroke="#818CF8" stroke-width="1.3" />
+      <circle cx="61" cy="28" r="3.4" fill="#0F141D" stroke="#F59E0B" stroke-width="1.4" />
+      <circle cx="61" cy="48" r="3.4" fill="#0F141D" stroke="#F59E0B" stroke-width="1.4" />
+    </g>
+    <text x="568" y="484" fill="#F1F5F9" class="sans" font-size="14" font-weight="700">ML &amp; Data Lab</text>
+    <text x="568" y="504" fill="#94A3B8" class="sans" font-size="11.5">Predictive modeling, feature pipelines</text>
+    <text x="568" y="520" fill="#94A3B8" class="sans" font-size="11.5">&amp; supervised classification studies.</text>
+    <text x="568" y="540" fill="#F59E0B" class="mono" font-size="10" font-weight="600" letter-spacing="0.3">REPOS: ML-FINAL · ML-ARA · TITANIC</text>
+    <rect x="478" y="556" width="52" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="504.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Python</text>
+    <rect x="536" y="556" width="88" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="580.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Scikit-Learn</text>
+    <rect x="630" y="556" width="52" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="656.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">Pandas</text>
+    <rect x="688" y="556" width="34" height="20" rx="3" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+    <text x="705.0" y="569.5" fill="#94A3B8" class="mono" font-size="9.5" text-anchor="middle">EDA</text>
+  </g>
+  <text x="20" y="608" fill="#7C8EA6" class="mono" font-size="9.5">SUPPORTING REPOS: Gelismis_Kutuphane_Sistemi · Benzin_Istasyonu_Otamasyon · Envanter-Stok-Takibi · FonDedektifi</text>
+  <text x="860" y="608" fill="#34D399" class="mono" font-size="9.5" font-weight="700" text-anchor="end">ALL 6 SYSTEMS DOCUMENTED</text>
+</svg>
