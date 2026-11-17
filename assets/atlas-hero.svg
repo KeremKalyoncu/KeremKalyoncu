@@ -7,7 +7,7 @@
 @keyframes busFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -48; } }
 .bus-pulse { stroke-dasharray: 10 38; stroke-dashoffset: 0; animation: busFlow 2.8s linear infinite; }</style>
     <pattern id="micro-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.6" stroke-opacity="0.55" />
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#163654" stroke-width="0.6" stroke-opacity="0.55" />
     </pattern>
     <filter id="slate-grain" x="0%" y="0%" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="3" stitchTiles="stitch" result="noise" />
@@ -20,106 +20,136 @@
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+    <radialGradient id="aero-canvas-glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.11" />
+      <stop offset="55%" stop-color="#0EA5E9" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#060E18" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="aero-card-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F243C" />
+      <stop offset="45%" stop-color="#0A1829" />
+      <stop offset="100%" stop-color="#081423" />
+    </linearGradient>
+    <linearGradient id="aero-top-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F0FAFF" stop-opacity="0.05" />
+      <stop offset="35%" stop-color="#00D4FF" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#34D399" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#F0FAFF" stop-opacity="0.05" />
+    </linearGradient>
     <linearGradient id="plate-sheen" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#111824" />
-      <stop offset="100%" stop-color="#0F141D" />
+      <stop offset="0%" stop-color="#102842" />
+      <stop offset="55%" stop-color="#0A1829" />
+      <stop offset="100%" stop-color="#071525" />
+    </linearGradient>
+    <linearGradient id="bosphorus-water" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06233D" />
+      <stop offset="50%" stop-color="#093358" />
+      <stop offset="100%" stop-color="#051B30" />
     </linearGradient>
     <radialGradient id="beacon-aura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF5A1F" stop-opacity="0.24" />
-      <stop offset="65%" stop-color="#FF5A1F" stop-opacity="0.06" />
-      <stop offset="100%" stop-color="#FF5A1F" stop-opacity="0" />
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.26" />
+      <stop offset="65%" stop-color="#34D399" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0" />
     </radialGradient>
     <pattern id="sub-dots" width="8" height="8" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="0.7" fill="#334155" fill-opacity="0.35" />
+      <circle cx="1.5" cy="1.5" r="0.7" fill="#256394" fill-opacity="0.35" />
     </pattern>
     <clipPath id="topo-clip">
       <rect x="574" y="54" width="286" height="240" rx="6" />
     </clipPath>
   </defs>
-  <rect width="880" height="356" rx="12" fill="#080A0F" />
+  <rect width="880" height="356" rx="12" fill="#060E18" />
+  <rect width="880" height="356" rx="12" fill="url(#aero-canvas-glow)" />
   <rect width="880" height="356" rx="12" fill="url(#micro-grid)" />
   <rect width="880" height="356" rx="12" filter="url(#slate-grain)" />
-  <rect x="0.5" y="0.5" width="879" height="355" rx="11.5" fill="none" stroke="#1E293B" stroke-width="1" />
-  <path d="M10,18 V10 H18 M862,10 H870 V18 M10,338 V346 H18 M862,346 H870 V338" fill="none" stroke="#334155" stroke-width="1.2" />
-  <rect x="20" y="14" width="840" height="28" rx="4" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <line x1="162" y1="19" x2="162" y2="37" stroke="#1E293B" stroke-width="1" />
-  <line x1="412" y1="19" x2="412" y2="37" stroke="#1E293B" stroke-width="1" />
-  <line x1="650" y1="19" x2="650" y2="37" stroke="#1E293B" stroke-width="1" />
+  <rect x="0.5" y="0.5" width="879" height="355" rx="11.5" fill="none" stroke="#163654" stroke-width="1" />
+  <line x1="24" y1="1" x2="856" y2="1" stroke="url(#aero-top-sheen)" stroke-width="1.2" />
+  <path d="M10,18 V10 H18 M862,10 H870 V18 M10,338 V346 H18 M862,346 H870 V338" fill="none" stroke="#256394" stroke-width="1.2" />
+  <rect x="20" y="14" width="840" height="28" rx="4" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <line x1="162" y1="19" x2="162" y2="37" stroke="#163654" stroke-width="1" />
+  <line x1="412" y1="19" x2="412" y2="37" stroke="#163654" stroke-width="1" />
+  <line x1="650" y1="19" x2="650" y2="37" stroke="#163654" stroke-width="1" />
   <circle cx="34" cy="28" r="3.5" fill="#34D399" opacity="1">
     <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite" />
   </circle>
-  <text x="46" y="32" fill="#34D399" class="mono" font-size="10.5" font-weight="700" letter-spacing="0.8">GO // ISTANBUL</text>
-  <text x="174" y="32" fill="#7C8EA6" class="mono" font-size="10" letter-spacing="0.6">PLATE 01 // OBSIDIAN ATLAS</text>
-  <text x="426" y="32" fill="#F59E0B" class="mono" font-size="10" letter-spacing="0.5">41.0082° N · 28.9784° E</text>
-  <text x="848" y="32" fill="#94A3B8" class="mono" font-size="10" text-anchor="end" letter-spacing="0.4">DOĞUŞ BSc '23–'27</text>
-  <rect x="20" y="54" width="542" height="240" rx="6" fill="url(#plate-sheen)" stroke="#1E293B" stroke-width="1" />
-  <rect x="20" y="55" width="3" height="238" rx="1.5" fill="#FF5A1F" />
-  <text x="40" y="78" fill="#FF5A1F" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.2">01 // SOFTWARE ENGINEER · İSTANBUL, TÜRKİYE</text>
+  <text x="46" y="32" fill="#34D399" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">ONLINE · ISTANBUL</text>
+  <text x="174" y="32" fill="#75A1C2" class="mono" font-size="10" letter-spacing="0.6">ISTANBUL, TR // SYSTEMS &amp; AI</text>
+  <text x="426" y="32" fill="#38BDF8" class="mono" font-size="10" letter-spacing="0.5">41.0082° N · 28.9784° E</text>
+  <text x="848" y="32" fill="#9EC5E2" class="mono" font-size="10" text-anchor="end" letter-spacing="0.4">DOĞUŞ BSc '23–'27</text>
+  <rect x="20" y="54" width="542" height="240" rx="6" fill="url(#plate-sheen)" stroke="#163654" stroke-width="1" />
+  <line x1="28" y1="54.8" x2="554" y2="54.8" stroke="url(#aero-top-sheen)" stroke-width="1" />
+  <rect x="20" y="55" width="3" height="238" rx="1.5" fill="#00D4FF" />
+  <text x="40" y="78" fill="#00D4FF" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.2">SOFTWARE ENGINEER  ·  İSTANBUL, TÜRKİYE</text>
   <g transform="translate(40.00,96.00) scale(0.4400)">
-    <path d="M0,0 H18 V100 H0 Z M18,44 L54,0 H76 L38,48 L76,100 H54 L18,54 Z" transform="translate(0.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H68 V18 H18 V41 H58 V59 H18 V82 H68 V100 H0 Z" transform="translate(90.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H62 L74,12 V44 L62,56 H48 L76,100 H54 L28,56 H18 V100 H0 Z M18,18 H53 L56,21 V35 L53,38 H18 Z" transform="translate(172.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H68 V18 H18 V41 H58 V59 H18 V82 H68 V100 H0 Z" transform="translate(262.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H20 L44,46 L68,0 H88 V100 H70 V34 L49,74 H39 L18,34 V100 H0 Z" transform="translate(344.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
+    <path d="M0,0 H18 V100 H0 Z M18,44 L54,0 H76 L38,48 L76,100 H54 L18,54 Z" transform="translate(0.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H68 V18 H18 V41 H58 V59 H18 V82 H68 V100 H0 Z" transform="translate(90.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H62 L74,12 V44 L62,56 H48 L76,100 H54 L28,56 H18 V100 H0 Z M18,18 H53 L56,21 V35 L53,38 H18 Z" transform="translate(172.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H68 V18 H18 V41 H58 V59 H18 V82 H68 V100 H0 Z" transform="translate(262.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H20 L44,46 L68,0 H88 V100 H70 V34 L49,74 H39 L18,34 V100 H0 Z" transform="translate(344.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
   </g>
-  <rect x="250" y="106" width="36" height="3" fill="#FF5A1F" />
-  <text x="250" y="126" fill="#7C8EA6" class="mono" font-size="10" letter-spacing="0.6">ATLAS MONOGRAPH // REV.2026</text>
+  <rect x="250" y="106" width="36" height="3" fill="#34D399" />
+  <text x="250" y="126" fill="#75A1C2" class="mono" font-size="10" letter-spacing="0.6">BOSPHORUS STRAIT · ISTANBUL</text>
   <g transform="translate(40.00,150.00) scale(0.4400)">
-    <path d="M0,0 H18 V100 H0 Z M18,44 L54,0 H76 L38,48 L76,100 H54 L18,54 Z" transform="translate(0.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M28,0 H50 L78,100 H59 L52,74 H26 L19,100 H0 Z M39,20 L29,56 H49 Z" transform="translate(90.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H18 V82 H64 V100 H0 Z" transform="translate(182.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H21 L38,38 L55,0 H76 L47,56 V100 H29 V56 Z" transform="translate(260.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M12,0 H66 L78,12 V88 L66,100 H12 L0,88 V12 Z M22,18 H56 L60,22 V78 L56,82 H22 L18,78 V22 Z" transform="translate(350.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H20 L60,68 V0 H78 V100 H58 L18,32 V100 H0 Z" transform="translate(442.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M12,0 H62 L74,12 V30 H56 V18 H18 V82 H56 V70 H74 V88 L62,100 H12 L0,88 V12 Z" transform="translate(534.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
-    <path d="M0,0 H18 V78 L22,82 H54 L58,78 V0 H76 V88 L64,100 H12 L0,88 Z" transform="translate(622.00,0)" fill="#F1F5F9" fill-rule="evenodd" />
+    <path d="M0,0 H18 V100 H0 Z M18,44 L54,0 H76 L38,48 L76,100 H54 L18,54 Z" transform="translate(0.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M28,0 H50 L78,100 H59 L52,74 H26 L19,100 H0 Z M39,20 L29,56 H49 Z" transform="translate(90.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H18 V82 H64 V100 H0 Z" transform="translate(182.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H21 L38,38 L55,0 H76 L47,56 V100 H29 V56 Z" transform="translate(260.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M12,0 H66 L78,12 V88 L66,100 H12 L0,88 V12 Z M22,18 H56 L60,22 V78 L56,82 H22 L18,78 V22 Z" transform="translate(350.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H20 L60,68 V0 H78 V100 H58 L18,32 V100 H0 Z" transform="translate(442.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M12,0 H62 L74,12 V30 H56 V18 H18 V82 H56 V70 H74 V88 L62,100 H12 L0,88 V12 Z" transform="translate(534.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
+    <path d="M0,0 H18 V78 L22,82 H54 L58,78 V0 H76 V88 L64,100 H12 L0,88 Z" transform="translate(622.00,0)" fill="#F0FAFF" fill-rule="evenodd" />
   </g>
-  <line x1="40" y1="208" x2="542" y2="208" stroke="#1E293B" stroke-width="1" />
-  <text x="40" y="229" fill="#F1F5F9" class="sans" font-size="13.5" font-weight="700">Full-Stack Systems, Maritime Telemetry &amp; Applied AI</text>
-  <text x="40" y="250" fill="#94A3B8" class="sans" font-size="12">BSc Software Engineering at Doğuş University (2023–2027).</text>
-  <text x="40" y="268" fill="#94A3B8" class="sans" font-size="12">Building production web systems, microservices &amp; ML pipelines.</text>
-  <text x="40" y="285" fill="#7C8EA6" class="mono" font-size="9.5" letter-spacing="0.6">SYSTEMS: 06 CORE  ·  ROLE: GDG DESIGN LEAD  ·  HUAWEI AI ACADEMY</text>
-  <rect x="574" y="54" width="286" height="240" rx="6" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
+  <line x1="40" y1="208" x2="542" y2="208" stroke="#163654" stroke-width="1" />
+  <text x="40" y="229" fill="#F0FAFF" class="sans" font-size="13.5" font-weight="700">Full-Stack Systems, Maritime Telemetry &amp; Applied AI</text>
+  <text x="40" y="250" fill="#9EC5E2" class="sans" font-size="12">BSc Software Engineering at Doğuş University (2023–2027).</text>
+  <text x="40" y="268" fill="#9EC5E2" class="sans" font-size="12">Building production web systems, microservices &amp; ML pipelines.</text>
+  <text x="40" y="285" fill="#75A1C2" class="mono" font-size="9.5" letter-spacing="0.6">SYSTEMS: 06 CORE  ·  ROLE: GDG DESIGN LEAD  ·  HUAWEI AI ACADEMY</text>
+  <rect x="574" y="54" width="286" height="240" rx="6" fill="url(#bosphorus-water)" stroke="#163654" stroke-width="1" />
   <g clip-path="url(#topo-clip)">
     <rect x="574" y="54" width="286" height="240" fill="url(#sub-dots)" />
-    <path d="M582,196 C606,120 664,84 726,92 C792,100 842,138 854,194 C862,232 824,274 756,280 C686,286 566,252 582,196 Z" fill="none" stroke="#1E293B" stroke-width="1.0" />
-    <path d="M602,188 C622,130 670,102 722,108 C778,114 820,146 832,190 C840,222 806,256 750,262 C692,268 588,236 602,188 Z" fill="none" stroke="#233044" stroke-width="1.0" />
-    <path d="M624,180 C642,136 680,116 720,120 C764,126 798,150 808,186 C814,212 786,238 744,244 C698,250 612,218 624,180 Z" fill="none" stroke="#283548" stroke-width="1.0" />
-    <path d="M646,170 C660,140 688,128 718,132 C752,136 776,154 784,180 C790,200 768,220 736,226 C702,232 636,200 646,170 Z" fill="none" stroke="#2D3B50" stroke-width="1.1" />
-    <path d="M666,162 C676,144 696,138 716,142 C738,146 756,158 762,174 C766,188 748,202 728,206 C704,210 658,184 666,162 Z" fill="none" stroke="#334155" stroke-width="1.1" />
-    <path d="M682,156 C690,146 702,144 714,148 C726,152 736,160 738,170 C740,178 728,186 716,188 C702,190 676,170 682,156 Z" fill="none" stroke="#334155" stroke-width="1.2" />
-    <path d="M734,182 C742,172 758,170 768,176 C778,182 782,194 774,202 C766,210 748,210 738,202 C730,196 728,188 734,182 Z" fill="none" stroke="#283548" stroke-width="0.9" />
-    <circle cx="718" cy="164" r="64" fill="url(#beacon-aura)" />
-    <circle cx="718" cy="164" r="22" fill="none" stroke="#FF5A1F" stroke-width="1" stroke-opacity="0.55" />
-    <circle cx="718" cy="164" r="46" fill="none" stroke="#334155" stroke-width="1" stroke-opacity="0.8" />
-    <circle cx="718" cy="164" r="74" fill="none" stroke="#334155" stroke-width="0.9" stroke-dasharray="3 3" stroke-opacity="0.65" />
-    <path d="M610,164 H826 M718,76 V252" fill="none" stroke="#334155" stroke-width="0.8" stroke-opacity="0.55" />
-    <circle cx="718" cy="164" r="14" fill="none" stroke="#FF5A1F" stroke-width="1.2" stroke-opacity="0.85">
-      <animate attributeName="r" values="14;36" dur="3.6s" repeatCount="indefinite" />
+    <path d="M 574,54 L 724,54 C 716,74 694,90 682,108 C 672,122 688,136 696,150 C 702,162 686,178 678,194 C 670,208 660,218 648,220 C 628,214 608,204 596,198 C 604,210 626,222 646,228 C 656,236 654,254 638,274 C 624,286 600,294 574,294 Z" fill="#0A1829" stroke="#256394" stroke-width="1.3" stroke-linejoin="round" />
+    <path d="M 860,54 L 764,54 C 750,74 734,94 726,114 C 720,130 714,142 716,154 C 718,166 728,178 722,194 C 716,208 702,220 704,234 C 706,248 724,264 748,282 L 768,294 L 860,294 Z" fill="#0A1829" stroke="#256394" stroke-width="1.3" stroke-linejoin="round" />
+    <path d="M 574,72 L 696,72 C 686,90 664,106 656,124 C 650,140 668,154 662,174 C 654,192 634,196 574,186" fill="none" stroke="#163654" stroke-width="0.9" />
+    <path d="M 574,244 C 604,244 630,248 626,264 C 620,278 596,286 574,288" fill="none" stroke="#163654" stroke-width="0.9" />
+    <path d="M 860,82 L 778,82 C 760,102 746,124 744,150 C 742,176 752,196 736,222 C 728,236 746,258 788,284 L 860,284" fill="none" stroke="#163654" stroke-width="0.9" />
+    <path d="M 860,118 L 798,118 C 778,138 768,162 768,190 C 768,218 778,242 812,268 L 860,268" fill="none" stroke="#1E4970" stroke-width="0.8" />
+    <line x1="714" y1="68" x2="752" y2="68" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="2 1.5" stroke-opacity="0.8" />
+    <line x1="696" y1="151" x2="716" y2="153" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="2 1.5" stroke-opacity="0.8" />
+    <line x1="676" y1="198" x2="718" y2="202" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="2 1.5" stroke-opacity="0.8" />
+    <path d="M 744,54 C 724,84 704,112 706,152 C 708,180 694,204 678,234 C 668,256 682,278 696,294" fill="none" stroke="#256394" stroke-width="1.0" stroke-dasharray="3 3" stroke-opacity="0.75" />
+    <path d="M 744,54 C 724,84 704,112 706,152 C 708,180 694,204 678,234 C 668,256 682,278 696,294" fill="none" stroke="#00D4FF" class="bus-pulse" stroke-width="1.8" stroke-linecap="round" />
+    <circle cx="720" cy="96" r="2.3" fill="#34D399" />
+    <circle cx="680" cy="228" r="2.3" fill="#38BDF8" />
+    <circle cx="706" cy="164" r="60" fill="url(#beacon-aura)" />
+    <circle cx="706" cy="164" r="20" fill="none" stroke="#00D4FF" stroke-width="1" stroke-opacity="0.65" />
+    <circle cx="706" cy="164" r="42" fill="none" stroke="#256394" stroke-width="0.9" stroke-dasharray="3 3" stroke-opacity="0.75" />
+    <path d="M612,164 H800 M706,84 V244" fill="none" stroke="#256394" stroke-width="0.75" stroke-opacity="0.5" />
+    <circle cx="706" cy="164" r="12" fill="none" stroke="#00D4FF" stroke-width="1.2" stroke-opacity="0.85">
+      <animate attributeName="r" values="12;34" dur="3.6s" repeatCount="indefinite" />
       <animate attributeName="stroke-opacity" values="0.85;0" dur="3.6s" repeatCount="indefinite" />
     </circle>
-    <circle cx="718" cy="164" r="4" fill="#FF5A1F" filter="url(#amber-glow)" />
-    <circle cx="718" cy="164" r="1.8" fill="#F1F5F9" />
+    <circle cx="706" cy="164" r="3.8" fill="#00D4FF" filter="url(#amber-glow)" />
+    <circle cx="706" cy="164" r="1.7" fill="#F0FAFF" />
   </g>
-  <text x="588" y="74" fill="#7C8EA6" class="mono" font-size="9.5" letter-spacing="0.5">TOPO // ISTANBUL RIDGE</text>
-  <text x="846" y="74" fill="#34D399" class="mono" font-size="9.5" font-weight="700" text-anchor="end">LOCK: ACTIVE</text>
-  <text x="588" y="262" fill="#F59E0B" class="mono" font-size="10" font-weight="700">41.0082° N</text>
-  <text x="588" y="278" fill="#F59E0B" class="mono" font-size="10" font-weight="700">28.9784° E</text>
-  <text x="846" y="278" fill="#7C8EA6" class="mono" font-size="9.5" text-anchor="end">DATUM WGS84 // +118M</text>
-  <rect x="20" y="304" width="204" height="40" rx="5" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="20" y="305" width="2.5" height="38" rx="1.2" fill="#F59E0B" />
-  <text x="32" y="320" fill="#F59E0B" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">DOĞUŞ UNIV. · 2023–2027</text>
-  <text x="32" y="336" fill="#F1F5F9" class="sans" font-size="11" font-weight="600">BSc Software Engineering</text>
-  <rect x="232" y="304" width="204" height="40" rx="5" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="232" y="305" width="2.5" height="38" rx="1.2" fill="#818CF8" />
-  <text x="244" y="320" fill="#818CF8" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">GDG DOĞUŞ · 2025–2026</text>
-  <text x="244" y="336" fill="#F1F5F9" class="sans" font-size="11" font-weight="600">Design &amp; Social Media Team Lead</text>
-  <rect x="444" y="304" width="204" height="40" rx="5" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="444" y="305" width="2.5" height="38" rx="1.2" fill="#FF5A1F" />
-  <text x="456" y="320" fill="#FF5A1F" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">HUAWEI × AI · 2026</text>
-  <text x="456" y="336" fill="#F1F5F9" class="sans" font-size="11" font-weight="600">AI Academy · Data &amp; ML</text>
-  <rect x="656" y="304" width="204" height="40" rx="5" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="656" y="305" width="2.5" height="38" rx="1.2" fill="#F59E0B" />
-  <text x="668" y="320" fill="#F59E0B" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">VOLLSIGN · PRODUCTION</text>
-  <text x="668" y="336" fill="#F1F5F9" class="sans" font-size="11" font-weight="600">Dev / QA &amp; Test Engineering</text>
+  <text x="588" y="74" fill="#75A1C2" class="mono" font-size="9.5" letter-spacing="0.5">BOSPHORUS STRAIT</text>
+  <text x="846" y="74" fill="#34D399" class="mono" font-size="9.5" font-weight="700" text-anchor="end">AIS LIVE</text>
+  <text x="588" y="262" fill="#38BDF8" class="mono" font-size="10" font-weight="700">41.0082° N</text>
+  <text x="588" y="278" fill="#38BDF8" class="mono" font-size="10" font-weight="700">28.9784° E</text>
+  <text x="846" y="278" fill="#75A1C2" class="mono" font-size="9.5" text-anchor="end">RUMELİ × ANADOLU</text>
+  <rect x="20" y="304" width="204" height="40" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="20" y="305" width="2.5" height="38" rx="1.2" fill="#38BDF8" />
+  <text x="32" y="320" fill="#38BDF8" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">DOĞUŞ UNIV. · 2023–2027</text>
+  <text x="32" y="336" fill="#F0FAFF" class="sans" font-size="11" font-weight="600">BSc Software Engineering</text>
+  <rect x="232" y="304" width="204" height="40" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="232" y="305" width="2.5" height="38" rx="1.2" fill="#7DD3FC" />
+  <text x="244" y="320" fill="#7DD3FC" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">GDG DOĞUŞ · 2025–2026</text>
+  <text x="244" y="336" fill="#F0FAFF" class="sans" font-size="11" font-weight="600">Design &amp; Social Media Team Lead</text>
+  <rect x="444" y="304" width="204" height="40" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="444" y="305" width="2.5" height="38" rx="1.2" fill="#00D4FF" />
+  <text x="456" y="320" fill="#00D4FF" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">HUAWEI × AI · 2026</text>
+  <text x="456" y="336" fill="#F0FAFF" class="sans" font-size="11" font-weight="600">AI Academy · Data &amp; ML</text>
+  <rect x="656" y="304" width="204" height="40" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="656" y="305" width="2.5" height="38" rx="1.2" fill="#38BDF8" />
+  <text x="668" y="320" fill="#38BDF8" class="mono" font-size="9" font-weight="700" letter-spacing="0.5">VOLLSIGN · PRODUCTION</text>
+  <text x="668" y="336" fill="#F0FAFF" class="sans" font-size="11" font-weight="600">Dev / QA &amp; Test Engineering</text>
 </svg>

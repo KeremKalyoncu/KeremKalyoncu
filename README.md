@@ -83,5 +83,5 @@
 </details>
 
 <p align="center">
-  <sub>OBSIDIAN ATLAS // ISTANBUL SYSTEMS MONOGRAPH · Kerem Kalyoncu © 2026</sub>
+  <sub>KEREM KALYONCU // ISTANBUL SYSTEMS & AI · Kerem Kalyoncu © 2026</sub>
 </p>

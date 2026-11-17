@@ -8,19 +8,19 @@ Zero third-party dependencies so both `source/build_readme_svgs.py` and
 from __future__ import annotations
 
 PALETTE: dict[str, str] = {
-    "bg_void": "#080A0F",        # Canvas Void (frames cleanly on GitHub Dark #0d1117)
-    "bg_plate": "#0F141D",       # Elevated Surface / Plate
-    "bg_bay": "#0A0D14",         # Recessed Telemetry Bay
-    "bg_hover": "#151C28",       # Active / Hover Surface
-    "border_grid": "#1E293B",    # Structural Hairlines
-    "border_active": "#334155",  # Active Frame
-    "ink_primary": "#F1F5F9",    # >16:1 contrast on bg_void
-    "ink_secondary": "#94A3B8",  # >6.5:1 contrast on bg_void
-    "ink_caption": "#7C8EA6",    # >4.5:1 contrast on bg_plate
-    "accent_orange": "#FF5A1F",  # Signal Amber / Survey Orange (primary beacon, CTAs)
-    "accent_amber": "#F59E0B",   # Radar Brass / Gold (coordinates, timeline)
-    "accent_emerald": "#34D399", # Telemetry Emerald (GO state, live status)
-    "accent_indigo": "#818CF8",  # Blueprint Indigo (AI/ML & community)
+    "bg_void": "#060E18",        # Deep Sapphire Night (frames cleanly on GitHub Dark #0d1117)
+    "bg_plate": "#0A1829",       # Aero Sapphire Glass Plate
+    "bg_bay": "#071220",         # Recessed Hydro-Glass Bay
+    "bg_hover": "#102640",       # Luminous Aqua Hover Glass
+    "border_grid": "#163654",    # Crisp Aero Glass Hairlines
+    "border_active": "#256394",  # Specular Cyan Frame
+    "ink_primary": "#F0FAFF",    # >16:1 Crystal Ice White
+    "ink_secondary": "#9EC5E2",  # >7:1 Soft Aero Mist Blue
+    "ink_caption": "#75A1C2",    # >5.5:1 Muted Aqua Caption
+    "accent_orange": "#00D4FF",  # Luminous Aero Electric Cyan (primary beacon, CTAs)
+    "accent_amber": "#38BDF8",   # Crystal Sky Aqua (coordinates, timeline)
+    "accent_emerald": "#34D399", # Bioluminescent Seafoam Mint (GO state, live status)
+    "accent_indigo": "#7DD3FC",  # Soft Pearl Ice Cyan (AI/ML & community)
 }
 
 FONTS: dict[str, str] = {
@@ -29,11 +29,11 @@ FONTS: dict[str, str] = {
 }
 
 BRAND: dict[str, str] = {
-    "monograph": "OBSIDIAN ATLAS // ISTANBUL SYSTEMS MONOGRAPH",
-    "revision": "ATLAS MONOGRAPH // REV.2026",
-    "plate_code": "PLATE 01 // OBSIDIAN ATLAS",
-    "topo_label": "TOPO // ISTANBUL RIDGE",
-    "topo_datum": "DATUM WGS84 // +118M",
+    "monograph": "KEREM KALYONCU // ISTANBUL SYSTEMS & AI",
+    "revision": "BOSPHORUS STRAIT · ISTANBUL",
+    "plate_code": "ISTANBUL, TR // SYSTEMS & AI",
+    "topo_label": "BOSPHORUS STRAIT",
+    "topo_datum": "RUMELİ × ANADOLU",
 }
 
 PROFILE: dict = {

@@ -2729,19 +2729,27 @@ class CDPHarness:
         self._browser: Any = None
 
     def open(self) -> "CDPHarness":
-        self._browser = choreographer.Browser(headless=True)
-        if os.name == "nt":
-            orig_get_popen_args = self._browser._browser_impl.get_popen_args
+        last_err: Exception | None = None
+        for attempt in range(3):
+            try:
+                self._browser = choreographer.Browser(headless=True)
+                if os.name == "nt":
+                    orig_get_popen_args = self._browser._browser_impl.get_popen_args
 
-            def _win_safe_popen_args() -> dict[str, Any]:
-                args = dict(orig_get_popen_args())
-                args.setdefault("stdin", subprocess.DEVNULL)
-                args.setdefault("stdout", subprocess.DEVNULL)
-                return args
+                    def _win_safe_popen_args() -> dict[str, Any]:
+                        args = dict(orig_get_popen_args())
+                        args.setdefault("stdin", subprocess.DEVNULL)
+                        args.setdefault("stdout", subprocess.DEVNULL)
+                        return args
 
-            self._browser._browser_impl.get_popen_args = _win_safe_popen_args
-        self._runner.run(self._browser.open(), timeout=25.0)
-        return self
+                    self._browser._browser_impl.get_popen_args = _win_safe_popen_args
+                self._runner.run(self._browser.open(), timeout=25.0)
+                return self
+            except Exception as exc:
+                last_err = exc
+                time.sleep(1.0 * (attempt + 1))
+        assert last_err is not None
+        raise last_err
 
     def close(self) -> None:
         try:

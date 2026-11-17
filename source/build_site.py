@@ -114,45 +114,89 @@ def render_wordmark_svg() -> str:
 
 
 def render_topo_bay_svg() -> str:
-    """Render Istanbul ridge contours + pulsing target reticle inside Hero Topo Bay."""
+    """Render authentic Bosphorus Strait vector cartography + live TSS lane + reticle inside Hero Topo Bay."""
+    rumeli_land = (
+        "M 574,54 L 724,54 "
+        "C 716,74 694,90 682,108 "
+        "C 672,122 688,136 696,150 "
+        "C 702,162 686,178 678,194 "
+        "C 670,208 660,218 648,220 "
+        "C 628,214 608,204 596,198 "
+        "C 604,210 626,222 646,228 "
+        "C 656,236 654,254 638,274 "
+        "C 624,286 600,294 574,294 Z"
+    )
+    anadolu_land = (
+        "M 860,54 L 764,54 "
+        "C 750,74 734,94 726,114 "
+        "C 720,130 714,142 716,154 "
+        "C 718,166 728,178 722,194 "
+        "C 716,208 702,220 704,234 "
+        "C 706,248 724,264 748,282 "
+        "L 768,294 L 860,294 Z"
+    )
+    inland_contours = [
+        ("M 574,72 L 696,72 C 686,90 664,106 656,124 C 650,140 668,154 662,174 C 654,192 634,196 574,186", "#163654", "0.9"),
+        ("M 574,244 C 604,244 630,248 626,264 C 620,278 596,286 574,288", "#163654", "0.9"),
+        ("M 860,82 L 778,82 C 760,102 746,124 744,150 C 742,176 752,196 736,222 C 728,236 746,258 788,284 L 860,284", "#163654", "0.9"),
+        ("M 860,118 L 798,118 C 778,138 768,162 768,190 C 768,218 778,242 812,268 L 860,268", "#1E4970", "0.8"),
+    ]
+    tss_lane = "M 744,54 C 724,84 704,112 706,152 C 708,180 694,204 678,234 C 668,256 682,278 696,294"
+
     parts: list[str] = [
-        '<svg class="topo-svg" viewBox="574 54 286 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">'
+        '<svg class="topo-svg" viewBox="574 54 286 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
         "<defs>"
         '<radialGradient id="hero-beacon-aura" cx="50%" cy="50%" r="50%">'
         f'<stop offset="0%" stop-color="{PALETTE["accent_orange"]}" stop-opacity="0.28"/>'
-        f'<stop offset="60%" stop-color="{PALETTE["accent_orange"]}" stop-opacity="0.06"/>'
+        f'<stop offset="60%" stop-color="{PALETTE["accent_emerald"]}" stop-opacity="0.08"/>'
         f'<stop offset="100%" stop-color="{PALETTE["accent_orange"]}" stop-opacity="0"/>'
         "</radialGradient>"
         "</defs>"
     ]
-    for d, col, sw in RIDGE_CONTOURS:
+    parts.append(
+        f'<path d="{rumeli_land}" fill="{PALETTE["bg_plate"]}" stroke="{PALETTE["border_active"]}" stroke-width="1.3" stroke-linejoin="round"/>'
+    )
+    parts.append(
+        f'<path d="{anadolu_land}" fill="{PALETTE["bg_plate"]}" stroke="{PALETTE["border_active"]}" stroke-width="1.3" stroke-linejoin="round"/>'
+    )
+    for d, col, sw in inland_contours:
         parts.append(f'<path d="{d}" fill="none" stroke="{col}" stroke-width="{sw}"/>')
 
-    rx, ry = 718, 164
-    parts.append('<g class="topo-reticle-layer">')
-    parts.append(f'<circle cx="{rx}" cy="{ry}" r="64" fill="url(#hero-beacon-aura)"/>')
+    for bx1, by1, bx2, by2 in ((714, 68, 752, 68), (696, 151, 716, 153), (676, 198, 718, 202)):
+        parts.append(
+            f'<line x1="{bx1}" y1="{by1}" x2="{bx2}" y2="{by2}" stroke="{PALETTE["accent_amber"]}" '
+            'stroke-width="1.2" stroke-dasharray="2 1.5" stroke-opacity="0.8"/>'
+        )
     parts.append(
-        f'<circle cx="{rx}" cy="{ry}" r="22" fill="none" stroke="{PALETTE["accent_orange"]}" '
+        f'<path d="{tss_lane}" fill="none" stroke="{PALETTE["border_active"]}" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.75"/>'
+    )
+    parts.append(
+        f'<path d="{tss_lane}" fill="none" stroke="{PALETTE["accent_orange"]}" stroke-width="1.6" stroke-dasharray="8 24"/>'
+    )
+    parts.append(f'<circle cx="720" cy="96" r="2.3" fill="{PALETTE["accent_emerald"]}"/>')
+    parts.append(f'<circle cx="680" cy="228" r="2.3" fill="{PALETTE["accent_amber"]}"/>')
+
+    rx, ry = 706, 164
+    parts.append('<g class="topo-reticle-layer">')
+    parts.append(f'<circle cx="{rx}" cy="{ry}" r="60" fill="url(#hero-beacon-aura)"/>')
+    parts.append(
+        f'<circle cx="{rx}" cy="{ry}" r="20" fill="none" stroke="{PALETTE["accent_orange"]}" '
         'stroke-width="1.1" stroke-opacity="0.65"/>'
     )
     parts.append(
-        f'<circle cx="{rx}" cy="{ry}" r="46" fill="none" stroke="{PALETTE["border_active"]}" '
-        'stroke-width="1" stroke-opacity="0.85"/>'
+        f'<circle cx="{rx}" cy="{ry}" r="42" fill="none" stroke="{PALETTE["border_active"]}" '
+        'stroke-width="0.9" stroke-dasharray="3 3" stroke-opacity="0.75"/>'
     )
     parts.append(
-        f'<circle cx="{rx}" cy="{ry}" r="74" fill="none" stroke="{PALETTE["border_active"]}" '
-        'stroke-width="0.9" stroke-dasharray="3 3" stroke-opacity="0.65"/>'
+        f'<path d="M612,{ry} H800 M{rx},84 V244" fill="none" stroke="{PALETTE["border_active"]}" '
+        'stroke-width="0.75" stroke-opacity="0.5"/>'
     )
     parts.append(
-        f'<path d="M604,{ry} H832 M{rx},76 V252" fill="none" stroke="{PALETTE["border_active"]}" '
-        'stroke-width="0.8" stroke-opacity="0.55"/>'
-    )
-    parts.append(
-        f'<circle class="reticle-pulse" cx="{rx}" cy="{ry}" r="18" fill="none" '
+        f'<circle class="reticle-pulse" cx="{rx}" cy="{ry}" r="16" fill="none" '
         f'stroke="{PALETTE["accent_orange"]}" stroke-width="1.3"/>'
     )
-    parts.append(f'<circle cx="{rx}" cy="{ry}" r="4.2" fill="{PALETTE["accent_orange"]}"/>')
-    parts.append(f'<circle cx="{rx}" cy="{ry}" r="1.8" fill="{PALETTE["ink_primary"]}"/>')
+    parts.append(f'<circle cx="{rx}" cy="{ry}" r="4" fill="{PALETTE["accent_orange"]}"/>')
+    parts.append(f'<circle cx="{rx}" cy="{ry}" r="1.7" fill="{PALETTE["ink_primary"]}"/>')
     parts.append("</g></svg>")
     return "".join(parts)
 
@@ -1220,7 +1264,7 @@ main, section, header, footer, article, aside, .atlas-shell, .hero-grid > *, .be
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: radial-gradient(280px circle at var(--mx, -400px) var(--my, -400px), rgba(255, 90, 31, 0.55), transparent 65%);
+  background: radial-gradient(280px circle at var(--mx, -400px) var(--my, -400px), rgba(0, 212, 255, 0.55), transparent 65%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -1237,7 +1281,7 @@ main, section, header, footer, article, aside, .atlas-shell, .hero-grid > *, .be
 .bento-card.is-skill-matched {{
   background: var(--bg-hover);
   border-color: var(--accent-orange);
-  box-shadow: 0 0 0 1px rgba(255, 90, 31, 0.5), 0 10px 26px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.5), 0 10px 26px rgba(0, 0, 0, 0.45);
 }}
 
 .bento-card.is-skill-dimmed {{
@@ -2538,7 +2582,7 @@ def build_js() -> str:
     ctx.setLineDash([]);
 
     for (const pt of CONSTELLATION) {
-      ctx.fillStyle = "rgba(245, 158, 11, 0.28)";
+      ctx.fillStyle = "rgba(56, 189, 248, 0.32)";
       ctx.beginPath();
       ctx.arc(pt[0] * w, pt[1] * h, 2, 0, Math.PI * 2);
       ctx.fill();
@@ -2548,14 +2592,14 @@ def build_js() -> str:
     // Pointer reactive illumination
     if (pointerX >= 0 && pointerY >= 0) {
       const grad = ctx.createRadialGradient(pointerX, pointerY, 0, pointerX, pointerY, 220);
-      grad.addColorStop(0, "rgba(255, 90, 31, 0.075)");
-      grad.addColorStop(1, "rgba(255, 90, 31, 0)");
+      grad.addColorStop(0, "rgba(0, 212, 255, 0.085)");
+      grad.addColorStop(1, "rgba(0, 212, 255, 0)");
       ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.arc(pointerX, pointerY, 220, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.strokeStyle = "rgba(255, 90, 31, 0.28)";
+      ctx.strokeStyle = "rgba(0, 212, 255, 0.32)";
       ctx.lineWidth = 1;
       ctx.setLineDash([3, 3]);
       ctx.beginPath();

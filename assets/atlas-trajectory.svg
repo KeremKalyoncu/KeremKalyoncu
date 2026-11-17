@@ -7,7 +7,7 @@
 @keyframes busFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -48; } }
 .bus-pulse { stroke-dasharray: 10 38; stroke-dashoffset: 0; animation: busFlow 2.8s linear infinite; }</style>
     <pattern id="micro-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.6" stroke-opacity="0.55" />
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#163654" stroke-width="0.6" stroke-opacity="0.55" />
     </pattern>
     <filter id="slate-grain" x="0%" y="0%" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="3" stitchTiles="stitch" result="noise" />
@@ -20,116 +20,134 @@
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+    <radialGradient id="aero-canvas-glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.11" />
+      <stop offset="55%" stop-color="#0EA5E9" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#060E18" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="aero-card-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F243C" />
+      <stop offset="45%" stop-color="#0A1829" />
+      <stop offset="100%" stop-color="#081423" />
+    </linearGradient>
+    <linearGradient id="aero-top-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F0FAFF" stop-opacity="0.05" />
+      <stop offset="35%" stop-color="#00D4FF" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#34D399" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#F0FAFF" stop-opacity="0.05" />
+    </linearGradient>
   </defs>
-  <rect width="880" height="400" rx="12" fill="#080A0F" />
+  <rect width="880" height="400" rx="12" fill="#060E18" />
+  <rect width="880" height="400" rx="12" fill="url(#aero-canvas-glow)" />
   <rect width="880" height="400" rx="12" fill="url(#micro-grid)" />
   <rect width="880" height="400" rx="12" filter="url(#slate-grain)" />
-  <rect x="0.5" y="0.5" width="879" height="399" rx="11.5" fill="none" stroke="#1E293B" stroke-width="1" />
-  <path d="M10,18 V10 H18 M862,10 H870 V18 M10,382 V390 H18 M862,390 H870 V382" fill="none" stroke="#334155" stroke-width="1.2" />
-  <text x="20" y="31" fill="#FF5A1F" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.2">03 // TRAJECTORY RAIL &amp; ENGINEERING STACK MATRIX</text>
-  <text x="860" y="31" fill="#7C8EA6" class="mono" font-size="10" text-anchor="end" letter-spacing="0.5">CHRONOLOGY: 2023 → 2027</text>
-  <line x1="20" y1="46" x2="860" y2="46" stroke="#1E293B" stroke-width="1" />
-  <rect x="20" y="56" width="840" height="124" rx="6" fill="#0A0D14" stroke="#1E293B" stroke-width="1" />
-  <path d="M56,82 H824" fill="none" stroke="#334155" stroke-width="1.5" />
-  <path d="M56,82 H824" fill="none" stroke="#F59E0B" class="bus-pulse" stroke-width="1.8" stroke-linecap="round" />
-  <text x="112" y="71" fill="#F59E0B" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">2023–2027</text>
-  <line x1="112" y1="87.5" x2="112" y2="96" stroke="#334155" stroke-width="1.2" />
-  <circle cx="112" cy="82" r="5.5" fill="#0F141D" stroke="#F59E0B" stroke-width="1.6" />
-  <circle cx="112" cy="82" r="2.2" fill="#F59E0B" />
-  <rect x="33" y="96" width="158" height="74" rx="4" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="34" y="96" width="156" height="2" rx="1" fill="#F59E0B" />
-  <text x="42" y="115" fill="#F1F5F9" class="sans" font-size="10.5" font-weight="700">Doğuş University</text>
-  <text x="42" y="134" fill="#94A3B8" class="sans" font-size="10">BSc Software Eng.</text>
-  <text x="42" y="152" fill="#7C8EA6" class="mono" font-size="9" letter-spacing="0.3">ISTANBUL · DEGREE</text>
-  <text x="276" y="71" fill="#818CF8" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">2025–2026</text>
-  <line x1="276" y1="87.5" x2="276" y2="96" stroke="#334155" stroke-width="1.2" />
-  <circle cx="276" cy="82" r="5.5" fill="#0F141D" stroke="#818CF8" stroke-width="1.6" />
-  <circle cx="276" cy="82" r="2.2" fill="#818CF8" />
-  <rect x="197" y="96" width="158" height="74" rx="4" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="198" y="96" width="156" height="2" rx="1" fill="#818CF8" />
-  <text x="206" y="115" fill="#F1F5F9" class="sans" font-size="10.5" font-weight="700">GDG on Campus Doğuş</text>
-  <text x="206" y="134" fill="#94A3B8" class="sans" font-size="10">Design &amp; Social</text>
-  <text x="206" y="152" fill="#7C8EA6" class="mono" font-size="9" letter-spacing="0.3">Media Team Lead</text>
-  <text x="440" y="71" fill="#FF5A1F" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">2026</text>
-  <line x1="440" y1="87.5" x2="440" y2="96" stroke="#334155" stroke-width="1.2" />
-  <circle cx="440" cy="82" r="5.5" fill="#0F141D" stroke="#FF5A1F" stroke-width="1.6" />
-  <circle cx="440" cy="82" r="2.2" fill="#FF5A1F" />
-  <rect x="361" y="96" width="158" height="74" rx="4" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="362" y="96" width="156" height="2" rx="1" fill="#FF5A1F" />
-  <text x="370" y="115" fill="#F1F5F9" class="sans" font-size="10.5" font-weight="700">Huawei × AI Academy</text>
-  <text x="370" y="134" fill="#94A3B8" class="sans" font-size="10">Data Science &amp; ML</text>
-  <text x="370" y="152" fill="#7C8EA6" class="mono" font-size="9" letter-spacing="0.3">APPLIED AI TRACK</text>
+  <rect x="0.5" y="0.5" width="879" height="399" rx="11.5" fill="none" stroke="#163654" stroke-width="1" />
+  <line x1="24" y1="1" x2="856" y2="1" stroke="url(#aero-top-sheen)" stroke-width="1.2" />
+  <path d="M10,18 V10 H18 M862,10 H870 V18 M10,382 V390 H18 M862,390 H870 V382" fill="none" stroke="#256394" stroke-width="1.2" />
+  <text x="20" y="31" fill="#00D4FF" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.2">ENGINEERING TRAJECTORY &amp; TECHNICAL STACK</text>
+  <text x="860" y="31" fill="#75A1C2" class="mono" font-size="10" text-anchor="end" letter-spacing="0.5">TIMELINE: 2023 → 2027</text>
+  <line x1="20" y1="46" x2="860" y2="46" stroke="#163654" stroke-width="1" />
+  <rect x="20" y="56" width="840" height="124" rx="6" fill="#071220" stroke="#163654" stroke-width="1" />
+  <path d="M56,82 H824" fill="none" stroke="#256394" stroke-width="1.5" />
+  <path d="M56,82 H824" fill="none" stroke="#00D4FF" class="bus-pulse" stroke-width="1.8" stroke-linecap="round" />
+  <text x="112" y="71" fill="#38BDF8" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">2023–2027</text>
+  <line x1="112" y1="87.5" x2="112" y2="96" stroke="#256394" stroke-width="1.2" />
+  <circle cx="112" cy="82" r="5.5" fill="#0A1829" stroke="#38BDF8" stroke-width="1.6" />
+  <circle cx="112" cy="82" r="2.2" fill="#38BDF8" />
+  <rect x="33" y="96" width="158" height="74" rx="4" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="34" y="96" width="156" height="2" rx="1" fill="#38BDF8" />
+  <text x="42" y="115" fill="#F0FAFF" class="sans" font-size="10.5" font-weight="700">Doğuş University</text>
+  <text x="42" y="134" fill="#9EC5E2" class="sans" font-size="10">BSc Software Eng.</text>
+  <text x="42" y="152" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">ISTANBUL · DEGREE</text>
+  <text x="276" y="71" fill="#7DD3FC" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">2025–2026</text>
+  <line x1="276" y1="87.5" x2="276" y2="96" stroke="#256394" stroke-width="1.2" />
+  <circle cx="276" cy="82" r="5.5" fill="#0A1829" stroke="#7DD3FC" stroke-width="1.6" />
+  <circle cx="276" cy="82" r="2.2" fill="#7DD3FC" />
+  <rect x="197" y="96" width="158" height="74" rx="4" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="198" y="96" width="156" height="2" rx="1" fill="#7DD3FC" />
+  <text x="206" y="115" fill="#F0FAFF" class="sans" font-size="10.5" font-weight="700">GDG on Campus Doğuş</text>
+  <text x="206" y="134" fill="#9EC5E2" class="sans" font-size="10">Design &amp; Social</text>
+  <text x="206" y="152" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">Media Team Lead</text>
+  <text x="440" y="71" fill="#00D4FF" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">2026</text>
+  <line x1="440" y1="87.5" x2="440" y2="96" stroke="#256394" stroke-width="1.2" />
+  <circle cx="440" cy="82" r="5.5" fill="#0A1829" stroke="#00D4FF" stroke-width="1.6" />
+  <circle cx="440" cy="82" r="2.2" fill="#00D4FF" />
+  <rect x="361" y="96" width="158" height="74" rx="4" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="362" y="96" width="156" height="2" rx="1" fill="#00D4FF" />
+  <text x="370" y="115" fill="#F0FAFF" class="sans" font-size="10.5" font-weight="700">Huawei × AI Academy</text>
+  <text x="370" y="134" fill="#9EC5E2" class="sans" font-size="10">Data Science &amp; ML</text>
+  <text x="370" y="152" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">APPLIED AI TRACK</text>
   <text x="604" y="71" fill="#34D399" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">FOUNDATION</text>
-  <line x1="604" y1="87.5" x2="604" y2="96" stroke="#334155" stroke-width="1.2" />
-  <circle cx="604" cy="82" r="5.5" fill="#0F141D" stroke="#34D399" stroke-width="1.6" />
+  <line x1="604" y1="87.5" x2="604" y2="96" stroke="#256394" stroke-width="1.2" />
+  <circle cx="604" cy="82" r="5.5" fill="#0A1829" stroke="#34D399" stroke-width="1.6" />
   <circle cx="604" cy="82" r="2.2" fill="#34D399" />
-  <rect x="525" y="96" width="158" height="74" rx="4" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+  <rect x="525" y="96" width="158" height="74" rx="4" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
   <rect x="526" y="96" width="156" height="2" rx="1" fill="#34D399" />
-  <text x="534" y="115" fill="#F1F5F9" class="sans" font-size="10.5" font-weight="700">BTK AI Fundamentals</text>
-  <text x="534" y="134" fill="#94A3B8" class="sans" font-size="10">AI &amp; ML Basics</text>
-  <text x="534" y="152" fill="#7C8EA6" class="mono" font-size="9" letter-spacing="0.3">CERTIFIED STUDY</text>
-  <text x="768" y="71" fill="#F59E0B" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">EXPERIENCE</text>
-  <line x1="768" y1="87.5" x2="768" y2="96" stroke="#334155" stroke-width="1.2" />
-  <circle cx="768" cy="82" r="5.5" fill="#0F141D" stroke="#F59E0B" stroke-width="1.6" />
-  <circle cx="768" cy="82" r="2.2" fill="#F59E0B" />
-  <rect x="689" y="96" width="158" height="74" rx="4" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="690" y="96" width="156" height="2" rx="1" fill="#F59E0B" />
-  <text x="698" y="115" fill="#F1F5F9" class="sans" font-size="10.5" font-weight="700">VollSign</text>
-  <text x="698" y="134" fill="#94A3B8" class="sans" font-size="10">Dev / QA &amp; Testing</text>
-  <text x="698" y="152" fill="#7C8EA6" class="mono" font-size="9" letter-spacing="0.3">VOLLSIGN.COM</text>
-  <rect x="20" y="192" width="204" height="146" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="21" y="192" width="202" height="2.5" rx="1" fill="#FF5A1F" />
-  <text x="34" y="214" fill="#FF5A1F" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">01 // SYSTEMS &amp; BACKEND</text>
-  <line x1="32" y1="224" x2="212" y2="224" stroke="#1E293B" stroke-width="1" />
-  <circle cx="35" cy="240.5" r="2" fill="#FF5A1F" />
-  <text x="46" y="244" fill="#94A3B8" class="sans" font-size="11.5">Java · Spring Boot</text>
-  <circle cx="35" cy="262.5" r="2" fill="#FF5A1F" />
-  <text x="46" y="266" fill="#94A3B8" class="sans" font-size="11.5">C# · ASP.NET Core</text>
-  <circle cx="35" cy="284.5" r="2" fill="#FF5A1F" />
-  <text x="46" y="288" fill="#94A3B8" class="sans" font-size="11.5">Python · Microservices</text>
-  <circle cx="35" cy="306.5" r="2" fill="#FF5A1F" />
-  <text x="46" y="310" fill="#94A3B8" class="sans" font-size="11.5">PostgreSQL · REST APIs</text>
-  <rect x="232" y="192" width="204" height="146" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="233" y="192" width="202" height="2.5" rx="1" fill="#F59E0B" />
-  <text x="246" y="214" fill="#F59E0B" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">02 // WEB &amp; INTERFACE</text>
-  <line x1="244" y1="224" x2="424" y2="224" stroke="#1E293B" stroke-width="1" />
-  <circle cx="247" cy="240.5" r="2" fill="#F59E0B" />
-  <text x="258" y="244" fill="#94A3B8" class="sans" font-size="11.5">React · TypeScript</text>
-  <circle cx="247" cy="262.5" r="2" fill="#F59E0B" />
-  <text x="258" y="266" fill="#94A3B8" class="sans" font-size="11.5">React Native · PWA</text>
-  <circle cx="247" cy="284.5" r="2" fill="#F59E0B" />
-  <text x="258" y="288" fill="#94A3B8" class="sans" font-size="11.5">Leaflet.js · Material UI</text>
-  <circle cx="247" cy="306.5" r="2" fill="#F59E0B" />
-  <text x="258" y="310" fill="#94A3B8" class="sans" font-size="11.5">SVG · Canvas2D Systems</text>
-  <rect x="444" y="192" width="204" height="146" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
-  <rect x="445" y="192" width="202" height="2.5" rx="1" fill="#818CF8" />
-  <text x="458" y="214" fill="#818CF8" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">03 // AI &amp; DATA LAB</text>
-  <line x1="456" y1="224" x2="636" y2="224" stroke="#1E293B" stroke-width="1" />
-  <circle cx="459" cy="240.5" r="2" fill="#818CF8" />
-  <text x="470" y="244" fill="#94A3B8" class="sans" font-size="11.5">Scikit-Learn · Pandas</text>
-  <circle cx="459" cy="262.5" r="2" fill="#818CF8" />
-  <text x="470" y="266" fill="#94A3B8" class="sans" font-size="11.5">Medical NLP Pipelines</text>
-  <circle cx="459" cy="284.5" r="2" fill="#818CF8" />
-  <text x="470" y="288" fill="#94A3B8" class="sans" font-size="11.5">Feature Engineering</text>
-  <circle cx="459" cy="306.5" r="2" fill="#818CF8" />
-  <text x="470" y="310" fill="#94A3B8" class="sans" font-size="11.5">Predictive Modeling</text>
-  <rect x="656" y="192" width="204" height="146" rx="6" fill="#0F141D" stroke="#1E293B" stroke-width="1" />
+  <text x="534" y="115" fill="#F0FAFF" class="sans" font-size="10.5" font-weight="700">BTK AI Fundamentals</text>
+  <text x="534" y="134" fill="#9EC5E2" class="sans" font-size="10">AI &amp; ML Basics</text>
+  <text x="534" y="152" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">CERTIFIED STUDY</text>
+  <text x="768" y="71" fill="#38BDF8" class="mono" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">EXPERIENCE</text>
+  <line x1="768" y1="87.5" x2="768" y2="96" stroke="#256394" stroke-width="1.2" />
+  <circle cx="768" cy="82" r="5.5" fill="#0A1829" stroke="#38BDF8" stroke-width="1.6" />
+  <circle cx="768" cy="82" r="2.2" fill="#38BDF8" />
+  <rect x="689" y="96" width="158" height="74" rx="4" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="690" y="96" width="156" height="2" rx="1" fill="#38BDF8" />
+  <text x="698" y="115" fill="#F0FAFF" class="sans" font-size="10.5" font-weight="700">VollSign</text>
+  <text x="698" y="134" fill="#9EC5E2" class="sans" font-size="10">Dev / QA &amp; Testing</text>
+  <text x="698" y="152" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">VOLLSIGN.COM</text>
+  <rect x="20" y="192" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="21" y="192" width="202" height="2.5" rx="1" fill="#00D4FF" />
+  <text x="34" y="214" fill="#00D4FF" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">SYSTEMS &amp; BACKEND</text>
+  <line x1="32" y1="224" x2="212" y2="224" stroke="#163654" stroke-width="1" />
+  <circle cx="35" cy="240.5" r="2" fill="#00D4FF" />
+  <text x="46" y="244" fill="#9EC5E2" class="sans" font-size="11.5">Java · Spring Boot</text>
+  <circle cx="35" cy="262.5" r="2" fill="#00D4FF" />
+  <text x="46" y="266" fill="#9EC5E2" class="sans" font-size="11.5">C# · ASP.NET Core</text>
+  <circle cx="35" cy="284.5" r="2" fill="#00D4FF" />
+  <text x="46" y="288" fill="#9EC5E2" class="sans" font-size="11.5">Python · Microservices</text>
+  <circle cx="35" cy="306.5" r="2" fill="#00D4FF" />
+  <text x="46" y="310" fill="#9EC5E2" class="sans" font-size="11.5">PostgreSQL · REST APIs</text>
+  <rect x="232" y="192" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="233" y="192" width="202" height="2.5" rx="1" fill="#38BDF8" />
+  <text x="246" y="214" fill="#38BDF8" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">WEB &amp; INTERFACE</text>
+  <line x1="244" y1="224" x2="424" y2="224" stroke="#163654" stroke-width="1" />
+  <circle cx="247" cy="240.5" r="2" fill="#38BDF8" />
+  <text x="258" y="244" fill="#9EC5E2" class="sans" font-size="11.5">React · TypeScript</text>
+  <circle cx="247" cy="262.5" r="2" fill="#38BDF8" />
+  <text x="258" y="266" fill="#9EC5E2" class="sans" font-size="11.5">React Native · PWA</text>
+  <circle cx="247" cy="284.5" r="2" fill="#38BDF8" />
+  <text x="258" y="288" fill="#9EC5E2" class="sans" font-size="11.5">Leaflet.js · Material UI</text>
+  <circle cx="247" cy="306.5" r="2" fill="#38BDF8" />
+  <text x="258" y="310" fill="#9EC5E2" class="sans" font-size="11.5">SVG · Canvas2D Systems</text>
+  <rect x="444" y="192" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="445" y="192" width="202" height="2.5" rx="1" fill="#7DD3FC" />
+  <text x="458" y="214" fill="#7DD3FC" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">AI &amp; DATA LAB</text>
+  <line x1="456" y1="224" x2="636" y2="224" stroke="#163654" stroke-width="1" />
+  <circle cx="459" cy="240.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="244" fill="#9EC5E2" class="sans" font-size="11.5">Scikit-Learn · Pandas</text>
+  <circle cx="459" cy="262.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="266" fill="#9EC5E2" class="sans" font-size="11.5">Medical NLP Pipelines</text>
+  <circle cx="459" cy="284.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="288" fill="#9EC5E2" class="sans" font-size="11.5">Feature Engineering</text>
+  <circle cx="459" cy="306.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="310" fill="#9EC5E2" class="sans" font-size="11.5">Predictive Modeling</text>
+  <rect x="656" y="192" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
   <rect x="657" y="192" width="202" height="2.5" rx="1" fill="#34D399" />
-  <text x="670" y="214" fill="#34D399" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">04 // CLOUD &amp; EDGE</text>
-  <line x1="668" y1="224" x2="848" y2="224" stroke="#1E293B" stroke-width="1" />
+  <text x="670" y="214" fill="#34D399" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">CLOUD &amp; EDGE</text>
+  <line x1="668" y1="224" x2="848" y2="224" stroke="#163654" stroke-width="1" />
   <circle cx="671" cy="240.5" r="2" fill="#34D399" />
-  <text x="682" y="244" fill="#94A3B8" class="sans" font-size="11.5">Docker · GitHub Actions</text>
+  <text x="682" y="244" fill="#9EC5E2" class="sans" font-size="11.5">Docker · GitHub Actions</text>
   <circle cx="671" cy="262.5" r="2" fill="#34D399" />
-  <text x="682" y="266" fill="#94A3B8" class="sans" font-size="11.5">Edge Nodes (~1.2W IoT)</text>
+  <text x="682" y="266" fill="#9EC5E2" class="sans" font-size="11.5">Edge Nodes (~1.2W IoT)</text>
   <circle cx="671" cy="284.5" r="2" fill="#34D399" />
-  <text x="682" y="288" fill="#94A3B8" class="sans" font-size="11.5">Open-Meteo · AIS Feeds</text>
+  <text x="682" y="288" fill="#9EC5E2" class="sans" font-size="11.5">Open-Meteo · AIS Feeds</text>
   <circle cx="671" cy="306.5" r="2" fill="#34D399" />
-  <text x="682" y="310" fill="#94A3B8" class="sans" font-size="11.5">QA &amp; Test Automation</text>
-  <rect x="20" y="350" width="840" height="40" rx="6" fill="#0F141D" stroke="#334155" stroke-width="1" />
-  <circle cx="36" cy="370" r="7" fill="none" stroke="#FF5A1F" stroke-width="1" stroke-opacity="0.4" />
-  <circle cx="36" cy="370" r="3.5" fill="#FF5A1F" />
-  <text x="50" y="374" fill="#F1F5F9" class="mono" font-size="10.5" font-weight="700" letter-spacing="0.6">COMPANION INTERACTIVE PORTAL</text>
-  <text x="276" y="374" fill="#94A3B8" class="sans" font-size="11">Architecture Inspector &amp; Case Studies</text>
-  <rect x="598" y="357" width="252" height="26" rx="4" fill="#151C28" stroke="#FF5A1F" stroke-width="1" />
-  <text x="724" y="374" fill="#FF5A1F" class="mono" font-size="9.2" font-weight="700" text-anchor="middle">keremkalyoncu.github.io/KeremKalyoncu</text>
+  <text x="682" y="310" fill="#9EC5E2" class="sans" font-size="11.5">QA &amp; Test Automation</text>
+  <rect x="20" y="350" width="840" height="40" rx="6" fill="url(#aero-card-glass)" stroke="#256394" stroke-width="1" />
+  <circle cx="36" cy="370" r="7" fill="none" stroke="#00D4FF" stroke-width="1" stroke-opacity="0.4" />
+  <circle cx="36" cy="370" r="3.5" fill="#00D4FF" />
+  <text x="50" y="374" fill="#F0FAFF" class="mono" font-size="10.5" font-weight="700" letter-spacing="0.6">COMPANION INTERACTIVE PORTAL</text>
+  <text x="276" y="374" fill="#9EC5E2" class="sans" font-size="11">Architecture Inspector &amp; Case Studies</text>
+  <rect x="598" y="357" width="252" height="26" rx="4" fill="#102640" stroke="#00D4FF" stroke-width="1" />
+  <text x="724" y="374" fill="#00D4FF" class="mono" font-size="9.2" font-weight="700" text-anchor="middle">keremkalyoncu.github.io/KeremKalyoncu</text>
 </svg>

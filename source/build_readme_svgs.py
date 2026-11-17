@@ -146,8 +146,26 @@ def create_svg_root(width: int, height: int, title: str) -> tuple[ET.Element, ET
     el(merge, "feMergeNode", **{"in": "blur"})
     el(merge, "feMergeNode", **{"in": "SourceGraphic"})
 
-    # Base canvas + micro-grid + subtle matte slate grain + border + corner brackets
+    # Frutiger Aero ambient top-glow & glossy card surface gradients
+    canvas_glow = el(defs, "radialGradient", id="aero-canvas-glow", cx="50%", cy="0%", r="75%")
+    el(canvas_glow, "stop", offset="0%", **{"stop-color": "#00D4FF", "stop-opacity": "0.11"})
+    el(canvas_glow, "stop", offset="55%", **{"stop-color": "#0EA5E9", "stop-opacity": "0.04"})
+    el(canvas_glow, "stop", offset="100%", **{"stop-color": PALETTE["bg_void"], "stop-opacity": "0"})
+
+    card_glass = el(defs, "linearGradient", id="aero-card-glass", x1="0%", y1="0%", x2="0%", y2="100%")
+    el(card_glass, "stop", offset="0%", **{"stop-color": "#0F243C"})
+    el(card_glass, "stop", offset="45%", **{"stop-color": PALETTE["bg_plate"]})
+    el(card_glass, "stop", offset="100%", **{"stop-color": "#081423"})
+
+    top_sheen = el(defs, "linearGradient", id="aero-top-sheen", x1="0%", y1="0%", x2="100%", y2="0%")
+    el(top_sheen, "stop", offset="0%", **{"stop-color": "#F0FAFF", "stop-opacity": "0.05"})
+    el(top_sheen, "stop", offset="35%", **{"stop-color": "#00D4FF", "stop-opacity": "0.45"})
+    el(top_sheen, "stop", offset="70%", **{"stop-color": "#34D399", "stop-opacity": "0.35"})
+    el(top_sheen, "stop", offset="100%", **{"stop-color": "#F0FAFF", "stop-opacity": "0.05"})
+
+    # Base canvas + Aero ambient glow + micro-grid + subtle grain + border + corner brackets
     el(root, "rect", width=str(width), height=str(height), rx="12", fill=PALETTE["bg_void"])
+    el(root, "rect", width=str(width), height=str(height), rx="12", fill="url(#aero-canvas-glow)")
     el(root, "rect", width=str(width), height=str(height), rx="12", fill="url(#micro-grid)")
     el(root, "rect", width=str(width), height=str(height), rx="12", filter="url(#slate-grain)")
     el(
@@ -161,6 +179,16 @@ def create_svg_root(width: int, height: int, title: str) -> tuple[ET.Element, ET
         fill="none",
         stroke=PALETTE["border_grid"],
         **{"stroke-width": "1"},
+    )
+    el(
+        root,
+        "line",
+        x1="24",
+        y1="1",
+        x2=str(width - 24),
+        y2="1",
+        stroke="url(#aero-top-sheen)",
+        **{"stroke-width": "1.2"},
     )
 
     brackets = (
@@ -189,12 +217,18 @@ def build_hero_plate() -> ET.Element:
     root, defs = create_svg_root(width, height, title)
 
     sheen = el(defs, "linearGradient", id="plate-sheen", x1="0%", y1="0%", x2="100%", y2="100%")
-    el(sheen, "stop", offset="0%", **{"stop-color": "#111824"})
-    el(sheen, "stop", offset="100%", **{"stop-color": PALETTE["bg_plate"]})
+    el(sheen, "stop", offset="0%", **{"stop-color": "#102842"})
+    el(sheen, "stop", offset="55%", **{"stop-color": PALETTE["bg_plate"]})
+    el(sheen, "stop", offset="100%", **{"stop-color": "#071525"})
+
+    bosphorus_water = el(defs, "linearGradient", id="bosphorus-water", x1="0%", y1="0%", x2="100%", y2="100%")
+    el(bosphorus_water, "stop", offset="0%", **{"stop-color": "#06233D"})
+    el(bosphorus_water, "stop", offset="50%", **{"stop-color": "#093358"})
+    el(bosphorus_water, "stop", offset="100%", **{"stop-color": "#051B30"})
 
     aura = el(defs, "radialGradient", id="beacon-aura", cx="50%", cy="50%", r="50%")
-    el(aura, "stop", offset="0%", **{"stop-color": PALETTE["accent_orange"], "stop-opacity": "0.24"})
-    el(aura, "stop", offset="65%", **{"stop-color": PALETTE["accent_orange"], "stop-opacity": "0.06"})
+    el(aura, "stop", offset="0%", **{"stop-color": PALETTE["accent_orange"], "stop-opacity": "0.26"})
+    el(aura, "stop", offset="65%", **{"stop-color": PALETTE["accent_emerald"], "stop-opacity": "0.08"})
     el(aura, "stop", offset="100%", **{"stop-color": PALETTE["accent_orange"], "stop-opacity": "0"})
 
     sub_dots = el(defs, "pattern", id="sub-dots", width="8", height="8", patternUnits="userSpaceOnUse")
@@ -220,7 +254,7 @@ def build_hero_plate() -> ET.Element:
         width="840",
         height="28",
         rx="4",
-        fill=PALETTE["bg_plate"],
+        fill="url(#aero-card-glass)",
         stroke=PALETTE["border_grid"],
         **{"stroke-width": "1"},
     )
@@ -248,11 +282,11 @@ def build_hero_plate() -> ET.Element:
     el(
         root,
         "text",
-        "GO // ISTANBUL",
+        "ONLINE · ISTANBUL",
         x="46",
         y="32",
         fill=PALETTE["accent_emerald"],
-        **{"class": "mono", "font-size": "10.5", "font-weight": "700", "letter-spacing": "0.8"},
+        **{"class": "mono", "font-size": "10", "font-weight": "700", "letter-spacing": "0.6"},
     )
     el(
         root,
@@ -295,12 +329,22 @@ def build_hero_plate() -> ET.Element:
         stroke=PALETTE["border_grid"],
         **{"stroke-width": "1"},
     )
+    el(
+        root,
+        "line",
+        x1="28",
+        y1="54.8",
+        x2="554",
+        y2="54.8",
+        stroke="url(#aero-top-sheen)",
+        **{"stroke-width": "1"},
+    )
     el(root, "rect", x="20", y="55", width="3", height="238", rx="1.5", fill=PALETTE["accent_orange"])
 
     el(
         root,
         "text",
-        f"01 // {PROFILE['role_short']} · {PROFILE['location_upper']}",
+        f"{PROFILE['role_short']}  ·  {PROFILE['location_upper']}",
         x="40",
         y="78",
         fill=PALETTE["accent_orange"],
@@ -309,7 +353,7 @@ def build_hero_plate() -> ET.Element:
 
     first_name, last_name = PROFILE["name"].split(" ", 1)
     render_vector_text(root, first_name, 40, 96, height=44.0, gap=14.0, fill=PALETTE["ink_primary"])
-    el(root, "rect", x="250", y="106", width="36", height="3", fill=PALETTE["accent_orange"])
+    el(root, "rect", x="250", y="106", width="36", height="3", fill=PALETTE["accent_emerald"])
     el(
         root,
         "text",
@@ -368,7 +412,7 @@ def build_hero_plate() -> ET.Element:
         **{"class": "mono", "font-size": "9.5", "letter-spacing": "0.6"},
     )
 
-    # Hero Right Topo Bay
+    # Hero Right Cartography Bay — Real Bosphorus Strait (İstanbul Boğazı)
     el(
         root,
         "rect",
@@ -377,78 +421,139 @@ def build_hero_plate() -> ET.Element:
         width="286",
         height="240",
         rx="6",
-        fill=PALETTE["bg_bay"],
+        fill="url(#bosphorus-water)",
         stroke=PALETTE["border_grid"],
         **{"stroke-width": "1"},
     )
     topo_group = el(root, "g", **{"clip-path": "url(#topo-clip)"})
     el(topo_group, "rect", x="574", y="54", width="286", height="240", fill="url(#sub-dots)")
 
-    # 7 nested terrestrial ridge elevation isolines (zero ocean waves)
-    ridge_contours = [
-        ("M582,196 C606,120 664,84 726,92 C792,100 842,138 854,194 C862,232 824,274 756,280 C686,286 566,252 582,196 Z", "#1E293B", "1.0"),
-        ("M602,188 C622,130 670,102 722,108 C778,114 820,146 832,190 C840,222 806,256 750,262 C692,268 588,236 602,188 Z", "#233044", "1.0"),
-        ("M624,180 C642,136 680,116 720,120 C764,126 798,150 808,186 C814,212 786,238 744,244 C698,250 612,218 624,180 Z", "#283548", "1.0"),
-        ("M646,170 C660,140 688,128 718,132 C752,136 776,154 784,180 C790,200 768,220 736,226 C702,232 636,200 646,170 Z", "#2D3B50", "1.1"),
-        ("M666,162 C676,144 696,138 716,142 C738,146 756,158 762,174 C766,188 748,202 728,206 C704,210 658,184 666,162 Z", "#334155", "1.1"),
-        ("M682,156 C690,146 702,144 714,148 C726,152 736,160 738,170 C740,178 728,186 716,188 C702,190 676,170 682,156 Z", "#334155", "1.2"),
-        ("M734,182 C742,172 758,170 768,176 C778,182 782,194 774,202 C766,210 748,210 738,202 C730,196 728,188 734,182 Z", "#283548", "0.9"),
-    ]
-    for path_d, stroke_hex, sw in ridge_contours:
-        el(topo_group, "path", d=path_d, fill="none", stroke=stroke_hex, **{"stroke-width": sw})
-
-    # Target Reticle at (718, 164)
-    rx, ry = 718, 164
-    el(topo_group, "circle", cx=str(rx), cy=str(ry), r="64", fill="url(#beacon-aura)")
-    el(
-        topo_group,
-        "circle",
-        cx=str(rx),
-        cy=str(ry),
-        r="22",
-        fill="none",
-        stroke=PALETTE["accent_orange"],
-        **{"stroke-width": "1", "stroke-opacity": "0.55"},
+    # Authentic Bosphorus Strait Coastlines & Landmasses (Rumeli West & Anadolu East)
+    rumeli_land = (
+        "M 574,54 L 724,54 "
+        "C 716,74 694,90 682,108 "
+        "C 672,122 688,136 696,150 "
+        "C 702,162 686,178 678,194 "
+        "C 670,208 660,218 648,220 "
+        "C 628,214 608,204 596,198 "
+        "C 604,210 626,222 646,228 "
+        "C 656,236 654,254 638,274 "
+        "C 624,286 600,294 574,294 Z"
     )
-    el(
-        topo_group,
-        "circle",
-        cx=str(rx),
-        cy=str(ry),
-        r="46",
-        fill="none",
-        stroke=PALETTE["border_active"],
-        **{"stroke-width": "1", "stroke-opacity": "0.8"},
-    )
-    el(
-        topo_group,
-        "circle",
-        cx=str(rx),
-        cy=str(ry),
-        r="74",
-        fill="none",
-        stroke=PALETTE["border_active"],
-        **{"stroke-width": "0.9", "stroke-dasharray": "3 3", "stroke-opacity": "0.65"},
+    anadolu_land = (
+        "M 860,54 L 764,54 "
+        "C 750,74 734,94 726,114 "
+        "C 720,130 714,142 716,154 "
+        "C 718,166 728,178 722,194 "
+        "C 716,208 702,220 704,234 "
+        "C 706,248 724,264 748,282 "
+        "L 768,294 L 860,294 Z"
     )
     el(
         topo_group,
         "path",
-        d=f"M610,{ry} H826 M{rx},76 V252",
+        d=rumeli_land,
+        fill=PALETTE["bg_plate"],
+        stroke=PALETTE["border_active"],
+        **{"stroke-width": "1.3", "stroke-linejoin": "round"},
+    )
+    el(
+        topo_group,
+        "path",
+        d=anadolu_land,
+        fill=PALETTE["bg_plate"],
+        stroke=PALETTE["border_active"],
+        **{"stroke-width": "1.3", "stroke-linejoin": "round"},
+    )
+
+    # Topographic inland elevation isolines on Rumeli & Anadolu shores
+    inland_contours = [
+        ("M 574,72 L 696,72 C 686,90 664,106 656,124 C 650,140 668,154 662,174 C 654,192 634,196 574,186", "#163654", "0.9"),
+        ("M 574,244 C 604,244 630,248 626,264 C 620,278 596,286 574,288", "#163654", "0.9"),
+        ("M 860,82 L 778,82 C 760,102 746,124 744,150 C 742,176 752,196 736,222 C 728,236 746,258 788,284 L 860,284", "#163654", "0.9"),
+        ("M 860,118 L 798,118 C 778,138 768,162 768,190 C 768,218 778,242 812,268 L 860,268", "#1E4970", "0.8"),
+    ]
+    for path_d, stroke_hex, sw in inland_contours:
+        el(topo_group, "path", d=path_d, fill="none", stroke=stroke_hex, **{"stroke-width": sw})
+
+    # Bosphorus 3 Suspension Bridges (YSS North, FSM Hisarlar Narrows, 15 Temmuz Ortaköy-Beylerbeyi)
+    for bx1, by1, bx2, by2 in ((714, 68, 752, 68), (696, 151, 716, 153), (676, 198, 718, 202)):
+        el(
+            topo_group,
+            "line",
+            x1=str(bx1),
+            y1=str(by1),
+            x2=str(bx2),
+            y2=str(by2),
+            stroke=PALETTE["accent_amber"],
+            **{"stroke-width": "1.2", "stroke-dasharray": "2 1.5", "stroke-opacity": "0.8"},
+        )
+
+    # Bosphorus Traffic Separation Scheme (TSS) Animated Shipping Channel
+    tss_lane = "M 744,54 C 724,84 704,112 706,152 C 708,180 694,204 678,234 C 668,256 682,278 696,294"
+    el(
+        topo_group,
+        "path",
+        d=tss_lane,
         fill="none",
         stroke=PALETTE["border_active"],
-        **{"stroke-width": "0.8", "stroke-opacity": "0.55"},
+        **{"stroke-width": "1.0", "stroke-dasharray": "3 3", "stroke-opacity": "0.75"},
+    )
+    el(
+        topo_group,
+        "path",
+        d=tss_lane,
+        fill="none",
+        stroke=PALETTE["accent_orange"],
+        **{"class": "bus-pulse", "stroke-width": "1.8", "stroke-linecap": "round"},
+    )
+
+    # Live AIS Vessel Nodes in the Strait
+    for vx, vy, vcol in ((720, 96, PALETTE["accent_emerald"]), (680, 228, PALETTE["accent_amber"])):
+        el(topo_group, "circle", cx=str(vx), cy=str(vy), r="2.3", fill=vcol)
+
+    # Target Reticle at Bosphorus Narrows (706, 164)
+    rx, ry = 706, 164
+    el(topo_group, "circle", cx=str(rx), cy=str(ry), r="60", fill="url(#beacon-aura)")
+    el(
+        topo_group,
+        "circle",
+        cx=str(rx),
+        cy=str(ry),
+        r="20",
+        fill="none",
+        stroke=PALETTE["accent_orange"],
+        **{"stroke-width": "1", "stroke-opacity": "0.65"},
+    )
+    el(
+        topo_group,
+        "circle",
+        cx=str(rx),
+        cy=str(ry),
+        r="42",
+        fill="none",
+        stroke=PALETTE["border_active"],
+        **{"stroke-width": "0.9", "stroke-dasharray": "3 3", "stroke-opacity": "0.75"},
+    )
+    el(
+        topo_group,
+        "path",
+        d=f"M612,{ry} H800 M{rx},84 V244",
+        fill="none",
+        stroke=PALETTE["border_active"],
+        **{"stroke-width": "0.75", "stroke-opacity": "0.5"},
     )
     pulse_ring = el(
         topo_group,
         "circle",
         cx=str(rx),
         cy=str(ry),
-        r="14",
+        r="12",
         fill="none",
         stroke=PALETTE["accent_orange"],
         **{"stroke-width": "1.2", "stroke-opacity": "0.85"},
     )
-    el(pulse_ring, "animate", attributeName="r", values="14;36", dur="3.6s", repeatCount="indefinite")
+    el(pulse_ring, "animate", attributeName="r", values="12;34", dur="3.6s", repeatCount="indefinite")
     el(
         pulse_ring,
         "animate",
@@ -462,13 +567,13 @@ def build_hero_plate() -> ET.Element:
         "circle",
         cx=str(rx),
         cy=str(ry),
-        r="4",
+        r="3.8",
         fill=PALETTE["accent_orange"],
         filter="url(#amber-glow)",
     )
-    el(topo_group, "circle", cx=str(rx), cy=str(ry), r="1.8", fill=PALETTE["ink_primary"])
+    el(topo_group, "circle", cx=str(rx), cy=str(ry), r="1.7", fill=PALETTE["ink_primary"])
 
-    # Topo callouts (placed clear of reticle crosshairs)
+    # Cartography callouts (placed clear of reticle crosshairs)
     el(
         root,
         "text",
@@ -481,7 +586,7 @@ def build_hero_plate() -> ET.Element:
     el(
         root,
         "text",
-        "LOCK: ACTIVE",
+        "AIS LIVE",
         x="846",
         y="74",
         fill=PALETTE["accent_emerald"],
@@ -549,7 +654,7 @@ def build_hero_plate() -> ET.Element:
             width="204",
             height="40",
             rx="5",
-            fill=PALETTE["bg_plate"],
+            fill="url(#aero-card-glass)",
             stroke=PALETTE["border_grid"],
             **{"stroke-width": "1"},
         )
@@ -827,7 +932,7 @@ def build_systems_plate() -> ET.Element:
     el(
         root,
         "text",
-        "02 // DEPLOYED SYSTEMS & ARCHITECTURE MATRIX",
+        "DEPLOYED SYSTEMS & ENGINEERING ARCHITECTURE",
         x="20",
         y="31",
         fill=PALETTE["accent_orange"],
@@ -836,7 +941,7 @@ def build_systems_plate() -> ET.Element:
     el(
         root,
         "text",
-        f"NODES: {len(PROJECTS):02d}  ·  BUS: ACTIVE  ·  TOPOLOGY: 2×3",
+        f"{len(PROJECTS):02d} CORE SYSTEMS  ·  PRODUCTION & RESEARCH",
         x="860",
         y="31",
         fill=PALETTE["ink_caption"],
@@ -859,8 +964,8 @@ def build_systems_plate() -> ET.Element:
 
     cross_routes = [
         ("M416,104 H430 V324 H464", PALETTE["accent_orange"]),
-        ("M464,180 H450 V506 H416", PALETTE["accent_indigo"]),
-        ("M440,142 V506", PALETTE["accent_orange"]),
+        ("M464,180 H450 V506 H416", PALETTE["accent_emerald"]),
+        ("M440,142 V506", PALETTE["accent_amber"]),
     ]
     for route_d, pulse_col in cross_routes:
         el(bus, "path", d=route_d, fill="none", stroke=PALETTE["border_active"], **{"stroke-width": "1.2"})
@@ -907,9 +1012,19 @@ def build_systems_plate() -> ET.Element:
             width="396",
             height="164",
             rx="6",
-            fill=PALETTE["bg_plate"],
+            fill="url(#aero-card-glass)",
             stroke=PALETTE["border_grid"],
             **{"stroke-width": "1"},
+        )
+        el(
+            card,
+            "line",
+            x1=str(cx + 8),
+            y1=str(cy + 0.8),
+            x2=str(cx + 388),
+            y2=str(cy + 0.8),
+            stroke="url(#aero-top-sheen)",
+            **{"stroke-width": "0.9"},
         )
         el(
             card,
@@ -925,7 +1040,7 @@ def build_systems_plate() -> ET.Element:
         el(
             card,
             "text",
-            f"{proj['code']} // {proj['category'].upper()}",
+            proj["category"].upper(),
             x=str(cx + 24),
             y=str(cy + 20),
             fill=accent_hex,
@@ -1058,7 +1173,7 @@ def build_trajectory_plate() -> ET.Element:
     el(
         root,
         "text",
-        "03 // TRAJECTORY RAIL & ENGINEERING STACK MATRIX",
+        "ENGINEERING TRAJECTORY & TECHNICAL STACK",
         x="20",
         y="31",
         fill=PALETTE["accent_orange"],
@@ -1067,7 +1182,7 @@ def build_trajectory_plate() -> ET.Element:
     el(
         root,
         "text",
-        f"CHRONOLOGY: {PROFILE['graduation_years'].replace('–', ' → ')}",
+        f"TIMELINE: {PROFILE['graduation_years'].replace('–', ' → ')}",
         x="860",
         y="31",
         fill=PALETTE["ink_caption"],
@@ -1094,7 +1209,7 @@ def build_trajectory_plate() -> ET.Element:
         "path",
         d="M56,82 H824",
         fill="none",
-        stroke=PALETTE["accent_amber"],
+        stroke=PALETTE["accent_orange"],
         **{"class": "bus-pulse", "stroke-width": "1.8", "stroke-linecap": "round"},
     )
 
@@ -1142,7 +1257,7 @@ def build_trajectory_plate() -> ET.Element:
             width="158",
             height="74",
             rx="4",
-            fill=PALETTE["bg_plate"],
+            fill="url(#aero-card-glass)",
             stroke=PALETTE["border_grid"],
             **{"stroke-width": "1"},
         )
@@ -1187,7 +1302,7 @@ def build_trajectory_plate() -> ET.Element:
             width="204",
             height="146",
             rx="6",
-            fill=PALETTE["bg_plate"],
+            fill="url(#aero-card-glass)",
             stroke=PALETTE["border_grid"],
             **{"stroke-width": "1"},
         )
@@ -1195,7 +1310,7 @@ def build_trajectory_plate() -> ET.Element:
         el(
             root,
             "text",
-            f"{pillar['code']} // {pillar['title'].upper()}",
+            pillar["title"].upper(),
             x=str(col_x + 14),
             y="214",
             fill=accent_hex,
@@ -1234,7 +1349,7 @@ def build_trajectory_plate() -> ET.Element:
         width="840",
         height="40",
         rx="6",
-        fill=PALETTE["bg_plate"],
+        fill="url(#aero-card-glass)",
         stroke=PALETTE["border_active"],
         **{"stroke-width": "1"},
     )
