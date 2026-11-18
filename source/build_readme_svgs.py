@@ -621,24 +621,24 @@ def build_hero_plate() -> ET.Element:
     )
 
     # Bottom 4-Cell Strip sourced from TIMELINE
-    strip_ids = ["dogus-bsc", "gdg-dogus", "huawei-ai", "vollsign"]
+    strip_ids = ["vollsign", "x-etc", "dogus-bsc", "gdg-dogus"]
     timeline_by_id = {t["id"]: t for t in TIMELINE}
     strip_labels = {
+        "vollsign": (
+            "VOLLSIGN · AUG 2026–PRESENT",
+            "Software Engineer · Dev & QA",
+        ),
+        "x-etc": (
+            "X-ETC. · FEB–AUG 2026 (7M)",
+            "Full-Stack Software Engineer",
+        ),
         "dogus-bsc": (
-            f"DOĞUŞ UNIV. · {timeline_by_id['dogus-bsc']['period']}",
+            "DOĞUŞ UNIV. · 2023–2027",
             "BSc Software Engineering",
         ),
         "gdg-dogus": (
-            f"GDG DOĞUŞ · {timeline_by_id['gdg-dogus']['period']}",
-            timeline_by_id["gdg-dogus"]["role"],
-        ),
-        "huawei-ai": (
-            f"HUAWEI × AI · {timeline_by_id['huawei-ai']['period']}",
-            "AI Academy · Data & ML",
-        ),
-        "vollsign": (
-            "VOLLSIGN · PRODUCTION",
-            "Dev / QA & Test Engineering",
+            "GDG DOĞUŞ · 2025–2026",
+            "Social Media & Design Lead",
         ),
     }
 
@@ -921,9 +921,9 @@ def draw_emblem(parent: ET.Element, project_id: str, ox: int, oy: int) -> None:
 
 
 def build_systems_plate() -> ET.Element:
-    width, height = 880, 624
+    width, height = 880, 736
     title = (
-        f"Obsidian Atlas Plate 02 — {len(PROJECTS)} Deployed Engineering Systems: "
+        f"Obsidian Atlas Plate 02 — {len(PROJECTS)} Core Engineering Systems & Specialist Practices: "
         + ", ".join(p["title"] for p in PROJECTS)
     )
     root, _ = create_svg_root(width, height, title)
@@ -1137,23 +1137,73 @@ def build_systems_plate() -> ET.Element:
             )
             px += pw + 6
 
+    # Specialist Field Builds & Consulting Band (y=600..700)
+    practices = getattr(spec, "SPECIALIST_PRACTICES", [])
+    for idx, pr in enumerate(practices[:3]):
+        bx = 20 + idx * (272 + 12)
+        by = 600
+        bw = 272
+        bh = 94
+        p_acc = PALETTE[pr["accent"]]
+        p_card = el(root, "g")
+        el(
+            p_card,
+            "rect",
+            x=str(bx),
+            y=str(by),
+            width=str(bw),
+            height=str(bh),
+            rx="6",
+            fill="url(#aero-card-glass)",
+            stroke=PALETTE["border_grid"],
+            **{"stroke-width": "1"},
+        )
+        el(p_card, "rect", x=str(bx + 1), y=str(by), width=str(bw - 2), height="2", rx="1", fill=p_acc)
+        el(
+            p_card,
+            "text",
+            pr["title"],
+            x=str(bx + 14),
+            y=str(by + 24),
+            fill=PALETTE["ink_primary"],
+            **{"class": "sans", "font-size": "12.5", "font-weight": "700"},
+        )
+        el(
+            p_card,
+            "text",
+            pr["subtitle"],
+            x=str(bx + 14),
+            y=str(by + 44),
+            fill=PALETTE["ink_secondary"],
+            **{"class": "sans", "font-size": "11"},
+        )
+        el(
+            p_card,
+            "text",
+            pr["metric"],
+            x=str(bx + 14),
+            y=str(by + 74),
+            fill=p_acc,
+            **{"class": "mono", "font-size": "9.5", "font-weight": "700", "letter-spacing": "0.4"},
+        )
+
     # Footer legend driven by SUPPORTING_REPOS & PROJECTS
-    featured_supporting = [r["title"] for r in SUPPORTING_REPOS if r["id"] != "dinamik-css-portfolyo"]
+    featured_supporting = [r["title"] for r in SUPPORTING_REPOS if r["id"] not in ("dinamik-css-portfolyo", "cybersecurity-consulting")]
     el(
         root,
         "text",
-        "SUPPORTING REPOS: " + " · ".join(featured_supporting),
+        "REPOS & BUILDS: " + " · ".join(featured_supporting[:4]),
         x="20",
-        y="608",
+        y="718",
         fill=PALETTE["ink_caption"],
         **{"class": "mono", "font-size": "9.5"},
     )
     el(
         root,
         "text",
-        f"ALL {len(PROJECTS)} SYSTEMS DOCUMENTED",
+        f"ALL {len(PROJECTS)} CORE SYSTEMS + 3 PRACTICES",
         x="860",
-        y="608",
+        y="718",
         fill=PALETTE["accent_emerald"],
         **{"class": "mono", "font-size": "9.5", "font-weight": "700", "text-anchor": "end"},
     )
@@ -1162,9 +1212,9 @@ def build_systems_plate() -> ET.Element:
 
 
 def build_trajectory_plate() -> ET.Element:
-    width, height = 880, 400
+    width, height = 880, 516
     title = (
-        f"Obsidian Atlas Plate 03 — {PROFILE['name']} Trajectory Rail, Community Leadership "
+        f"Obsidian Atlas Plate 03 — {PROFILE['name']} Career Experience, Community Leadership "
         f"({', '.join(t['organization'] for t in TIMELINE)}), and {len(TECH_PILLARS)}-Pillar Stack"
     )
     root, _ = create_svg_root(width, height, title)
@@ -1173,7 +1223,7 @@ def build_trajectory_plate() -> ET.Element:
     el(
         root,
         "text",
-        "ENGINEERING TRAJECTORY & TECHNICAL STACK",
+        "CAREER EXPERIENCE, EDUCATION & TECHNICAL STACK",
         x="20",
         y="31",
         fill=PALETTE["accent_orange"],
@@ -1182,115 +1232,74 @@ def build_trajectory_plate() -> ET.Element:
     el(
         root,
         "text",
-        f"TIMELINE: {PROFILE['graduation_years'].replace('–', ' → ')}",
+        "VOLLSIGN · X-ETC · SHIFHA · ERYAZ · DOĞUŞ UNIV. (2023 → 2027)",
         x="860",
         y="31",
         fill=PALETTE["ink_caption"],
-        **{"class": "mono", "font-size": "10", "text-anchor": "end", "letter-spacing": "0.5"},
+        **{"class": "mono", "font-size": "9.5", "text-anchor": "end", "letter-spacing": "0.4"},
     )
     el(root, "line", x1="20", y1="46", x2="860", y2="46", stroke=PALETTE["border_grid"], **{"stroke-width": "1"})
 
-    # Band A — Trajectory Rail
-    el(
-        root,
-        "rect",
-        x="20",
-        y="56",
-        width="840",
-        height="124",
-        rx="6",
-        fill=PALETTE["bg_bay"],
-        stroke=PALETTE["border_grid"],
-        **{"stroke-width": "1"},
-    )
-    el(root, "path", d="M56,82 H824", fill="none", stroke=PALETTE["border_active"], **{"stroke-width": "1.5"})
-    el(
-        root,
-        "path",
-        d="M56,82 H824",
-        fill="none",
-        stroke=PALETTE["accent_orange"],
-        **{"class": "bus-pulse", "stroke-width": "1.8", "stroke-linecap": "round"},
-    )
-
-    for idx, milestone in enumerate(TIMELINE):
-        card_x = 33 + idx * (158 + 6)
-        cx = card_x + 79
+    # Band A — 2x4 Career, Community & Certifications Grid (All 8 LinkedIn Milestones)
+    for idx, milestone in enumerate(TIMELINE[:8]):
+        row = idx // 4
+        col = idx % 4
+        card_x = 20 + col * (204 + 8)
+        card_y = 58 + row * (96 + 10)
         accent_hex = PALETTE[milestone["accent"]]
-
-        el(
-            root,
-            "text",
-            milestone["plate_period"],
-            x=str(cx),
-            y="71",
-            fill=accent_hex,
-            **{"class": "mono", "font-size": "9.5", "font-weight": "700", "text-anchor": "middle", "letter-spacing": "0.5"},
-        )
-        el(
-            root,
-            "line",
-            x1=str(cx),
-            y1="87.5",
-            x2=str(cx),
-            y2="96",
-            stroke=PALETTE["border_active"],
-            **{"stroke-width": "1.2"},
-        )
-        el(
-            root,
-            "circle",
-            cx=str(cx),
-            cy="82",
-            r="5.5",
-            fill=PALETTE["bg_plate"],
-            stroke=accent_hex,
-            **{"stroke-width": "1.6"},
-        )
-        el(root, "circle", cx=str(cx), cy="82", r="2.2", fill=accent_hex)
 
         el(
             root,
             "rect",
             x=str(card_x),
-            y="96",
-            width="158",
-            height="74",
-            rx="4",
+            y=str(card_y),
+            width="204",
+            height="96",
+            rx="5",
             fill="url(#aero-card-glass)",
             stroke=PALETTE["border_grid"],
             **{"stroke-width": "1"},
         )
-        el(root, "rect", x=str(card_x + 1), y="96", width="156", height="2", rx="1", fill=accent_hex)
+        el(root, "rect", x=str(card_x + 1), y=str(card_y), width="202", height="2.2", rx="1", fill=accent_hex)
+        el(root, "circle", cx=str(card_x + 14), cy=str(card_y + 18), r="2.5", fill=accent_hex)
+        el(
+            root,
+            "text",
+            milestone["plate_period"],
+            x=str(card_x + 24),
+            y=str(card_y + 21),
+            fill=accent_hex,
+            **{"class": "mono", "font-size": "9", "font-weight": "700", "letter-spacing": "0.4"},
+        )
         el(
             root,
             "text",
             milestone["plate_org"],
-            x=str(card_x + 9),
-            y="115",
+            x=str(card_x + 12),
+            y=str(card_y + 44),
             fill=PALETTE["ink_primary"],
-            **{"class": "sans", "font-size": "10.5", "font-weight": "700"},
+            **{"class": "sans", "font-size": "12", "font-weight": "700"},
         )
         el(
             root,
             "text",
             milestone["plate_lines"][0],
-            x=str(card_x + 9),
-            y="134",
+            x=str(card_x + 12),
+            y=str(card_y + 64),
             fill=PALETTE["ink_secondary"],
-            **{"class": "sans", "font-size": "10"},
+            **{"class": "sans", "font-size": "10.5"},
         )
         el(
             root,
             "text",
             milestone["plate_lines"][1],
-            x=str(card_x + 9),
-            y="152",
+            x=str(card_x + 12),
+            y=str(card_y + 82),
             fill=PALETTE["ink_caption"],
             **{"class": "mono", "font-size": "9", "letter-spacing": "0.3"},
         )
 
-    # Band B — 4-Pillar Tech Matrix
+    # Band B — 4-Pillar Tech Matrix (y=276..422)
     for idx, pillar in enumerate(TECH_PILLARS):
         col_x = 20 + idx * (204 + 8)
         accent_hex = PALETTE[pillar["accent"]]
@@ -1298,7 +1307,7 @@ def build_trajectory_plate() -> ET.Element:
             root,
             "rect",
             x=str(col_x),
-            y="192",
+            y="276",
             width="204",
             height="146",
             rx="6",
@@ -1306,13 +1315,13 @@ def build_trajectory_plate() -> ET.Element:
             stroke=PALETTE["border_grid"],
             **{"stroke-width": "1"},
         )
-        el(root, "rect", x=str(col_x + 1), y="192", width="202", height="2.5", rx="1", fill=accent_hex)
+        el(root, "rect", x=str(col_x + 1), y="276", width="202", height="2.5", rx="1", fill=accent_hex)
         el(
             root,
             "text",
             pillar["title"].upper(),
             x=str(col_x + 14),
-            y="214",
+            y="298",
             fill=accent_hex,
             **{"class": "mono", "font-size": "10", "font-weight": "700", "letter-spacing": "0.6"},
         )
@@ -1320,15 +1329,15 @@ def build_trajectory_plate() -> ET.Element:
             root,
             "line",
             x1=str(col_x + 12),
-            y1="224",
+            y1="308",
             x2=str(col_x + 192),
-            y2="224",
+            y2="308",
             stroke=PALETTE["border_grid"],
             **{"stroke-width": "1"},
         )
 
         for row_i, line_txt in enumerate(pillar["plate_lines"]):
-            row_y = 244 + row_i * 22
+            row_y = 328 + row_i * 22
             el(root, "circle", cx=str(col_x + 15), cy=str(row_y - 3.5), r="2", fill=accent_hex)
             el(
                 root,
@@ -1340,14 +1349,14 @@ def build_trajectory_plate() -> ET.Element:
                 **{"class": "sans", "font-size": "11.5"},
             )
 
-    # Band C — Companion Portal Strip
+    # Band C — Direct Contact & Companion Portal Strip (y=436..496)
     el(
         root,
         "rect",
         x="20",
-        y="350",
+        y="436",
         width="840",
-        height="40",
+        height="60",
         rx="6",
         fill="url(#aero-card-glass)",
         stroke=PALETTE["border_active"],
@@ -1356,37 +1365,37 @@ def build_trajectory_plate() -> ET.Element:
     el(
         root,
         "circle",
-        cx="36",
-        cy="370",
+        cx="38",
+        cy="466",
         r="7",
         fill="none",
         stroke=PALETTE["accent_orange"],
         **{"stroke-width": "1", "stroke-opacity": "0.4"},
     )
-    el(root, "circle", cx="36", cy="370", r="3.5", fill=PALETTE["accent_orange"])
+    el(root, "circle", cx="38", cy="466", r="3.5", fill=PALETTE["accent_orange"])
     el(
         root,
         "text",
-        "COMPANION INTERACTIVE PORTAL",
-        x="50",
-        y="374",
+        "DIRECT CONTACT & INTERACTIVE PORTAL",
+        x="54",
+        y="459",
         fill=PALETTE["ink_primary"],
         **{"class": "mono", "font-size": "10.5", "font-weight": "700", "letter-spacing": "0.6"},
     )
     el(
         root,
         "text",
-        "Architecture Inspector & Case Studies",
-        x="276",
-        y="374",
+        f"{PROFILE.get('email', 'keremkalyoncu.dev@gmail.com')}  ·  {PROFILE.get('email_secondary', 'gskerem200553@outlook.com')}",
+        x="54",
+        y="479",
         fill=PALETTE["ink_secondary"],
-        **{"class": "sans", "font-size": "11"},
+        **{"class": "mono", "font-size": "10"},
     )
     el(
         root,
         "rect",
         x="598",
-        y="357",
+        y="453",
         width="252",
         height="26",
         rx="4",
@@ -1400,7 +1409,7 @@ def build_trajectory_plate() -> ET.Element:
         "text",
         site_label,
         x="724",
-        y="374",
+        y="470",
         fill=PALETTE["accent_orange"],
         **{"class": "mono", "font-size": "9.2", "font-weight": "700", "text-anchor": "middle"},
     )
@@ -1490,6 +1499,8 @@ def build_readme_markdown() -> str:
         f'  <a href="{html.escape(github_url, quote=True)}">GitHub</a>',
         "  &nbsp;·&nbsp;",
         f'  <a href="{html.escape(linkedin_url, quote=True)}">LinkedIn</a>',
+        "  &nbsp;·&nbsp;",
+        f'  <a href="mailto:{html.escape(PROFILE.get("email", "keremkalyoncu.dev@gmail.com"), quote=True)}">keremkalyoncu.dev@gmail.com</a>',
         "</p>",
         "",
         '<p align="center">',
@@ -1516,28 +1527,76 @@ def build_readme_markdown() -> str:
         "",
         "</div>",
         "",
-        "<details>",
-        "  <summary><strong>ATS / Recruiter Specification — Plain-Text Index</strong></summary>",
+        "---",
         "",
-        "### Profile",
+        "## Engineering Focus & What I Build",
+        "",
+        "I'm **Kerem Kalyoncu** — a Software Engineer based in **İstanbul, Türkiye** (`Doğuş University · BSc Software Engineering, 2023–2027`) currently working as a **Software Engineer at [VollSign](https://vollsign.com)** in Beyoğlu Teknopark.",
+        "",
+        "- **Software Engineering & Systematic QA (@VollSign):** Developing production software while systematically testing UI workflows, API integrations, and end-to-end user journeys.",
+        "- **Enterprise Full-Stack Systems (Inventra @X-ETC):** Engineered [Inventra](https://x-etc.online) end-to-end with **ASP.NET Core**, **React.js**, **Material UI**, and **PostgreSQL** for large-scale multi-warehouse inventory and workforce management.",
+        "- **Applied Clinical AI (@Shifha):** Built AI-driven healthcare features in **Python** for an AI-powered doctor assistant supporting clinical triage and medical decision workflows.",
+        "- **Independent Cybersecurity & Penetration Testing:** Building an independent security consulting practice — delivering security assessments, vulnerability analysis, and penetration testing for small and medium businesses.",
+        "- **Real-World Field & Quant Engineering:** Created **[Maritime Watch Türkiye](https://keremkalyoncu.github.io/maritime-watch)** (24/7 Bosphorus AIS & weather safety engine running on a ~1.2W edge node), **Klima Gaz Defteri** (digital service & refrigerant tracking suite for my family's automotive AC business), and a **statistically rigorous cryptocurrency strategy backtesting platform**.",
+        "- **Developer Community Leadership (@GDG On Campus Doğuş):** Coordinated the Social Media & Design team for over a year, scaling technical content and developer community engagement.",
+        "",
+        "---",
+        "",
+        "## Professional Experience & Leadership",
+        "",
+        "| Period | Organization | Role & Location | Focus & Impact |",
+        "| :--- | :--- | :--- | :--- |",
+        "| **Aug 2026 – Present** | **[VollSign](https://vollsign.com)** | Software Engineer · *Beyoğlu, İstanbul (Teknopark)* | Full-cycle software development, systematic UI/API functional testing & quality assurance. |",
+        "| **Feb 2026 – Aug 2026** | **[X-ETC.](https://x-etc.online)** | Software Engineer (Full-Stack) · *Pendik, İstanbul* | End-to-end architecture & delivery of the **Inventra** enterprise inventory platform (`ASP.NET Core`, `React.js`). |",
+        "| **Feb 2026 – Aug 2026** | **Shifha** | Software Engineer · *İstanbul* | Built Python AI-powered doctor assistant features & structured clinical NLP workflows. |",
+        "| **Sep 2025 – Sep 2026** | **[GDG On Campus Doğuş](https://tr.linkedin.com/company/gdg-on-campus-dogus)** | Social Media Coordinator · *İstanbul* | Led the social media & design team (1 yr 1 mo), content production & campus developer outreach. |",
+        "| **Aug 2024 – Sep 2024** | **Eryaz Bilgi Teknolojileri A.Ş.** | Software Developer · *İstanbul* | Enterprise software development using `C#`, `ASP.NET`, `JavaScript`, `HTML/CSS`, and `SQL`. |",
+        "",
+        "---",
+        "",
+        "## Core Systems, Field Builds & Security Practice",
+        "",
+        *project_lines,
+        "7. **Klima Gaz Defteri** *(FIELD-01 · Production Field Tool)* — Custom digital service ledger, vehicle AC maintenance workflow, and refrigerant tracking tools engineered for my family's automotive air-conditioning service business.",
+        "8. **Independent Cybersecurity & Penetration Testing** *(SEC-02 · Security Consulting)* — Security assessments, web/API vulnerability discovery, and penetration testing helping small businesses identify and remediate weak points in their systems.",
+        "9. **FonDedektifi** *(FIN-03 · Financial Forensics)* — TEFAS funds & BIST equities forensic analytics platform built with `Python`, `FastAPI`, and `DuckDB` (DTL liquidity risk, HHI concentration & anomaly detection).",
+        "",
+        "---",
+        "",
+        "## Education, Certifications & Technical Stack",
+        "",
+        "- **Education:** **Doğuş Üniversitesi** — *BSc Software Engineering (Yazılım Mühendisliği)* (`2023 – 2027`)",
+        "- **Certifications:**",
+        "  - **Huawei Student Developers (HSD)** — *Veri Bilimi ve Makine Öğrenmesi (Data Science & Machine Learning)*",
+        "  - **GDG On Campus** — *Core Team Certificate of Completion*",
+        "  - **BTK Akademi** — *Yapay Zekaya Giriş (Introduction to AI)*",
+        "",
+        *pillar_lines,
+        "",
+        "---",
+        "",
+        "<details>",
+        "  <summary><strong>Türkçe Özet / Bilingual Profile & Plain-Text ATS Index</strong></summary>",
+        "",
+        "### [TR] Hakkımda",
+        "Merhaba, ben **Kerem** — İstanbul'da yaşayan bir yazılım mühendisliği öğrencisiyim (`Doğuş Üniversitesi, 2023–2027`). Şu anda **VollSign**'da (Beyoğlu Teknopark) **Yazılım Mühendisi** olarak çalışıyor, aynı zamanda QA/fonksiyonel test süreçlerinde (UI, API ve kullanıcı akışları) yer alıyorum.",
+        "- **X-ETC (Inventra):** `ASP.NET Core` ve `React.js` ile büyük ölçekli kurumsal envanter yönetim sisteminde uçtan uca (full-stack) geliştirme.",
+        "- **Shifha:** Yapay zekâ destekli doktor asistanı üzerinde `Python` ile klinik özellik geliştirme.",
+        "- **Siber Güvenlik & Pentest:** Küçük işletmelere bağımsız güvenlik değerlendirmesi ve sızma testi (penetration testing) danışmanlığı.",
+        "- **Özel Ürünler & Araştırma:** **Maritime Watch Türkiye** (Boğaz canlı AIS & hava karar motoru), **Klima Gaz Defteri** (ailemin otomotiv klima servisi için geliştirdiğim dijital operasyon araçları) ve **istatistiksel sağlamlık odaklı kripto para strateji backtest platformu**.",
+        "",
+        "### Profile & Experience Index",
         f"- **Name:** {PROFILE['name']} (`{PROFILE['handle']}`)",
         f"- **Role:** {PROFILE['title']}",
         f"- **Location:** {PROFILE['location']} (`{PROFILE['coordinates']}`)",
         f"- **Education:** {PROFILE['university']} — {PROFILE['degree']} (`{PROFILE['graduation_years']}`)",
-        "",
-        "### Experience & Community Leadership",
         *timeline_lines,
-        "",
-        "### Core Systems",
-        *project_lines,
         "",
         "### Supporting Repositories",
         "- " + " · ".join(supporting_parts),
         "",
-        "### Technical Stack",
-        *pillar_lines,
-        "",
-        "### Channels",
+        "### Direct Contact Channels",
+        f"- **Email:** [keremkalyoncu.dev@gmail.com](mailto:keremkalyoncu.dev@gmail.com) · [gskerem200553@outlook.com](mailto:gskerem200553@outlook.com)",
         f"- **Interactive Companion Site:** [{site_display}]({site_url})",
         f"- **GitHub:** [{github_display}]({github_url})",
         f"- **LinkedIn:** [{linkedin_display}]({linkedin_url})",

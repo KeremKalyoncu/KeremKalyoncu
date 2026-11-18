@@ -453,10 +453,10 @@ def render_project_micro_diagram(project: dict) -> str:
 def render_hero_strip() -> str:
     timeline_by_id = {t["id"]: t for t in TIMELINE}
     cells = [
+        ("vollsign", "VOLLSIGN · AUG 2026–PRESENT", "Software Engineer · Dev & QA"),
+        ("x-etc", "X-ETC. · FEB–AUG 2026 (7M)", "Full-Stack Software Engineer"),
         ("dogus-bsc", f"DOĞUŞ UNIV. · {timeline_by_id['dogus-bsc']['period']}", "BSc Software Engineering"),
-        ("gdg-dogus", f"GDG DOĞUŞ · {timeline_by_id['gdg-dogus']['period']}", timeline_by_id["gdg-dogus"]["role"]),
-        ("huawei-ai", f"HUAWEI × AI · {timeline_by_id['huawei-ai']['period']}", "Data Science & ML Track"),
-        ("vollsign", "VOLLSIGN · PRODUCTION", "Dev / QA & Test Engineering"),
+        ("gdg-dogus", f"GDG DOĞUŞ · {timeline_by_id['gdg-dogus']['period']}", "Social Media & Design Lead"),
     ]
     out: list[str] = ['<div class="hero-strip">']
     for tid, top_txt, sub_txt in cells:
@@ -1592,7 +1592,7 @@ main, section, header, footer, article, aside, .atlas-shell, .hero-grid > *, .be
 
 .timeline-grid {{
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
 }}
 
