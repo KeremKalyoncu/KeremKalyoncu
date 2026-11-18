@@ -1,426 +1,140 @@
 <div align="center">
 
-<img src="./assets/kerem-command-center.svg" alt="Kerem Kalyoncu Command Station HUD" width="100%" />
+<p align="center">
+  <strong><a href="https://keremkalyoncu.github.io/KeremKalyoncu/">Interactive Companion Site ↗</a></strong>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/KeremKalyoncu">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/kerem-kalyoncu/">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:keremkalyoncu.dev@gmail.com">keremkalyoncu.dev@gmail.com</a>
+</p>
 
-<br />
+<p align="center">
+  <a href="https://keremkalyoncu.github.io/KeremKalyoncu/">
+    <img src="assets/atlas-hero.svg" width="100%" alt="Obsidian Atlas Plate 01 — Kerem Kalyoncu, Software Engineer @Vollsign in İstanbul, Türkiye (41.0082° N, 28.9784° E), Doğuş University Software Engineering, BSc 2023–2027." />
+  </a>
+</p>
 
-<a href="https://github.com/KeremKalyoncu?tab=repositories">
-  <img src="https://img.shields.io/badge/EXPLORE%20PROJECTS-22D3EE?style=for-the-badge&logo=github&logoColor=020617" alt="Explore projects" />
-</a>
-<a href="https://keremkalyoncu.github.io/maritime-watch">
-  <img src="https://img.shields.io/badge/LIVE%20DEMO-MARITIME%20WATCH-0E7490?style=for-the-badge&logo=googleearth&logoColor=white" alt="Maritime Watch live demo" />
-</a>
-<a href="https://github.com/KeremKalyoncu">
-  <img src="https://img.shields.io/github/followers/KeremKalyoncu?label=FOLLOW&style=for-the-badge&color=164E63&logo=github&logoColor=white" alt="Follow Kerem" />
-</a>
+<p align="center">
+  <a href="https://github.com/KeremKalyoncu?tab=repositories">
+    <img src="assets/atlas-systems.svg" width="100%" alt="Obsidian Atlas Plate 02 — Core Engineering Systems: Maritime Watch Türkiye, Inventra, Restofy, Shifha, KriptoParaTakip, ML &amp; Data Lab." />
+  </a>
+</p>
 
-<br /><br />
+<p align="center">
+  <a href="https://www.linkedin.com/in/kerem-kalyoncu/">
+    <img src="assets/atlas-trajectory.svg" width="100%" alt="Obsidian Atlas Plate 03 — Engineering Trajectory, Community Leadership (GDG on Campus Doğuş, Huawei AI Academy, BTK AI Fundamentals, VollSign), and 4-Pillar Technical Stack." />
+  </a>
+</p>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=67E8F9&center=true&vCenter=true&width=900&lines=Software+Engineer+%26+Systems+Builder.;Live+Telemetry.+Geospatial+Interfaces.+Practical+Automation.;Financial+forensics+on+public+market+data.;From+raw+operational+signals+to+reliable%2C+useful+software." alt="Animated profile introduction" />
-
-</div>
-
-<br />
-
-<!--
-  Navigation Console
--->
-
-<div align="center">
-
-<a href="#about">[ 01_about ]</a> ·
-<a href="#flagship">[ 02_flagship ]</a> ·
-<a href="#telemetry">[ 03_telemetry ]</a> ·
-<a href="#console">[ 04_interactive_console ]</a> ·
-<a href="#projects">[ 05_projects ]</a> ·
-<a href="#contributions">[ 06_contributions ]</a> ·
-<a href="#stack">[ 07_stack ]</a> ·
-<a href="#contact">[ 08_contact ]</a>
-
-</div>
-
-<br />
-
-<a id="about"></a>
-
-## `01` / About the builder
-
-I’m **Kerem Kalyoncu**, a Software Engineer based in **İstanbul, Türkiye**.
-
-I engineer software where **digital systems intersect with the physical world**: live telemetry streams, geospatial mapping, automated workflows, and high-clarity interfaces that convert complex operational signals into reliable human decisions.
-
-I prioritize deterministic reliability over fragile tech trends. Every system must solve a tangible problem across its full operational loop:
-
-```text
-operational problem
-        ↓
-accurate telemetry & raw sensor data
-        ↓
-deterministic logic & safety engine
-        ↓
-clear, resilient interface
-        ↓
-measurable, real-world outcome
-```
-
-<div align="center">
-
-| `SYSTEM STATUS` | `COMMUNITY LEADERSHIP` | `ENGINEERING FOCUS` | `PRIMARY SECTOR` |
-| :---: | :---: | :---: | :---: |
-| `BUILDING & SHIPPING` | `GDG ON CAMPUS DOĞUŞ` | `REAL-TIME × GIS × AUTOMATION` | `ISTANBUL, TR` |
+<p align="center">
+  <a href="https://keremkalyoncu.github.io/maritime-watch">Maritime Watch</a>
+  &nbsp;·&nbsp;
+  <a href="https://x-etc.online">Inventra</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/software-lecture-labs/Restofy">Restofy</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/kerem-kalyoncu/">Shifha</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/KeremKalyoncu/KriptoParaTakip">KriptoParaTakip</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/KeremKalyoncu/ml-final-odev">ML &amp; Data Lab</a>
+</p>
 
 </div>
 
-<br />
+---
 
-<div align="center">
+## Engineering Focus & What I Build
 
-<a href="https://github.com/KeremKalyoncu?tab=repositories">
-  <img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-15-0F172A?style=flat-square&logo=github&logoColor=67E8F9" alt="Public repositories" />
-</a>
-<a href="https://github.com/KeremKalyoncu">
-  <img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20OPPORTUNITIES%20%26%20COLLABORATION-0F172A?style=flat-square&logo=github&logoColor=34D399" alt="Open to opportunities" />
-</a>
+I'm **Kerem Kalyoncu** — a Software Engineer based in **İstanbul, Türkiye** (`Doğuş University · BSc Software Engineering, 2023–2027`) currently working as a **Software Engineer at [VollSign](https://vollsign.com)** in Beyoğlu Teknopark.
 
-</div>
+- **Software Engineering & Systematic QA (@VollSign):** Developing production software while systematically testing UI workflows, API integrations, and end-to-end user journeys.
+- **Enterprise Full-Stack Systems (Inventra @X-ETC):** Engineered [Inventra](https://x-etc.online) end-to-end with **ASP.NET Core**, **React.js**, **Material UI**, and **PostgreSQL** for large-scale multi-warehouse inventory and workforce management.
+- **Applied Clinical AI (@Shifha):** Built AI-driven healthcare features in **Python** for an AI-powered doctor assistant supporting clinical triage and medical decision workflows.
+- **Independent Cybersecurity & Penetration Testing:** Building an independent security consulting practice — delivering security assessments, vulnerability analysis, and penetration testing for small and medium businesses.
+- **Real-World Field & Quant Engineering:** Created **[Maritime Watch Türkiye](https://keremkalyoncu.github.io/maritime-watch)** (24/7 Bosphorus AIS & weather safety engine running on a ~1.2W edge node), **Klima Gaz Defteri** (digital service & refrigerant tracking suite for my family's automotive AC business), and a **statistically rigorous cryptocurrency strategy backtesting platform**.
+- **Developer Community Leadership (@GDG On Campus Doğuş):** Coordinated the Social Media & Design team for over a year, scaling technical content and developer community engagement.
 
-<br />
+---
 
-<a id="flagship"></a>
+## Professional Experience & Leadership
 
-## `02` / Flagship build — Maritime Watch Türkiye
-
-<div align="center">
-
-<a href="https://github.com/KeremKalyoncu/maritime-watch">
-  <img src="./assets/maritime-watch-blueprint.svg" alt="Maritime Watch Türkiye - Tactical System Blueprint" width="100%" />
-</a>
-
-<br /><br />
-
-<a href="https://keremkalyoncu.github.io/maritime-watch">
-  <img src="https://img.shields.io/badge/OPEN%20LIVE%20DASHBOARD-22D3EE?style=for-the-badge&logo=googleearth&logoColor=020617" alt="Open live dashboard" />
-</a>
-<a href="https://keremkalyoncu.github.io/maritime-watch/stats.html">
-  <img src="https://img.shields.io/badge/LIVE%20STATISTICS-REPORT-0F172A?style=for-the-badge&logo=google-analytics&logoColor=67E8F9" alt="Maritime Watch statistics report" />
-</a>
-<a href="https://keremkalyoncu.github.io/maritime-watch/data/feed.xml">
-  <img src="https://img.shields.io/badge/RSS-LIVE%20FEED-0F172A?style=for-the-badge&logo=rss&logoColor=F59E0B" alt="Maritime Watch RSS feed" />
-</a>
-<a href="https://github.com/KeremKalyoncu/maritime-watch">
-  <img src="https://img.shields.io/badge/EXPLORE%20SOURCE%20CODE-164E63?style=for-the-badge&logo=github&logoColor=white" alt="Read source code" />
-</a>
-
-</div>
-
-### The Problem It Solves
-
-Standard marine weather reports output raw numbers: *24 knots of wind, 1.8 metres of wave height*. To a maritime operator or small craft captain, raw numbers do not answer the operational question:
-
-> **"Can my vessel safely depart right now, and by what exact time must I return?"**
-
-**Maritime Watch Türkiye** translates multi-source weather forecasts, live AIS telemetry, and official navigational warnings into vessel-specific **Go / Caution / No-Go departure and safe return windows** across Turkish waters and the Turkish Straits.
-
-### Architectural Highlights
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-#### 🛟 Decision Support Engine
-- Vessel-class safety windows (open fishing boat, yacht, commercial craft)
-- Dynamic wind gust & wave threshold calculations
-- 06:00 daily operational maritime briefings
-- Deterministic go / caution / no-go states
-
-</td>
-<td width="50%" valign="top">
-
-#### 📡 Live Maritime Intelligence
-- Real-time AIS vessel tracking & speed telemetry
-- Closest Point of Approach (**CPA**) collision risk
-- Sudden speed-drop anomaly detection in heavy traffic
-- Turkish Straits passage monitoring
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### 🆘 Safety & Offline Resilience
-- Telegram emergency assistant bot
-- `/neredeyim` nearest refuge-port spatial lookup
-- `/mayday` VHF Channel 16 distress communication templates
-- Offline PWA with cached nautical map layers
-
-</td>
-<td width="50%" valign="top">
-
-#### 🌱 Ultra-Low Power Infrastructure
-- Deterministic rule engine (**0 LLM in live safety loop**)
-- Automated GitHub Actions data processing pipeline
-- 24/7 Telegram sentinel operating on a recycled device
-- Dedicated Samsung Galaxy Note 4 edge node (~1.2W)
-
-</td>
-</tr>
-</table>
-
-<br />
-
-<a id="telemetry"></a>
-
-## `03` / Real-time living developer telemetry & Bosphorus sensor HUD
-
-The HUD card below is updated autonomously via GitHub Actions with live marine conditions from the Turkish Straits and a 5-axis engineering capability radar:
-
-<div align="center">
-
-<img src="./assets/developer-telemetry.svg" alt="Developer Telemetry and Metrics HUD" width="100%" />
-
-</div>
-
-<br />
-
-<a id="console"></a>
-
-## `04` / Interactive visitor command console (GitHub Issue-Ops)
-
-You can interact directly with the Command Center! Click any command below to dispatch an autonomous operation. A GitHub Action will execute the request in ~15 seconds, log your telemetry response to the live teletype terminal below, and close the session automatically:
-
-<div align="center">
-
-<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20PING_NODE4&body=Ping%20request%20to%20Samsung%20Galaxy%20Note%204%20Edge%20Sentinel%20(~1.2W).">
-  <img src="https://img.shields.io/badge/EXECUTE-PING%20NOTE%204%20NODE-22D3EE?style=for-the-badge&logo=satellite&logoColor=020617" alt="Ping Note 4 Edge Node" />
-</a>
-<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20RUN_SAFETY_EVAL&body=Executing%20deterministic%20coastal%20safety%20evaluation%20for%20Turkish%20waters.">
-  <img src="https://img.shields.io/badge/EXECUTE-RUN%20SAFETY%20EVAL-10B981?style=for-the-badge&logo=shield&logoColor=white" alt="Run Safety Evaluation" />
-</a>
-<a href="https://github.com/KeremKalyoncu/KeremKalyoncu/issues/new?title=%5BOPS-COMMAND%5D%3A%20CALLSIGN%20STATION-GUEST&body=Transmitting%20operator%20callsign%20to%20command%20center.">
-  <img src="https://img.shields.io/badge/TRANSMIT-CALLSIGN%20SIGNAL-6366F1?style=for-the-badge&logo=radio&logoColor=white" alt="Transmit Callsign" />
-</a>
-
-<br /><br />
-
-### 📟 Real-Time Operator Teletype Log
-
-<!-- VISITOR_LOG_START -->
-| `UTC TIME` | `OPERATOR` | `COMMAND` | `TELEMETRY TELETYPE OUTPUT` |
+| Period | Organization | Role & Location | Focus & Impact |
 | :--- | :--- | :--- | :--- |
-| `2026-09-21 22:30` | **@KeremKalyoncu** | `PING_NODE4` | `PONG (28ms) · Note 4 Edge Node [Termux] Online · ~1.18W Nominal` |
-| `2026-09-21 22:15` | **@octocat** | `RUN_SAFETY_EVAL` | `EVAL_OK · Turkish Straits Sector: Wind < 16kt · Wave 0.6m · Status: GO (SAFE)` |
-| `2026-09-21 21:50` | **@visitor-ops** | `CALLSIGN [STATION-ALPHA]` | `ACKNOWLEDGED · Frequency 156.800 MHz (VHF CH 16) · Welcome to Command Station` |
-<!-- VISITOR_LOG_END -->
-
-</div>
-
-<br />
-
-<a id="projects"></a>
-
-## `05` / Selected work & production repositories
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### ⚓ [Maritime Watch](https://github.com/KeremKalyoncu/maritime-watch)
-Flagship real-time marine safety & AIS intelligence platform for Turkish waters. Includes deterministic departure windows, low-power edge node, and spatial alerts.
-
-`Python` `Leaflet` `AIS` `Geospatial` `PWA`
-
-</td>
-<td width="50%" valign="top">
-
-### 📚 [Gelişmiş Kütüphane Sistemi](https://github.com/KeremKalyoncu/Gelismis_Kutuphane_Sistemi)
-A robust library management system featuring relational SQLite storage, transactional borrowing workflows, and detailed audit logging.
-
-`Python` `SQLite` `Data Architecture` `Logging`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 💹 [KriptoParaTakip](https://github.com/KeremKalyoncu/KriptoParaTakip)
-Desktop cryptocurrency intelligence application built in Java, streaming live price telemetry and market movements in real time.
-
-`Java` `Real-Time Data` `Desktop GUI` `API Integration`
-
-</td>
-<td width="50%" valign="top">
-
-### 📊 [Titanic Veri Analizi](https://github.com/KeremKalyoncu/Titanic_Veri_Analizi)
-In-depth exploratory data analysis and feature engineering on survival patterns, passenger demographics, and correlation matrices.
-
-`Jupyter` `Pandas` `NumPy` `Matplotlib` `Seaborn`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### ⛽ [Benzin İstasyonu Otomasyonu](https://github.com/KeremKalyoncu/Benzin_Istasyonu_Otamasyon)
-An enterprise domain automation tool modeling pump inventory, daily transactions, and fuel-station operational logic.
-
-`C#` `.NET` `Enterprise Automation` `Workflows`
-
-</td>
-<td width="50%" valign="top">
-
-### 🎨 [Dinamik CSS Portfolyo](https://github.com/KeremKalyoncu/Dinamik-Css-Portfolyo)
-Interactive frontend showcase focusing on responsive layouts, CSS animations, and vanilla JavaScript state handling.
-
-`JavaScript` `CSS3` `UI/UX` `Interactive Design`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🤖 [Müşteri Churn Tahmini](https://github.com/KeremKalyoncu/ml-ara-odev)
-End-to-end classification pipeline for customer churn: synthetic data generation, feature engineering, LR / KNN / DT benchmarking, and class-imbalance handling.
-
-`Python` `scikit-learn` `Classification` `EDA`
-
-</td>
-<td width="50%" valign="top">
-
-### 🏠 [Ev Fiyat Tahmini](https://github.com/KeremKalyoncu/ml-final-odev)
-Full regression workflow on California Housing: feature engineering, cross-validation, hyperparameter tuning, and model comparison.
-
-`Python` `scikit-learn` `Regression` `GridSearch`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 📦 [Envanter Stok Takibi](https://github.com/KeremKalyoncu/Envanter-Stok-Takibi)
-Inventory and stock tracking application for small-business workflows, built in Python.
-
-`Python` `Inventory` `Automation`
-
-</td>
-<td width="50%" valign="top">
-
-### 🔒 FonDedektifi *(private build)*
-Financial intelligence platform for TEFAS funds & BIST equities: liquidity risk (DTL), concentration (HHI), toxic fund scoring, and collusion detection.
-
-`Python` `FastAPI` `DuckDB` `Financial Forensics`
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-<a href="https://github.com/KeremKalyoncu?tab=repositories">
-  <img src="https://img.shields.io/badge/EXPLORE%20ALL-REPOSITORIES-0F172A?style=for-the-badge&logo=github&logoColor=67E8F9" alt="View all repositories" />
-</a>
-
-</div>
-
-<br />
-
-<a id="contributions"></a>
-
-## `06` / Live contribution theater
-
-### 🐍 Autonomous Contribution Stream
-
-Harvests repository activity automatically via GitHub Actions:
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./output/github-contribution-grid-snake.svg" />
-  <img src="./output/github-contribution-grid-snake.svg" alt="Animated contribution snake" width="100%" />
-</picture>
-
-</div>
-
-<br />
-
-### 🌌 3D Isometric Contribution Landscape
-
-Visualizing commitment volume, frequency, and density over time:
-
-<div align="center">
-
-<img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution calendar" width="100%" />
-
-<br /><br />
-
-<img src="https://streak-stats.demolab.com?user=KeremKalyoncu&theme=tokyonight&hide_border=true&background=0B1220&ring=22D3EE&fire=67E8F9&currStreakLabel=67E8F9&sideLabels=CBD5E1&dates=94A3B8" alt="GitHub contribution streak" />
-
-</div>
-
-<br />
-
-<a id="stack"></a>
-
-## `07` / Technology constellation
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,javascript,java,cs,html,css,sqlite,fastapi,sklearn,git,github,leaflet&perline=12" alt="Core Technologies" />
-
-<br /><br />
-
-| Category | Technologies &amp; Tools |
-| :--- | :--- |
-| **Core Languages** | `Python` · `JavaScript` · `Java` · `C#` · `SQL` · `HTML5` · `CSS3` |
-| **Data &amp; Analysis** | `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `scikit-learn` · `SQLite` · `DuckDB` |
-| **Backend &amp; Finance** | `FastAPI` · `Pydantic v2` · `Financial Data Pipelines` · `ReportLab` |
-| **Geospatial &amp; Systems** | `Leaflet.js` · `AIS Decoding` · `REST APIs` · `IoT Edge Computing` · `PWA` |
-| **Automation &amp; CI/CD** | `GitHub Actions` · `Cron Telemetry` · `Telegram Bot API` · `Linux / Bash` |
-
-</div>
-
-<br />
-
-## `08` / Engineering principles
-
-<div align="center">
-
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│  01. BUILD FOR THE PHYSICAL PROBLEM, NOT FOR TRANSIENT TECH HYPE       │
-│  02. RAW NUMBERS ARE NOT ENOUGH; ALWAYS DELIVER ACTIONABLE DECISIONS   │
-│  03. ZERO LLM IN THE CRITICAL REAL-TIME SAFETY PATH                    │
-│  04. RECYCLE HARDWARE & MAXIMIZE EFFICIENCY (1.2W OVER EXPENSIVE CLOUD)│
-│  05. SHIP WORKING PROTOTYPES FAST; HARDEN THROUGH EMPIRICAL TESTING    │
-└────────────────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
-<br />
-
-<a id="contact"></a>
-
-## `09` / Connect & open channel
-
-Are you building systems with **real-time telemetry, maps, automation, or data-driven software**?
-
-I am open to **software engineering opportunities, high-impact collaborations, and ambitious technical projects**.
-
-<div align="center">
-
-<a href="https://github.com/KeremKalyoncu">
-  <img src="https://img.shields.io/badge/GITHUB%20PROFILE-22D3EE?style=for-the-badge&logo=github&logoColor=020617" alt="Open GitHub profile" />
-</a>
-<a href="https://github.com/KeremKalyoncu?tab=issues">
-  <img src="https://img.shields.io/badge/START%20A%20CONVERSATION-164E63?style=for-the-badge&logo=github&logoColor=white" alt="Start a conversation" />
-</a>
-
-<br /><br />
-
-<img src="https://komarev.com/ghpvc/?username=KeremKalyoncu&style=for-the-badge&color=0891B2&label=PROFILE+SIGNALS" alt="Profile views" />
-
-<br /><br />
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,50:0E7490,100:020617&height=120&section=footer&animation=fadeIn" alt="Animated footer wave" width="100%" />
-
-</div>
+| **Aug 2026 – Present** | **[VollSign](https://vollsign.com)** | Software Engineer · *Beyoğlu, İstanbul (Teknopark)* | Full-cycle software development, systematic UI/API functional testing & quality assurance. |
+| **Feb 2026 – Aug 2026** | **[X-ETC.](https://x-etc.online)** | Software Engineer (Full-Stack) · *Pendik, İstanbul* | End-to-end architecture & delivery of the **Inventra** enterprise inventory platform (`ASP.NET Core`, `React.js`). |
+| **Feb 2026 – Aug 2026** | **Shifha** | Software Engineer · *İstanbul* | Built Python AI-powered doctor assistant features & structured clinical NLP workflows. |
+| **Sep 2025 – Sep 2026** | **[GDG On Campus Doğuş](https://tr.linkedin.com/company/gdg-on-campus-dogus)** | Social Media Coordinator · *İstanbul* | Led the social media & design team (1 yr 1 mo), content production & campus developer outreach. |
+| **Aug 2024 – Sep 2024** | **Eryaz Bilgi Teknolojileri A.Ş.** | Software Developer · *İstanbul* | Enterprise software development using `C#`, `ASP.NET`, `JavaScript`, `HTML/CSS`, and `SQL`. |
+
+---
+
+## Core Systems, Field Builds & Security Practice
+
+1. **[Maritime Watch Türkiye](https://keremkalyoncu.github.io/maritime-watch)** *(SYS-01 · Production Systems)* — Translates multi-source marine weather forecasts, real-time AIS telemetry, and Turkish navigational warnings into deterministic Go / Caution / No-Go departure and safe-return decisions. *Stack:* Python, Leaflet.js, Open-Meteo, AIS, PWA, Edge Computing.
+2. **[Inventra](https://x-etc.online)** *(SYS-02 · Production Systems)* — Enterprise cloud workforce scheduling, multi-warehouse inventory auditing, and operational workflow platform deployed in production. *Stack:* ASP.NET Core, React, Material UI, PostgreSQL.
+3. **[Restofy](https://github.com/software-lecture-labs/Restofy)** *(SYS-03 · Backend & Microservices)* — Collaborative restaurant QR menu and high-concurrency order dispatching microservices architecture built with Spring Boot and Docker. *Stack:* Java, Spring Boot, Microservices, Docker.
+4. **[Shifha](https://www.linkedin.com/in/kerem-kalyoncu/)** *(SYS-04 · AI & Data Lab)* — Built AI-driven healthcare features in Python for an AI-powered doctor assistant, structuring medical information routing and clinician decision support. *Stack:* Python, React Native, Medical NLP, Clinical AI.
+5. **[KriptoParaTakip](https://github.com/KeremKalyoncu/KriptoParaTakip)** *(SYS-05 · Backend & Microservices)* — Cryptocurrency market tracking suite and statistically rigorous strategy backtesting research platform focused on out-of-sample robustness and live volatility alerts. *Stack:* Java, Python, REST APIs, Desktop GUI, JSON Pipelines.
+6. **[ML & Data Lab](https://github.com/KeremKalyoncu/ml-final-odev)** *(SYS-06 · AI & Data Lab)* — Predictive modeling and EDA pipelines covering California Housing regression with GridSearchCV, Customer Churn classification benchmarking LR/KNN/DT, and survival pattern analysis. ([ml-ara-odev](https://github.com/KeremKalyoncu/ml-ara-odev), [Titanic_Veri_Analizi](https://github.com/KeremKalyoncu/Titanic_Veri_Analizi)) *Stack:* Python, Scikit-Learn, Pandas, NumPy.
+7. **Klima Gaz Defteri** *(FIELD-01 · Production Field Tool)* — Custom digital service ledger, vehicle AC maintenance workflow, and refrigerant tracking tools engineered for my family's automotive air-conditioning service business.
+8. **Independent Cybersecurity & Penetration Testing** *(SEC-02 · Security Consulting)* — Security assessments, web/API vulnerability discovery, and penetration testing helping small businesses identify and remediate weak points in their systems.
+9. **FonDedektifi** *(FIN-03 · Financial Forensics)* — TEFAS funds & BIST equities forensic analytics platform built with `Python`, `FastAPI`, and `DuckDB` (DTL liquidity risk, HHI concentration & anomaly detection).
+
+---
+
+## Education, Certifications & Technical Stack
+
+- **Education:** **Doğuş Üniversitesi** — *BSc Software Engineering (Yazılım Mühendisliği)* (`2023 – 2027`)
+- **Certifications:**
+  - **Huawei Student Developers (HSD)** — *Veri Bilimi ve Makine Öğrenmesi (Data Science & Machine Learning)*
+  - **GDG On Campus** — *Core Team Certificate of Completion*
+  - **BTK Akademi** — *Yapay Zekaya Giriş (Introduction to AI)*
+
+- **Full-Stack & Enterprise:** Python, C#, ASP.NET Core, React, TypeScript, Java, Spring Boot, FastAPI, PostgreSQL, REST APIs, Microservices
+- **QA, Testing & Security:** QA & Functional Testing, API Integration Testing, Penetration Testing, Security Assessments, Docker, GitHub Actions, Linux / Bash, CI/CD
+- **AI, Data & Backtesting:** Python, Scikit-Learn, Pandas, NumPy, Medical NLP, Crypto Backtesting, SQLite, DuckDB, Feature Engineering
+- **Geospatial, Edge & Ops:** Leaflet.js, AIS Telemetry, PWA, Edge Node (~1.2W), HTML5 / CSS3, Vector SVG, Team Management, Community Leadership
+
+---
+
+<details>
+  <summary><strong>Türkçe Özet / Bilingual Profile & Plain-Text ATS Index</strong></summary>
+
+### [TR] Hakkımda
+Merhaba, ben **Kerem** — İstanbul'da yaşayan bir yazılım mühendisliği öğrencisiyim (`Doğuş Üniversitesi, 2023–2027`). Şu anda **VollSign**'da (Beyoğlu Teknopark) **Yazılım Mühendisi** olarak çalışıyor, aynı zamanda QA/fonksiyonel test süreçlerinde (UI, API ve kullanıcı akışları) yer alıyorum.
+- **X-ETC (Inventra):** `ASP.NET Core` ve `React.js` ile büyük ölçekli kurumsal envanter yönetim sisteminde uçtan uca (full-stack) geliştirme.
+- **Shifha:** Yapay zekâ destekli doktor asistanı üzerinde `Python` ile klinik özellik geliştirme.
+- **Siber Güvenlik & Pentest:** Küçük işletmelere bağımsız güvenlik değerlendirmesi ve sızma testi (penetration testing) danışmanlığı.
+- **Özel Ürünler & Araştırma:** **Maritime Watch Türkiye** (Boğaz canlı AIS & hava karar motoru), **Klima Gaz Defteri** (ailemin otomotiv klima servisi için geliştirdiğim dijital operasyon araçları) ve **istatistiksel sağlamlık odaklı kripto para strateji backtest platformu**.
+
+### Profile & Experience Index
+- **Name:** Kerem Kalyoncu (`KeremKalyoncu`)
+- **Role:** Software Engineer @VollSign · Full-Stack, QA/Test, AI & Cybersecurity
+- **Location:** İstanbul, Türkiye (`41.0082° N, 28.9784° E`)
+- **Education:** Doğuş University — Software Engineering, BSc (`2023–2027`)
+- **VollSign** ([vollsign.com](https://vollsign.com)) — Software Engineer · Dev, QA & Functional Testing (`Aug 2026–Present`)
+- **X-ETC.** ([x-etc.online](https://x-etc.online)) — Full-Stack Software Engineer · ASP.NET Core & React (`Feb 2026–Aug 2026`)
+- **Clinical AI Venture** ([www.linkedin.com/in/kerem-kalyoncu](https://www.linkedin.com/in/kerem-kalyoncu/)) — Software Engineer · Python AI Doctor Assistant (`Feb 2026–Aug 2026`)
+- **GDG on Campus Doğuş** ([tr.linkedin.com/company/gdg-on-campus-dogus](https://tr.linkedin.com/company/gdg-on-campus-dogus)) — Social Media Coordinator · Design & Social Media Team Lead (`Sep 2025–Sep 2026`)
+- **Eryaz Bilgi Teknolojileri A.Ş.** ([www.linkedin.com/in/kerem-kalyoncu](https://www.linkedin.com/in/kerem-kalyoncu/)) — Software Developer Intern · C#, ASP.NET, JS & SQL (`Aug 2024–Sep 2024`)
+- **Doğuş University** — Software Engineering, BSc (`2023–2027`)
+- **Huawei × AI Academy** — Huawei Student Developers · Data Science & ML (`2026`)
+- **BTK AI Fundamentals** — Yapay Zekaya Giriş & GDG Core Team Certs (`2025–2026`)
+
+### Supporting Repositories
+- [Klima Gaz Defteri](https://www.linkedin.com/in/kerem-kalyoncu/) · [SMB Cybersecurity & Pentesting](https://www.linkedin.com/in/kerem-kalyoncu/) · [Gelismis_Kutuphane_Sistemi](https://github.com/KeremKalyoncu/Gelismis_Kutuphane_Sistemi) · [Benzin_Istasyonu_Otamasyon](https://github.com/KeremKalyoncu/Benzin_Istasyonu_Otamasyon) · [Envanter-Stok-Takibi](https://github.com/KeremKalyoncu/Envanter-Stok-Takibi) · [Dinamik-Css-Portfolyo](https://github.com/KeremKalyoncu/Dinamik-Css-Portfolyo) · `FonDedektifi` *(private)*
+
+### Direct Contact Channels
+- **Email:** [keremkalyoncu.dev@gmail.com](mailto:keremkalyoncu.dev@gmail.com) · [gskerem200553@outlook.com](mailto:gskerem200553@outlook.com)
+- **Interactive Companion Site:** [keremkalyoncu.github.io/KeremKalyoncu](https://keremkalyoncu.github.io/KeremKalyoncu/)
+- **GitHub:** [github.com/KeremKalyoncu](https://github.com/KeremKalyoncu)
+- **LinkedIn:** [linkedin.com/in/kerem-kalyoncu](https://www.linkedin.com/in/kerem-kalyoncu/)
+
+</details>
+
+<p align="center">
+  <sub>KEREM KALYONCU // ISTANBUL SYSTEMS, QA, AI & SECURITY · Kerem Kalyoncu © 2026</sub>
+</p>

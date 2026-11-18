@@ -163,14 +163,14 @@ function generateSvg({ marine, userData, languages }) {
   return `<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="hud-bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#020617"/>
-      <stop offset="0.5" stop-color="#07192F"/>
-      <stop offset="1" stop-color="#031021"/>
+      <stop stop-color="#041d45"/>
+      <stop offset="0.4" stop-color="#062557"/>
+      <stop offset="1" stop-color="#020d24"/>
     </linearGradient>
 
     <linearGradient id="hud-panel" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#061226" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#020713" stop-opacity="0.98"/>
+      <stop stop-color="#08306b" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#031533" stop-opacity="0.88"/>
     </linearGradient>
 
     <linearGradient id="spider-fill" x1="0" y1="0" x2="1" y2="1">

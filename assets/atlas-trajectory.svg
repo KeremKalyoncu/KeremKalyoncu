@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 516" width="880" height="516" role="img" aria-label="Obsidian Atlas Plate 03 — Kerem Kalyoncu Career Experience, Community Leadership (VollSign, X-ETC., Clinical AI Venture, GDG on Campus Doğuş, Eryaz Bilgi Teknolojileri A.Ş., Doğuş University, Huawei × AI Academy, BTK AI Fundamentals), and 4-Pillar Stack">
+  <title>Obsidian Atlas Plate 03 — Kerem Kalyoncu Career Experience, Community Leadership (VollSign, X-ETC., Clinical AI Venture, GDG on Campus Doğuş, Eryaz Bilgi Teknolojileri A.Ş., Doğuş University, Huawei × AI Academy, BTK AI Fundamentals), and 4-Pillar Stack</title>
+  <defs>
+    <style>.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+@keyframes busFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -48; } }
+.bus-pulse { stroke-dasharray: 10 38; stroke-dashoffset: 0; animation: busFlow 2.8s linear infinite; }</style>
+    <pattern id="micro-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#163654" stroke-width="0.6" stroke-opacity="0.55" />
+    </pattern>
+    <filter id="slate-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="3" stitchTiles="stitch" result="noise" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.96  0 0 0 0 0.98  0 0 0 0.045 0" in="noise" />
+    </filter>
+    <filter id="amber-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <radialGradient id="aero-canvas-glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.11" />
+      <stop offset="55%" stop-color="#0EA5E9" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#060E18" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="aero-card-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F243C" />
+      <stop offset="45%" stop-color="#0A1829" />
+      <stop offset="100%" stop-color="#081423" />
+    </linearGradient>
+    <linearGradient id="aero-top-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F0FAFF" stop-opacity="0.05" />
+      <stop offset="35%" stop-color="#00D4FF" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#34D399" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#F0FAFF" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+  <rect width="880" height="516" rx="12" fill="#060E18" />
+  <rect width="880" height="516" rx="12" fill="url(#aero-canvas-glow)" />
+  <rect width="880" height="516" rx="12" fill="url(#micro-grid)" />
+  <rect width="880" height="516" rx="12" filter="url(#slate-grain)" />
+  <rect x="0.5" y="0.5" width="879" height="515" rx="11.5" fill="none" stroke="#163654" stroke-width="1" />
+  <line x1="24" y1="1" x2="856" y2="1" stroke="url(#aero-top-sheen)" stroke-width="1.2" />
+  <path d="M10,18 V10 H18 M862,10 H870 V18 M10,498 V506 H18 M862,506 H870 V498" fill="none" stroke="#256394" stroke-width="1.2" />
+  <text x="20" y="31" fill="#00D4FF" class="mono" font-size="10.5" font-weight="700" letter-spacing="1.2">CAREER EXPERIENCE, EDUCATION &amp; TECHNICAL STACK</text>
+  <text x="860" y="31" fill="#75A1C2" class="mono" font-size="9.5" text-anchor="end" letter-spacing="0.4">VOLLSIGN · X-ETC · SHIFHA · ERYAZ · DOĞUŞ UNIV. (2023 → 2027)</text>
+  <line x1="20" y1="46" x2="860" y2="46" stroke="#163654" stroke-width="1" />
+  <rect x="20" y="58" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="21" y="58" width="202" height="2.2" rx="1" fill="#34D399" />
+  <circle cx="34" cy="76" r="2.5" fill="#34D399" />
+  <text x="44" y="79" fill="#34D399" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">AUG 2026–PRESENT</text>
+  <text x="32" y="102" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">VollSign (Teknopark)</text>
+  <text x="32" y="122" fill="#9EC5E2" class="sans" font-size="10.5">Software Engineer &amp; QA</text>
+  <text x="32" y="140" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">BEYOĞLU · UI &amp; API TEST</text>
+  <rect x="232" y="58" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="233" y="58" width="202" height="2.2" rx="1" fill="#00D4FF" />
+  <circle cx="246" cy="76" r="2.5" fill="#00D4FF" />
+  <text x="256" y="79" fill="#00D4FF" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">FEB–AUG 2026 (7M)</text>
+  <text x="244" y="102" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">X-ETC. (Pendik)</text>
+  <text x="244" y="122" fill="#9EC5E2" class="sans" font-size="10.5">Full-Stack Engineer</text>
+  <text x="244" y="140" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">ASP.NET CORE &amp; REACT.JS</text>
+  <rect x="444" y="58" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="445" y="58" width="202" height="2.2" rx="1" fill="#7DD3FC" />
+  <circle cx="458" cy="76" r="2.5" fill="#7DD3FC" />
+  <text x="468" y="79" fill="#7DD3FC" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">FEB–AUG 2026 (7M)</text>
+  <text x="456" y="102" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">Clinical AI R&amp;D</text>
+  <text x="456" y="122" fill="#9EC5E2" class="sans" font-size="10.5">Software Engineer (AI)</text>
+  <text x="456" y="140" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">PYTHON DOCTOR ASSISTANT</text>
+  <rect x="656" y="58" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="657" y="58" width="202" height="2.2" rx="1" fill="#38BDF8" />
+  <circle cx="670" cy="76" r="2.5" fill="#38BDF8" />
+  <text x="680" y="79" fill="#38BDF8" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">SEP 2025–SEP 2026</text>
+  <text x="668" y="102" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">GDG on Campus Doğuş</text>
+  <text x="668" y="122" fill="#9EC5E2" class="sans" font-size="10.5">Social Media Coord.</text>
+  <text x="668" y="140" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">DESIGN &amp; COMMUNITY LEAD</text>
+  <rect x="20" y="164" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="21" y="164" width="202" height="2.2" rx="1" fill="#00D4FF" />
+  <circle cx="34" cy="182" r="2.5" fill="#00D4FF" />
+  <text x="44" y="185" fill="#00D4FF" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">AUG–SEP 2024</text>
+  <text x="32" y="208" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">Eryaz Bilgi Teknolojileri</text>
+  <text x="32" y="228" fill="#9EC5E2" class="sans" font-size="10.5">Software Developer</text>
+  <text x="32" y="246" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">C# · ASP.NET · JS · SQL</text>
+  <rect x="232" y="164" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="233" y="164" width="202" height="2.2" rx="1" fill="#38BDF8" />
+  <circle cx="246" cy="182" r="2.5" fill="#38BDF8" />
+  <text x="256" y="185" fill="#38BDF8" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">2023–2027 · BSc</text>
+  <text x="244" y="208" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">Doğuş University</text>
+  <text x="244" y="228" fill="#9EC5E2" class="sans" font-size="10.5">BSc Software Eng.</text>
+  <text x="244" y="246" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">İSTANBUL · UNDERGRAD</text>
+  <rect x="444" y="164" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="445" y="164" width="202" height="2.2" rx="1" fill="#7DD3FC" />
+  <circle cx="458" cy="182" r="2.5" fill="#7DD3FC" />
+  <text x="468" y="185" fill="#7DD3FC" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">CERTIFIED · 2026</text>
+  <text x="456" y="208" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">Huawei × AI Academy</text>
+  <text x="456" y="228" fill="#9EC5E2" class="sans" font-size="10.5">HSD Data Science &amp; ML</text>
+  <text x="456" y="246" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">MACHINE LEARNING CERT</text>
+  <rect x="656" y="164" width="204" height="96" rx="5" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="657" y="164" width="202" height="2.2" rx="1" fill="#34D399" />
+  <circle cx="670" cy="182" r="2.5" fill="#34D399" />
+  <text x="680" y="185" fill="#34D399" class="mono" font-size="9" font-weight="700" letter-spacing="0.4">CERTIFICATIONS</text>
+  <text x="668" y="208" fill="#F0FAFF" class="sans" font-size="12" font-weight="700">BTK AI &amp; GDG Core</text>
+  <text x="668" y="228" fill="#9EC5E2" class="sans" font-size="10.5">AI Fundamentals Cert</text>
+  <text x="668" y="246" fill="#75A1C2" class="mono" font-size="9" letter-spacing="0.3">GDG CORE TEAM CERT</text>
+  <rect x="20" y="276" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="21" y="276" width="202" height="2.5" rx="1" fill="#00D4FF" />
+  <text x="34" y="298" fill="#00D4FF" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">FULL-STACK &amp; ENTERPRISE</text>
+  <line x1="32" y1="308" x2="212" y2="308" stroke="#163654" stroke-width="1" />
+  <circle cx="35" cy="324.5" r="2" fill="#00D4FF" />
+  <text x="46" y="328" fill="#9EC5E2" class="sans" font-size="11.5">Python · C# · ASP.NET Core</text>
+  <circle cx="35" cy="346.5" r="2" fill="#00D4FF" />
+  <text x="46" y="350" fill="#9EC5E2" class="sans" font-size="11.5">React.js · TypeScript · MUI</text>
+  <circle cx="35" cy="368.5" r="2" fill="#00D4FF" />
+  <text x="46" y="372" fill="#9EC5E2" class="sans" font-size="11.5">Java · Spring Boot · SQL</text>
+  <circle cx="35" cy="390.5" r="2" fill="#00D4FF" />
+  <text x="46" y="394" fill="#9EC5E2" class="sans" font-size="11.5">PostgreSQL · REST APIs</text>
+  <rect x="232" y="276" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="233" y="276" width="202" height="2.5" rx="1" fill="#34D399" />
+  <text x="246" y="298" fill="#34D399" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">QA, TESTING &amp; SECURITY</text>
+  <line x1="244" y1="308" x2="424" y2="308" stroke="#163654" stroke-width="1" />
+  <circle cx="247" cy="324.5" r="2" fill="#34D399" />
+  <text x="258" y="328" fill="#9EC5E2" class="sans" font-size="11.5">UI &amp; API Functional QA</text>
+  <circle cx="247" cy="346.5" r="2" fill="#34D399" />
+  <text x="258" y="350" fill="#9EC5E2" class="sans" font-size="11.5">SMB Penetration Testing</text>
+  <circle cx="247" cy="368.5" r="2" fill="#34D399" />
+  <text x="258" y="372" fill="#9EC5E2" class="sans" font-size="11.5">Security Assessments</text>
+  <circle cx="247" cy="390.5" r="2" fill="#34D399" />
+  <text x="258" y="394" fill="#9EC5E2" class="sans" font-size="11.5">Docker · CI/CD Pipelines</text>
+  <rect x="444" y="276" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="445" y="276" width="202" height="2.5" rx="1" fill="#7DD3FC" />
+  <text x="458" y="298" fill="#7DD3FC" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">AI, DATA &amp; BACKTESTING</text>
+  <line x1="456" y1="308" x2="636" y2="308" stroke="#163654" stroke-width="1" />
+  <circle cx="459" cy="324.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="328" fill="#9EC5E2" class="sans" font-size="11.5">Python AI Doctor Assistant</text>
+  <circle cx="459" cy="346.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="350" fill="#9EC5E2" class="sans" font-size="11.5">Statistical Crypto Backtest</text>
+  <circle cx="459" cy="368.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="372" fill="#9EC5E2" class="sans" font-size="11.5">Scikit-Learn · Pandas · EDA</text>
+  <circle cx="459" cy="390.5" r="2" fill="#7DD3FC" />
+  <text x="470" y="394" fill="#9EC5E2" class="sans" font-size="11.5">FastAPI · DuckDB Forensics</text>
+  <rect x="656" y="276" width="204" height="146" rx="6" fill="url(#aero-card-glass)" stroke="#163654" stroke-width="1" />
+  <rect x="657" y="276" width="202" height="2.5" rx="1" fill="#38BDF8" />
+  <text x="670" y="298" fill="#38BDF8" class="mono" font-size="10" font-weight="700" letter-spacing="0.6">GEOSPATIAL, EDGE &amp; OPS</text>
+  <line x1="668" y1="308" x2="848" y2="308" stroke="#163654" stroke-width="1" />
+  <circle cx="671" cy="324.5" r="2" fill="#38BDF8" />
+  <text x="682" y="328" fill="#9EC5E2" class="sans" font-size="11.5">Leaflet.js · AIS · Open-Meteo</text>
+  <circle cx="671" cy="346.5" r="2" fill="#38BDF8" />
+  <text x="682" y="350" fill="#9EC5E2" class="sans" font-size="11.5">~1.2W Recycled Edge Node</text>
+  <circle cx="671" cy="368.5" r="2" fill="#38BDF8" />
+  <text x="682" y="372" fill="#9EC5E2" class="sans" font-size="11.5">Klima Gaz Defteri AC Ops</text>
+  <circle cx="671" cy="390.5" r="2" fill="#38BDF8" />
+  <text x="682" y="394" fill="#9EC5E2" class="sans" font-size="11.5">Team &amp; Community Lead</text>
+  <rect x="20" y="436" width="840" height="60" rx="6" fill="url(#aero-card-glass)" stroke="#256394" stroke-width="1" />
+  <circle cx="38" cy="466" r="7" fill="none" stroke="#00D4FF" stroke-width="1" stroke-opacity="0.4" />
+  <circle cx="38" cy="466" r="3.5" fill="#00D4FF" />
+  <text x="54" y="459" fill="#F0FAFF" class="mono" font-size="10.5" font-weight="700" letter-spacing="0.6">DIRECT CONTACT &amp; INTERACTIVE PORTAL</text>
+  <text x="54" y="479" fill="#9EC5E2" class="mono" font-size="10">keremkalyoncu.dev@gmail.com  ·  gskerem200553@outlook.com</text>
+  <rect x="598" y="453" width="252" height="26" rx="4" fill="#102640" stroke="#00D4FF" stroke-width="1" />
+  <text x="724" y="470" fill="#00D4FF" class="mono" font-size="9.2" font-weight="700" text-anchor="middle">keremkalyoncu.github.io/KeremKalyoncu</text>
+</svg>

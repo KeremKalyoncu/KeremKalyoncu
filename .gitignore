@@ -1,0 +1,10 @@
+# Python & Pytest
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# E2E generated screenshots & local test artifacts
+tests/artifacts/
